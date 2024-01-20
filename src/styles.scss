@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Poppins', sans-serif; 
+  background-color: #f7f7f7;
+ }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+app-nav-bar{
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  
+}
+
+//COLORES
+:root {
+  --primary-color: #1a3763;
+  --primary-font-color: #4a4a4a;
+  --primary-white:#f7f7f7;
+}
