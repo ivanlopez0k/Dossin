@@ -1,0 +1,69 @@
+<div class="contenedor">
+  <div class="top-line">
+    <div class="language-container">
+        <ul class="language-list">
+            <li class="language-item">
+                <a class=""><span>ES</span></a>
+            </li>
+            <li class="language-item">
+                <a><span class="">EN</span></a>
+            </li>
+        </ul>
+    </div>		
+  </div>
+  <div class="first-nav">
+    <div class="bottom-line">
+        <div class="bottom-content">
+          <div class="logo">
+            <a href="#">
+              <img src="../../../../assets/images/dossin-logo.jpeg" />
+            </a>
+          </div>
+          <a class="toggle-button" (click)="toggleSideMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div class="menu-container">
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a class="menu-link" href="/servicios">Servicios</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="/industrias">Industrias</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="/blog">Blog</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="/nosotroa">Nosotros</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="side-menu" [ngClass]="{'active': isSideMenuVisible}">
+    <ul class="toggle-list">
+      <li class="toggle-item">
+        <a class="toggle-link" href="/servicios">Servicios</a>
+      </li>
+      <li class="toggle-item">
+        <a class="toggle-link" href="/industrias">Industrias</a>
+      </li>
+      <li class="toggle-item">
+        <a class="toggle-link" href="/blog">Blog</a>
+      </li>
+      <li class="toggle-item">
+        <a class="toggle-link" href="/nosotroa">Nosotros</a>
+      </li>
+      <li class="toggle-item">
+        <a class="toggle-link" href="#">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</div>
+  
