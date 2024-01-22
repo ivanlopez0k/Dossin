@@ -135,7 +135,8 @@
 
 .servicios-container {
     margin-top: 50px;
-    background-color: #f1f1f1;
+    background-color: var(--primary-grey);
+    //background-color: #f1f1f1;
     width: 100%;
     min-height: 360px;
     display: flex;
@@ -372,8 +373,10 @@
     margin-bottom: 10px;
 }
 
-.blog-img img {
+.blog-img {
     width: 100%;
+    height: 30%;
+    max-height: 30%;
 }
 .blog-img img {
     width: 100%;
