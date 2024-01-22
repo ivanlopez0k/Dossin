@@ -30,6 +30,12 @@ app-nav-bar{
   
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 //COLORES
 :root {
   --primary-color: #163660;
