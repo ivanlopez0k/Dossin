@@ -5,7 +5,7 @@ body {
   flex-direction: column;
   margin: 0;
   font-family: 'Poppins', sans-serif; 
-  background-color: #f7f7f7;
+  background-color: #fff;
  }
 
 * {
@@ -32,5 +32,5 @@ app-nav-bar{
 :root {
   --primary-color: #1a3763;
   --primary-font-color: #4a4a4a;
-  --primary-white:#f7f7f7;
+  --primary-white:#fff;
 }
