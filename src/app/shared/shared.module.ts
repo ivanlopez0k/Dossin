@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FloatingWhatsappComponent } from './components/floating-whatsapp/floating-whatsapp.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,7 +14,9 @@ import { FloatingWhatsappComponent } from './components/floating-whatsapp/floati
     FloatingWhatsappComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    TranslateModule.forChild()
   ],
   exports: [
     NavBarComponent,

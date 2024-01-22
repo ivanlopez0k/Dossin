@@ -1,4 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from 'src/app/services/language/language.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,7 +10,7 @@ import { Component, Renderer2 } from '@angular/core';
 export class NavBarComponent {
   isSideMenuVisible = false;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, public translate: LanguageService) { }
 
   toggleSideMenu() {
     this.isSideMenuVisible = !this.isSideMenuVisible;
@@ -22,5 +24,8 @@ export class NavBarComponent {
         this.renderer.removeClass(sideMenu, 'active');
       }
     }
+  }
+  switchLang(lang: string) {
+    this.translate.setLanguage(lang);
   }
 }
