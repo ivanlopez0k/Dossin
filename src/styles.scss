@@ -5,7 +5,8 @@ body {
   flex-direction: column;
   margin: 0;
   font-family: 'Poppins', sans-serif; 
-  background-color: #f7f7f7;
+  background-color: #fff;
+  color: #000;
  }
 
 * {
@@ -16,6 +17,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 li {
@@ -28,9 +30,16 @@ app-nav-bar{
   
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 //COLORES
 :root {
-  --primary-color: #1a3763;
+  --primary-color: #163660;
   --primary-font-color: #4a4a4a;
-  --primary-white:#f7f7f7;
+  --primary-white:#fff;
+  --primary-grey:#c0c0bf;
 }
