@@ -1,23 +1,26 @@
+
+<app-portada [portadaInfo]="portadaData"></app-portada>
+
 <div class="industrias-section">
     <div class="industrias-content">
-        <div class="industrias-item">
-            <app-service-card [cardInfo]="industriaData[0]"></app-service-card>
+        <div class="industrias-item" *ngFor="let card of industriaData; let i = index">
+            <app-service-card [cardInfo]="card"></app-service-card>
         </div>
-        
-        <div class="industrias-item">
-            <app-service-card [cardInfo]="industriaData[1]"></app-service-card>
-        </div>
-        
-        <div class="industrias-item">
-            <app-service-card [cardInfo]="industriaData[2]"></app-service-card>
-        </div>
-        
-        <div class="industrias-item">
-            <app-service-card [cardInfo]="industriaData[3]"></app-service-card>
-        </div>
-        
-        <div class="industrias-item">
-            <app-service-card [cardInfo]="industriaData[4]"></app-service-card>
+    </div>
+</div>
+
+<div class="empresas-section">
+    <h1 class="empresas-main-title">Algunos de Nuestros Clientes</h1>
+    <div class="empresas-content">
+        <div class="empresa" *ngFor="let empresa of empresasData; let i = index">
+            <div class="empresa-item">
+                <div class="empresa-imagen">
+                    <img [src]="empresa.empLogo" alt="{{ empresa.empTitle }}">
+                </div>
+                <div class="empresa-title">
+                    <h3>{{ empresa.empTitle }}</h3>
+                </div>
+            </div>
         </div>
     </div>
 </div>

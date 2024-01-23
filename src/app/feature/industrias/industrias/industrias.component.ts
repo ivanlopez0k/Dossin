@@ -33,4 +33,33 @@ export class IndustriasComponent {
       cardDesc: 'Manejamos y almacenamos todo tipo de productos de alimentos y bebidas no perecederos y no refrigerados. Nuestras instalaciones y equipos se mantienen limpios y todos los alimentos se tratan de forma higiénica y de acuerdo con las normas y regulaciones de la industria durante la carga y el transporte.',
     }
   ];
+
+  empresasData = [
+    {
+      empTitle: 'AGRO SPECIALITIES',
+      empLogo: 'https://www.exportadoresdecordoba.com/images_db/logos/120px/14912_logo.jpg',
+    },
+    {
+      empTitle: 'BARBALE AGROPECUARIA',
+      empLogo: 'https://www.exportadoresdecordoba.com/images_db/logos/120px/18262_logo.jpg',
+    },
+    {
+      empTitle: 'CF AGRO EXPORT',
+      empLogo: 'https://www.exportadoresdecordoba.com/images_db/logos/120px/16642_logo.jpg',
+    },
+    {
+      empTitle: 'CLC - CONSORCIO DE LEGUMBRES DE CÓRDOBA',
+      empLogo: 'https://www.exportadoresdecordoba.com/images_db/logos/120px/17356_logo.jpg',
+    },
+    {
+      empTitle: 'CONO SAS',
+      empLogo: 'https://www.exportadoresdecordoba.com/images_db/logos/120px/15227_logo.jpg',
+    },
+  ];
+
+  portadaData = {
+    videoSrc: '../../../../assets/videos/placeholder-video.mp4',
+    titulo: 'Industrias',
+    texto: 'Tenemos experiencia en diversos rubros industriales'
+  };
 }

@@ -4,13 +4,15 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FloatingWhatsappComponent } from './components/floating-whatsapp/floating-whatsapp.component';
 import { ServiceCardComponent } from './components/cards/service-card/service-card.component';
+import { PortadaComponent } from './components/portada/portada.component';
 
 @NgModule({
   declarations: [
     NavBarComponent,
     FooterComponent,
     FloatingWhatsappComponent,
-    ServiceCardComponent
+    ServiceCardComponent,
+    PortadaComponent
   ],
   imports: [
     CommonModule
@@ -19,7 +21,8 @@ import { ServiceCardComponent } from './components/cards/service-card/service-ca
     NavBarComponent,
     FooterComponent,
     FloatingWhatsappComponent,
-    ServiceCardComponent    
+    ServiceCardComponent,
+    PortadaComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA  ]
 })

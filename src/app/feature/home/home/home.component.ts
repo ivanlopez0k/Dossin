@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  portadaData = {
+    videoSrc: '../../../../assets/videos/placeholder-video.mp4',
+    titulo: 'Logística y Transporte',
+    texto: 'Más que un transporte, una solucion logistica'
+  };
 }

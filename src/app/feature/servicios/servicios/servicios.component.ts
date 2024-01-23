@@ -28,4 +28,9 @@ export class ServiciosComponent {
       cardDesc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ex alias esse expedita! Labore dolore doloremque aut iuredolor    in     aliquam.',
     }
   ];
+  portadaData = {
+    videoSrc: '../../../../assets/videos/placeholder-video.mp4',
+    titulo: 'Servicios',
+    texto: 'Profesionales dedicados a atender todas las necesidades'
+  };
 }
