@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class PortadaComponent {
   @Input() portadaInfo: any;
+  @Input() portadaTitulo: any;
+  @Input() portadaTexto: any;
 }

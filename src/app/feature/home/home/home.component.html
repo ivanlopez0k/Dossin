@@ -1,20 +1,8 @@
 
 <!----------------------------------------------------------------------------------------->
-<<<<<<< HEAD
-<div class="portada">
-    <video autoplay muted loop id="video-portada">
-        <source src="../../../../assets/videos/placeholder-video.mp4" type="video/mp4">
-        Tu navegador no soporta la etiqueta de video.
-    </video>
 
-    <div class="portada-content">
-        <h1>{{'Portada-Title' | translate}}</h1>
-        <p>{{'Portada-p' | translate}}</p>
-    </div>
-</div>
-=======
-<app-portada [portadaInfo]="portadaData"></app-portada>
->>>>>>> e2afc2ad6de0f85ca0d15056a57e86cebefce24e
+<app-portada [portadaInfo]="portadaData" portadaTitulo="{{'Portada-Title'|translate}}" portadaTexto="{{'Portada-p'|translate}}"></app-portada>
+
 
 <!----------------------------------------------------------------------------------------->
 
@@ -47,11 +35,9 @@
                     <img src="../../../../assets/logos/logo-dossin.png" class="">											
                 </div>
                 <div class="servicio-title">
-<<<<<<< HEAD
-                    <h2><a href="#">{{'Cargue a Granel' | translate}}</a></h2>
-=======
-                    <h2><a href="/servicios">Cargas a Granel</a></h2>
->>>>>>> e2afc2ad6de0f85ca0d15056a57e86cebefce24e
+
+                    <h2><a href="/servicios">{{'Cargue a Granel' | translate}}</a></h2>
+
                 </div>
             </div>
 
