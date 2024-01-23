@@ -1,0 +1,127 @@
+.servicios-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+}
+
+.servicios-content {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.servicios-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.servicios-item {
+    width: 40%;
+    max-width: 40%;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .servicios-content {
+        gap: 10px;
+    }
+    .servicios-item {
+        width: 98%;
+        max-width: 98%;
+    }
+}
+
+
+
+.elegirnos-section {
+    margin-top: 50px;
+    //background-color: #f1f1f1;
+    width: 100%;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.elegirnos-content {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px auto;
+}
+.servicios-content h1 {
+    margin: 50px auto 0;
+    font-weight: 600px;
+}
+
+.elegirnos-flex {
+    width: 100%;
+    display: flex;
+}
+.elegirnos-item {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.elegirnos-image {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.elegirnos-image img {
+    
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.elegirnos-title {
+    width: 100%;
+    font-size: 12px;
+    color: black;
+    padding: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .elegirnos-flex {
+        flex-direction: row; 
+        flex-wrap: wrap;     
+    }
+
+    .elegirnos-item {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
+@media (max-width: 480px) {
+    .elegirnos-content h1 {
+        font-size: 24px;
+    }
+    .elegirnos-item {
+        width: 100%;
+        margin: 1%; 
+    }
+}
+
