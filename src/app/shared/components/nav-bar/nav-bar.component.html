@@ -3,10 +3,10 @@
     <div class="language-container">
         <ul class="language-list">
             <li class="language-item">
-                <a class=""><span>ES</span></a>
+                <a class=""><span (click)="switchLang('es')">ES</span></a>
             </li>
             <li class="language-item">
-                <a><span class="">EN</span></a>
+                <a><span class="" (click)="switchLang('en')">EN</span></a>
             </li>
         </ul>
     </div>		
@@ -27,19 +27,19 @@
           <div class="menu-container">
             <ul class="menu-list">
               <li class="menu-item">
-                <a class="menu-link" href="/servicios">Servicios</a>
+                <a class="menu-link" href="/servicios">{{'navbar-servicios'|translate}}</a>
               </li>
               <li class="menu-item">
-                <a class="menu-link" href="/industrias">Industrias</a>
+                <a class="menu-link" href="/industrias">{{'navbar-industrias'|translate}}</a>
               </li>
               <li class="menu-item">
-                <a class="menu-link" href="/viajes">Viajes</a>
+                <a class="menu-link" href="/viajes">{{'navbar-viajes'|translate}}</a>
               </li>
               <li class="menu-item">
-                <a class="menu-link" href="/nosotros">Nosotros</a>
+                <a class="menu-link" href="/nosotros">{{'navbar-nosotros'|translate}}</a>
               </li>
               <li class="menu-item">
-                <a class="menu-link" href="/contacto">Contacto</a>
+                <a class="menu-link" href="/contacto">{{'navbar-contacto'|translate}}</a>
               </li>
             </ul>
           </div>
@@ -49,19 +49,19 @@
   <div class="side-menu" [ngClass]="{'active': isSideMenuVisible}">
     <ul class="toggle-list">
       <li class="toggle-item">
-        <a class="toggle-link" href="/servicios">Servicios</a>
+        <a class="toggle-link" href="/servicios">{{'navbar-servicios'|translate}}</a>
       </li>
       <li class="toggle-item">
-        <a class="toggle-link" href="/industrias">Industrias</a>
+        <a class="toggle-link" href="/industrias">{{'navbar-industrias'|translate}}</a>
       </li>
       <li class="toggle-item">
-        <a class="toggle-link" href="/viajes">Viajes</a>
+        <a class="toggle-link" href="/viajes">{{'navbar-viajes'|translate}}</a>
       </li>
       <li class="toggle-item">
-        <a class="toggle-link" href="/nosotros">Nosotros</a>
+        <a class="toggle-link" href="/nosotros">{{'navbar-nosotros'|translate}}</a>
       </li>
       <li class="toggle-item">
-        <a class="toggle-link" href="/contacto">Contacto</a>
+        <a class="toggle-link" href="/contacto">{{'navbar-contacto'|translate}}</a>
       </li>
     </ul>
   </div>
