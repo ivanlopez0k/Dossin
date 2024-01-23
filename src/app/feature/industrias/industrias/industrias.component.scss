@@ -1,0 +1,22 @@
+.industrias-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+}
+
+.industrias-content {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;    
+}
+
+.industrias-item {
+    width: 48%;
+    max-width: 48%;
+    margin-bottom: 20px;
+}
