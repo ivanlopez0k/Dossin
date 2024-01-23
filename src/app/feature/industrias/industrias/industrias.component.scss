@@ -20,3 +20,10 @@
     max-width: 48%;
     margin-bottom: 20px;
 }
+
+@media screen and (max-width:768px) {
+    .industrias-item {
+        width: 98%;
+        max-width: 98%;
+    }
+}
