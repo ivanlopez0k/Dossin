@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FloatingWhatsappComponent } from './components/floating-whatsapp/floating-whatsapp.component';
+import { ServiceCardComponent } from './components/cards/service-card/service-card.component';
 
 @NgModule({
   declarations: [
     NavBarComponent,
     FooterComponent,
-    FloatingWhatsappComponent
+    FloatingWhatsappComponent,
+    ServiceCardComponent
   ],
   imports: [
     CommonModule
@@ -17,7 +19,7 @@ import { FloatingWhatsappComponent } from './components/floating-whatsapp/floati
     NavBarComponent,
     FooterComponent,
     FloatingWhatsappComponent,
-    
+    ServiceCardComponent    
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA  ]
 })
