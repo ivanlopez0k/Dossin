@@ -102,21 +102,22 @@ form {
 .input-form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
     width: 50%;
     margin: 10px;
 }
 .input-form input{
-        height: 30px;
-        width: 90%;
-        margin-top:20px;
-        outline: 0;
-        border-width: 0 0 2px;
-        border-color: var(--primary-color)
-      }
-      input:focus {
-    
-        outline: 1px dotted #000
-      }
+    height: 30px;
+    width: 90%;
+    margin-top:20px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: var(--primary-color)
+}
+input:focus {
+  outline: 1px dotted #000
+}
     
 
 span{
@@ -125,13 +126,11 @@ span{
     font-size: 20px;
 }
 
-  .input-form-message{
+.input-form-message{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 15px;
-
 }
 
 .input-form-message textarea{
@@ -144,7 +143,10 @@ span{
     border-color: var(--primary-color);
     resize: none;
 }
-
+.input-form-message span{
+    width: 90%;
+    text-align: left;
+}
 .boton-enviar{
     width: 100%;
     display: flex;
@@ -165,7 +167,9 @@ span{
 }
 
 .btn:hover {
+    background-color: #3475ca;
     animation: pulse 0.5s ease-in-out both;
+    cursor: pointer;
 }
 
 
@@ -178,7 +182,13 @@ span{
         align-items: center;
     }
     .input-form {
+        width: 90%;
+    }
+    .input-form input{
         width: 100%;
+    }
+    .input-form-message{
+        align-items: baseline;
     }
 }
 
@@ -193,5 +203,6 @@ span{
     }
     .form-container{
         order: -1;
+        padding: 0;
     }
 }

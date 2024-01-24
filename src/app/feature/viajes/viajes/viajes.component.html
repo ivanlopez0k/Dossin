@@ -12,7 +12,7 @@
             <div class="form-title">
                 <h2>Cargá tus datos y nos ponemos en contacto</h2>
             </div>
-            <form [formGroup]="datosViaje">
+            <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
             <div class="form">
                 <div class="first-part">
                 <div class="input-form">
@@ -35,13 +35,10 @@
     
                 <div class="input-form-message">
                 <span class="span-text">Mensaje</span>
-                <textarea name="mensaje" id="mensaje" cols="10" rows="5" formControlName="mensaje" ></textarea>
+                <textarea name="mensaje" id="mensaje" cols="10" rows="6" formControlName="mensaje" ></textarea>
                 </div>
             </div>
-    
-    
-            
-                <a (click)="submitForm()" class="btn">Enviar</a>
+            <button type="submit" class="btn">Enviar</button> 
         </form>
         </div>
     </div>
