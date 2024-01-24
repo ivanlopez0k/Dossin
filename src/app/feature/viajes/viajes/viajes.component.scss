@@ -1,0 +1,157 @@
+input, textarea{
+    font-family: 'Poppins', sans-serif;;
+}
+
+.qr-title h2{
+    color: var(--primary-color);
+    width: 80%;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+.form-title h2{
+    color: var(--primary-color);
+    width: 80%;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.qr{
+    width: 100%;
+    height: 70%;
+    text-align: center;
+
+}
+.qr img{
+    width: 50%;
+    margin-top: 10%;
+    margin-bottom:20px;
+}
+
+.container{
+    margin: auto;
+    margin-top: 8vh;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    height: 55vh;
+    display: flex;
+
+}
+
+.qr-container{
+    justify-content: center;
+    background-color: #e6e6e6;
+    width: 60%;
+    margin-right: 30px;
+    border-radius: 12px;
+    margin-left: 10%;
+}
+
+.form-container{
+    width: 100%;
+    margin-left: 30px;
+}
+
+.message{
+    width: 60%;
+}
+
+.form{
+    width: 80%;
+    height:80%;
+    margin-left: 10%;
+}
+.first-part{
+    width: 100%;
+    display: flex;
+
+}
+.input-form{
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+}
+.input-form input{
+        height: 30px;
+        width: 20vh;
+        margin-top:20px;
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: var(--primary-color)
+      }
+      input:focus {
+    
+        outline: 1px dotted #000
+      }
+    
+
+span{
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+  .input-form-message{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+
+}
+
+.input-form-message textarea{
+    width: 100%;
+    height: 70px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: var(--primary-color);
+    resize: none;
+}
+
+.boton-enviar{
+    margin-left: 12vh;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    margin-bottom: 40px;
+    color: #fff;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.btn:hover {
+    animation: pulse 0.5s ease-in-out both;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .qr-container {
+        width: 80%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .form-container {
+        margin-left: 0;
+    }
+
+    .input-form input{
+        width: 100%;
+    }
+    .input-form-message {
+        width: 100%; /* Ajusta según tus necesidades específicas */
+        max-width: 100%; /* Asegúrate de que no haya un ancho máximo que cause el desbordamiento */
+        height: auto; /* Permite que el textarea se expanda automáticamente en altura según el contenido */
+    }
+}
