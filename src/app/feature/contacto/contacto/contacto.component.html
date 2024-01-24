@@ -1,2 +1,171 @@
 
 <app-portada [portadaInfo]="portadaData"></app-portada>
+
+<div class="contacto-section">
+    <div class="contacto-content">
+        <div class="contacto-selector">
+            <div class="selector-item" (click)="mostrarForm('cliente')" [class.selected]="formularioActual === 'cliente'">
+              <span>Cliente</span>
+            </div>
+            <div class="selector-item" (click)="mostrarForm('proveedor')" [class.selected]="formularioActual === 'proveedor'">
+              <span>Proveedor</span>
+            </div>
+            <div class="selector-item" (click)="mostrarForm('cv')" [class.selected]="formularioActual === 'cv'">
+              <span>Mandar CV</span>
+            </div>
+          </div>
+        <div class="form-container">
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+
+            <form *ngIf="formularioActual === 'cliente'" [formGroup]="clienteForm" (ngSubmit)="printForm(clienteForm)">
+                <div class="top-form form-row">
+                    <div class="form-item">
+                        <label>Apellido <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Apellido" aria-required="true" formControlName="apellido">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label>Nombre <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Nombre" aria-required="true" formControlName="nombre">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label>Empresa <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Empresa" aria-required="true" formControlName="empresa">
+                        </div>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item">
+                        <label>Email <span>*</span></label>
+                        <div class="input-container">
+                            <input type="email" value="" placeholder="Email" data-required="true" aria-required="true" formControlName="email">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label>Teléfono <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Teléfono" aria-required="true" autocomplete="off" formControlName="telefono">
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-form">
+                    <label>Mensaje <span>*</span></label>
+                    
+                    <textarea rows="6" maxlength="180" formControlName="texto"></textarea>
+                    
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+
+            </form>
+    
+
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+
+            <form *ngIf="formularioActual === 'proveedor'" [formGroup]="proveedorForm" (ngSubmit)="printForm(proveedorForm)">
+                <div class="top-form form-row">
+                    <div class="form-item">
+                        <label>Apellido <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Apellido" aria-required="true" formControlName="apellido">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label>Nombre <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Nombre" aria-required="true" formControlName="nombre">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label>Empresa <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Empresa" aria-required="true" formControlName="empresa">
+                        </div>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item">
+                        <label>Email <span>*</span></label>
+                        <div class="input-container">
+                            <input type="email" value="" placeholder="Email" data-required="true" aria-required="true" formControlName="email">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label>Teléfono <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Teléfono" aria-required="true" autocomplete="off" formControlName="telefono">
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-form">
+                    <label>Mensaje <span>*</span></label>
+                    
+                    <textarea rows="6" maxlength="180" formControlName="texto"></textarea>
+                    
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+
+            </form>
+
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+
+            <form *ngIf="formularioActual === 'cv'" [formGroup]="cvForm" (ngSubmit)="printForm(cvForm)">
+
+                <div class="top-form form-row">
+                    <div class="form-item">
+                        <label>Apellido <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Apellido" aria-required="true" formControlName="apellido">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label>Nombre <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Nombre" aria-required="true" formControlName="nombre">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label>Empresa <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Empresa" aria-required="true" formControlName="empresa">
+                        </div>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item">
+                        <label>Email <span>*</span></label>
+                        <div class="input-container">
+                            <input type="email" value="" placeholder="Email" data-required="true" aria-required="true" formControlName="email">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label>Teléfono <span>*</span></label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Teléfono" aria-required="true" autocomplete="off" formControlName="telefono">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Código HTML -->
+                <div class="bottom-form form-row">
+                    <label>Adjuntá tu CV</label>
+                    <div class="input-file">
+                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.js,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml">
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn">Enviar</button>
+                </div>
+                
+            </form>
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+
+        </div>
+
+    </div>
+</div>
+
