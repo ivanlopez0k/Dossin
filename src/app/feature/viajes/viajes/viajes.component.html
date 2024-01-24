@@ -1,48 +1,48 @@
 <div class="container">
-    <div class="qr-container">
-        <div class="qr-title">
-            <h2>¿Queres enterarte de nuestros beneficios que ofrecemos a los transportistas tercerizados?</h2>
+    <div class="content">
+        <div class="qr-container">
+            <div class="qr-title">
+                <h2>¿Queres enterarte de nuestros beneficios que ofrecemos a los transportistas tercerizados?</h2>
+            </div>
+            <div class="qr">
+                <img class="qr-image" src="../../../../assets/images/qr-image-example.jpg">
+            </div>
         </div>
-        <div class="qr">
-            <img class="qr-image" src="../../../../assets/images/qr-image-example.jpg">
-        </div>
-    </div>
-    <div class="form-container">
-        <div class="form-title">
-            <h2>Cargá tus datos y nos ponemos en contacto</h2>
-        </div>
-        <form [formGroup]="datosViaje">
-        <div class="form">
+        <div class="form-container">
+            <div class="form-title">
+                <h2>Cargá tus datos y nos ponemos en contacto</h2>
+            </div>
+            <form [formGroup]="datosViaje">
+            <div class="form">
+                <div class="first-part">
+                <div class="input-form">
+                <span class="span-text">Nombre</span>
+                <input type="text" formControlName="nombre" placeholder="Nombre"></div>
+                <div class="input-form">
+                <span class="span-text">Apellido</span>
+                <input type="text" formControlName="apellido" placeholder="Apellido">
+                </div>
+            
+            </div>
             <div class="first-part">
-            <div class="input-form">
-            <span class="span-text">Nombre</span>
-            <input type="text" formControlName="nombre" placeholder="Nombre"></div>
-            <div class="input-form">
-            <span class="span-text">Apellido</span>
-            <input type="text" formControlName="apellido" placeholder="Apellido">
+                <div class="input-form">
+                <span class="span-text">Transporte</span>
+                <input type="text" formControlName="transporte" placeholder="Transporte"></div>
+                <div class="input-form">
+                <span class="span-text">Teléfono</span>
+                <input type="text" formControlName="telefono" placeholder="351123456"></div>
             </div>
-        
-        </div>
-        <div class="first-part">
-            <div class="input-form">
-            <span class="span-text">Transporte</span>
-            <input type="text" formControlName="transporte" placeholder="Transporte"></div>
-            <div class="input-form">
-            <span class="span-text">Teléfono</span>
-            <input type="text" formControlName="telefono" placeholder="351123456"></div>
-        </div>
-
-            <div class="input-form-message">
-            <span class="span-text">Mensaje</span>
-            <textarea name="mensaje" id="mensaje" cols="10" rows="5" formControlName="mensaje" ></textarea>
-            </div>
-        </div>
-
-
-        <div class="boton-enviar">
-            <a (click)="submitForm()" class="btn">Enviar</a>
-        </div>
-    </form>
-    </div>
     
+                <div class="input-form-message">
+                <span class="span-text">Mensaje</span>
+                <textarea name="mensaje" id="mensaje" cols="10" rows="5" formControlName="mensaje" ></textarea>
+                </div>
+            </div>
+    
+    
+            
+                <a (click)="submitForm()" class="btn">Enviar</a>
+        </form>
+        </div>
+    </div>
 </div>

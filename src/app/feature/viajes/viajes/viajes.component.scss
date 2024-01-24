@@ -2,64 +2,97 @@ input, textarea{
     font-family: 'Poppins', sans-serif;;
 }
 
+.container{
+    width: 100%;
+    margin: 8vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
+    padding: 20px;
+}
+
+.content {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.qr-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #e6e6e6;
+    width: 50%;
+    border-radius: 12px;
+    height: 100%;
+}
+.qr-title {
+    width: 100%;
+    height: 30%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .qr-title h2{
     color: var(--primary-color);
     width: 80%;
-    margin-left: 50px;
-    margin-top: 25px;
+}
+.qr{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.qr img{
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+}
+
+
+.form-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.form-title {
+    color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .form-title h2{
     color: var(--primary-color);
     width: 80%;
-    margin-left: 50px;
-    margin-top: 25px;
 }
-
-.qr{
-    width: 100%;
-    height: 70%;
-    text-align: center;
-
-}
-.qr img{
-    width: 50%;
-    margin-top: 10%;
-    margin-bottom:20px;
-}
-
-.container{
-    margin: auto;
-    margin-top: 8vh;
-    justify-content: center;
-    max-width: 100%;
-    width: 100%;
-    height: 55vh;
-    display: flex;
-
-}
-
-.qr-container{
-    justify-content: center;
-    background-color: #e6e6e6;
-    width: 60%;
-    margin-right: 30px;
-    border-radius: 12px;
-    margin-left: 10%;
-}
-
-.form-container{
-    width: 100%;
-    margin-left: 30px;
-}
-
 .message{
     width: 60%;
 }
-
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .form{
     width: 80%;
     height:80%;
-    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .first-part{
     width: 100%;
@@ -69,11 +102,12 @@ input, textarea{
 .input-form{
     display: flex;
     flex-direction: column;
-    padding-right: 30px;
+    width: 50%;
+    margin: 10px;
 }
 .input-form input{
         height: 30px;
-        width: 20vh;
+        width: 90%;
         margin-top:20px;
         outline: 0;
         border-width: 0 0 2px;
@@ -94,12 +128,14 @@ span{
   .input-form-message{
     display: flex;
     flex-direction: column;
-    width: 50vh;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
 
 }
 
 .input-form-message textarea{
-    width: 100%;
+    width: 90%;
     height: 70px;
     margin-top:30px;
     margin-bottom: 30px;
@@ -110,7 +146,10 @@ span{
 }
 
 .boton-enviar{
-    margin-left: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
@@ -129,29 +168,30 @@ span{
     animation: pulse 0.5s ease-in-out both;
 }
 
-@media screen and (max-width: 768px) {
-    .container {
+
+@media screen and (max-width: 1024px) {
+    .first-part{
+        width: 100%;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        height: auto;
     }
-
-    .qr-container {
-        width: 80%;
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-    .form-container {
-        margin-left: 0;
-    }
-
-    .input-form input{
+    .input-form {
         width: 100%;
     }
-    .input-form-message {
-        width: 100%; /* Ajusta según tus necesidades específicas */
-        max-width: 100%; /* Asegúrate de que no haya un ancho máximo que cause el desbordamiento */
-        height: auto; /* Permite que el textarea se expanda automáticamente en altura según el contenido */
+}
+
+@media screen and (max-width: 768px) {
+    .content{
+        flex-direction: column;
+    }
+
+    .form-container,
+    .qr-container {
+        width: 100%;
+    }
+    .form-container{
+        order: -1;
     }
 }
