@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormsModule, FormGroup } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-viajes',
@@ -18,7 +19,16 @@ datosViaje = this._formBuilder.group({
   mensaje: ['', Validators.required]
 })
 
-submitForm(){
-  console.log('Formulario enviado:', this.datosViaje.value)
+async submitForm(){
+  emailjs.init('0iqF7t81iqHpG9ou3')
+  let res = await emailjs.send("service_snxjftg","template_hdclsf7",{
+    nombre: this.datosViaje.value.nombre,
+    apellido: this.datosViaje.value.apellido,
+    telefono: this.datosViaje.value.telefono,
+    transporte: this.datosViaje.value.transporte,
+    mensaje: this.datosViaje.value.mensaje
+  });
+  alert('Mensaje enviado');
+  this.datosViaje.reset();
 }
 }
