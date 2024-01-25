@@ -1,1 +1,81 @@
-<p>servicios works! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium explicabo voluptatem repudiandae alias accusamus, aspernatur dolorum perferendis. Laudantium quos in illo consequuntur soluta. Corrupti cumque amet iste distinctio ipsam hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi officia a iusto iste perspiciatis consectetur. Laudantium explicabo nihil est nam officia id placeat in suscipit natus? Natus, assumenda accusantium!</p>
+
+<app-portada [portadaInfo]="portadaData"></app-portada>
+
+
+<div class="servicios-section">
+    <div class="servicios-content">
+        <!-------------------------------------------->
+        <div class="servicios-row">
+            
+            <div class="servicios-item">
+                <app-service-card [cardInfo]="serviceData[0]"></app-service-card>
+            </div>
+            
+            <div class="servicios-item">
+                <app-service-card [cardInfo]="serviceData[1]"></app-service-card>
+            </div>
+
+            
+        </div>
+        
+        <!---------------------------------------------------------------------->
+        <div class="servicios-row">
+            
+            <div class="servicios-item">
+                <app-service-card [cardInfo]="serviceData[2]"></app-service-card>
+            </div>
+            
+            <div class="servicios-item">
+                <app-service-card [cardInfo]="serviceData[3]"></app-service-card>
+            </div>
+
+            
+        </div>
+
+    </div>
+</div>
+
+<div class="elegirnos-section">
+    <div class="elegirnos-content">
+        <h1>Porque con nostros</h1>
+        <div class="elegirnos-flex">
+
+            <div class="elegirnos-item">
+                <div class="elegirnos-image">
+                    <img src="https://rigar.com.ar/wp-content/uploads/2019/04/flota-moderna.png">											
+                </div>
+                <div class="elegirnos-title">
+                    <h2>Trayectoria</h2>
+                </div>
+            </div>
+
+            <div class="elegirnos-item">
+                <div class="elegirnos-image">
+                    <img src="https://rigar.com.ar/wp-content/uploads/2019/05/camion-semi-remolque-01-1024x725.png" class="">											
+                </div>
+                <div class="elegirnos-title">
+                    <h2>Compromiso con el cliente</h2>
+                </div>
+            </div>
+
+            <div class="elegirnos-item">
+                <div class="elegirnos-image">
+                    <img src="https://rigar.com.ar/wp-content/uploads/2019/04/internacional.png">										
+                </div>
+                <div class="elegirnos-title">
+                    <h2>Seguimiento satelital</h2>
+                </div>
+            </div>
+
+            <div class="elegirnos-item">
+                <div class="elegirnos-image">
+                    <img src="https://rigar.com.ar/wp-content/uploads/2019/04/trayectoria.png">										
+                </div>
+                <div class="elegirnos-title">
+                    <h2>Servicio Personalizado</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
