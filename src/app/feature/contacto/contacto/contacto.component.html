@@ -19,41 +19,66 @@
 
             <form *ngIf="formularioActual === 'cliente'" [formGroup]="clienteForm" (ngSubmit)="printForm(clienteForm)">
                 <div class="top-form form-row">
-                    <div class="form-item">
-                        <label>Apellido <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlCliente('apellido').invalid && (getControlCliente('apellido').dirty || getControlCliente('apellido').touched)">
+                        <label>
+                            Apellido *
+                        </label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Apellido" aria-required="true" formControlName="apellido">
+                            <input type="text" class="form-control" placeholder="Apellido" value="" formControlName="apellido">
                         </div>
+                        <span *ngIf="getControlCliente('apellido').invalid && (getControlCliente('apellido').dirty || getControlCliente('apellido').touched)" class="text-warning">Este campo es obligatorio.Por favor ingresa tu apellido</span>
                     </div>
-                    <div class="form-item">
-                        <label>Nombre <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlCliente('nombre').invalid && (getControlCliente('nombre').dirty || getControlCliente('nombre').touched)">
+                        <label>
+                            Nombre *
+                        </label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Nombre" aria-required="true" formControlName="nombre">
+                            <input type="text" value="" placeholder="Nombre" aria-required="true" formControlName="nombre" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu nombre</span>
                     </div>
-                    <div class="form-item">
-                        <label>Empresa <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlCliente('empresa').invalid && (getControlCliente('empresa').dirty || getControlCliente('empresa').touched)">
+                        <label>Empresa *</label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Empresa" aria-required="true" formControlName="empresa">
+                            <input type="text" value="" placeholder="Empresa" aria-required="true" formControlName="empresa" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu empresa</span>
                     </div>
                 </div>
                 <div class="midle-form form-row">
-                    <div class="form-item">
-                        <label>Email <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlCliente('email').invalid && (getControlCliente('email').dirty || getControlCliente('email').touched)">
+                        <label>Email *</label>
                         <div class="input-container">
-                            <input type="email" value="" placeholder="Email" data-required="true" aria-required="true" formControlName="email">
+                            <input type="email" value="" placeholder="Email" data-required="true" aria-required="true" formControlName="email" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa un email valido</span>
                     </div>
-                    <div class="form-item">
-                        <label>Teléfono <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlCliente('telefono').invalid && (getControlCliente('telefono').dirty || getControlCliente('telefono').touched)">
+                        <label>Teléfono *</label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Teléfono" aria-required="true" autocomplete="off" formControlName="telefono">
+                            <input type="number" inputmode="numeric" value="" placeholder="Teléfono" aria-required="true" autocomplete="off" formControlName="telefono" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu telefono</span>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item" [class.warning]="getControlCliente('cuit').invalid && (getControlCliente('cuit').dirty || getControlCliente('cuit').touched)">
+                        <label>Cuit *</label>
+                        <div class="input-container">
+                            <input type="number" inputmode="numeric" value="" placeholder="Cuit" data-required="true" aria-required="true" formControlName="cuit" required>
+                        </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu cuit</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlCliente('servicios').invalid && (getControlCliente('servicios').dirty || getControlCliente('servicios').touched)">
+                        <label>Servicio *</label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Servicios" aria-required="true" autocomplete="off" formControlName="servicios" required>
+                        </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tus servicios</span>
                     </div>
                 </div>
                 <div class="bottom-form">
-                    <label>Mensaje <span>*</span></label>
+                    <label>Mensaje</label>
                     
                     <textarea rows="6" maxlength="180" formControlName="texto"></textarea>
                     
@@ -67,41 +92,66 @@
 
             <form *ngIf="formularioActual === 'proveedor'" [formGroup]="proveedorForm" (ngSubmit)="printForm(proveedorForm)">
                 <div class="top-form form-row">
-                    <div class="form-item">
-                        <label>Apellido <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlProveedor('apellido').invalid && (getControlProveedor('apellido').dirty || getControlProveedor('apellido').touched)">
+                        <label>
+                            Apellido *
+                        </label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Apellido" aria-required="true" formControlName="apellido">
+                            <input type="text" class="form-control" placeholder="Apellido" value="" formControlName="apellido">
                         </div>
+                        <span *ngIf="getControlProveedor('apellido').invalid && (getControlProveedor('apellido').dirty || getControlProveedor('apellido').touched)" class="text-warning">Este campo es obligatorio.Por favor ingresa tu apellido</span>
                     </div>
-                    <div class="form-item">
-                        <label>Nombre <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlProveedor('nombre').invalid && (getControlProveedor('nombre').dirty || getControlProveedor('nombre').touched)">
+                        <label>
+                            Nombre *
+                        </label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Nombre" aria-required="true" formControlName="nombre">
+                            <input type="text" value="" placeholder="Nombre" aria-required="true" formControlName="nombre" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu nombre</span>
                     </div>
-                    <div class="form-item">
-                        <label>Empresa <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlProveedor('empresa').invalid && (getControlProveedor('empresa').dirty || getControlProveedor('empresa').touched)">
+                        <label>Empresa *</label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Empresa" aria-required="true" formControlName="empresa">
+                            <input type="text" value="" placeholder="Empresa" aria-required="true" formControlName="empresa" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu empresa</span>
                     </div>
                 </div>
                 <div class="midle-form form-row">
-                    <div class="form-item">
-                        <label>Email <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlProveedor('email').invalid && (getControlProveedor('email').dirty || getControlProveedor('email').touched)">
+                        <label>Email *</label>
                         <div class="input-container">
-                            <input type="email" value="" placeholder="Email" data-required="true" aria-required="true" formControlName="email">
+                            <input type="email" value="" placeholder="Email" data-required="true" aria-required="true" formControlName="email" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa un email valido</span>
                     </div>
-                    <div class="form-item">
-                        <label>Teléfono <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlProveedor('telefono').invalid && (getControlProveedor('telefono').dirty || getControlProveedor('telefono').touched)">
+                        <label>Teléfono *</label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Teléfono" aria-required="true" autocomplete="off" formControlName="telefono">
+                            <input type="number" inputmode="numeric" value="" placeholder="Teléfono" aria-required="true" autocomplete="off" formControlName="telefono" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu telefono</span>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item" [class.warning]="getControlProveedor('cuit').invalid && (getControlProveedor('cuit').dirty || getControlProveedor('cuit').touched)">
+                        <label>Cuit *</label>
+                        <div class="input-container">
+                            <input type="number" inputmode="numeric" value="" placeholder="Cuit" data-required="true" aria-required="true" formControlName="cuit" required>
+                        </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu cuit</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlProveedor('servicios').invalid && (getControlProveedor('servicios').dirty || getControlProveedor('servicios').touched)">
+                        <label>Servicio *</label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Servicios" aria-required="true" autocomplete="off" formControlName="servicios" required>
+                        </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tus servicios</span>
                     </div>
                 </div>
                 <div class="bottom-form">
-                    <label>Mensaje <span>*</span></label>
+                    <label>Mensaje</label>
                     
                     <textarea rows="6" maxlength="180" formControlName="texto"></textarea>
                     
@@ -115,45 +165,86 @@
             <form *ngIf="formularioActual === 'cv'" [formGroup]="cvForm" (ngSubmit)="printForm(cvForm)">
 
                 <div class="top-form form-row">
-                    <div class="form-item">
-                        <label>Apellido <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlPostulante('apellido').invalid && (getControlPostulante('apellido').dirty || getControlPostulante('apellido').touched)">
+                        <label>
+                            Apellido *
+                        </label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Apellido" aria-required="true" formControlName="apellido">
+                            <input type="text" class="form-control" placeholder="Apellido" value="" formControlName="apellido">
+                        </div>
+                        <span *ngIf="getControlPostulante('apellido').invalid && (getControlPostulante('apellido').dirty || getControlPostulante('apellido').touched)" class="text-warning">Este campo es obligatorio.Por favor ingresa tu apellido</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlPostulante('nombre').invalid && (getControlPostulante('nombre').dirty || getControlPostulante('nombre').touched)">
+                        <label>
+                            Nombre *
+                        </label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Nombre" aria-required="true" formControlName="nombre" required>
+                        </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu nombre</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlPostulante('empresa').invalid && (getControlPostulante('empresa').dirty || getControlPostulante('empresa').touched)">
+                        <label>Empresa *</label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="Empresa" aria-required="true" formControlName="empresa" required>
+                        </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu empresa</span>
+                    </div>
+                </div>
+
+                <div class="top-form form-row">
+                    <div class="form-item" [class.warning]="getControlPostulante('profesion').invalid && (getControlPostulante('profesion').dirty || getControlPostulante('profesion').touched)">
+                        <label for="profesion">Profesion *</label>
+                        <div class="input-container selec-container">
+                            <select id="profesion" name="profesion" aria-required="true" formControlName="profesion" required>
+                                <option value="" disabled selected style="color: #888888;">Selecciona un puesto</option>
+                                <option value="chofer">Chofer</option>
+                                <option value="contador">Contador</option>
+                                <option value="dador">Dador</option>
+                            </select>
+                            <span class="text-warning">Este campo es obligatorio.Por favor ingrese el puesto a postularse</span>
                         </div>
                     </div>
-                    <div class="form-item">
-                        <label>Nombre <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlPostulante('edad').invalid && (getControlPostulante('edad').dirty || getControlPostulante('edad').touched)">
+                        <label>Edad *</label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Nombre" aria-required="true" formControlName="nombre">
+                            <input type="number" inputmode="numeric" value="" placeholder="Edad" aria-required="true" formControlName="edad" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingrese su edad</span>
                     </div>
-                    <div class="form-item">
-                        <label>Empresa <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlPostulante('dni').invalid && (getControlPostulante('dni').dirty || getControlPostulante('dni').touched)">
+                        <label>DNI *</label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Empresa" aria-required="true" formControlName="empresa">
+                            <input type="number" inputmode="numeric" value="" placeholder="DNI" aria-required="true" formControlName="dni" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingrese su DNI</span>
                     </div>
                 </div>
                 <div class="midle-form form-row">
-                    <div class="form-item">
-                        <label>Email <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlPostulante('email').invalid && (getControlPostulante('email').dirty || getControlPostulante('email').touched)">
+                        <label>Email *</label>
                         <div class="input-container">
-                            <input type="email" value="" placeholder="Email" data-required="true" aria-required="true" formControlName="email">
+                            <input type="email" value="" placeholder="Email" data-required="true" aria-required="true" formControlName="email" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingrese un email valido</span>
                     </div>
-                    <div class="form-item">
-                        <label>Teléfono <span>*</span></label>
+                    <div class="form-item" [class.warning]="getControlPostulante('telefono').invalid && (getControlPostulante('telefono').dirty || getControlPostulante('telefono').touched)">
+                        <label>Teléfono *</label>
                         <div class="input-container">
-                            <input type="text" value="" placeholder="Teléfono" aria-required="true" autocomplete="off" formControlName="telefono">
+                            <input type="number" inputmode="numeric" value="" placeholder="Teléfono" aria-required="true" autocomplete="off" formControlName="telefono" required>
                         </div>
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingrese su telefono</span>
                     </div>
                 </div>
                 
                 <!-- Código HTML -->
                 <div class="bottom-form form-row">
-                    <label>Adjuntá tu CV</label>
-                    <div class="input-file">
-                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.js,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml">
+                    <div class="input-file" [class.warning]="getControlPostulante('archivo').invalid && (getControlPostulante('archivo').dirty || getControlPostulante('archivo').touched)">
+                        <label for="archivo-input" class="archivo-label">
+                            <span class="archivo-label-button" >Adjuntá tu CV</span>
+                            <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                        </label>
+                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.js,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="archivo" id="archivo-input" class="archivo-input" (change)="onFileSelected($event)" required>
                     </div>
                 </div>
 
