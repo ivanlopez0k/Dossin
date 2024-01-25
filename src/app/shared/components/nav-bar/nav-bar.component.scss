@@ -28,6 +28,23 @@
 
 .language-item{
   cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.language-item a span{
+  font-size: 0.9rem;
+}
+
+.language-item:hover,
+.language-item.active{
+  background-color: var(--primary-lightgray);
+}
+.language-item.active a span{
+  font-weight: 500;
 }
 
 .bottom-content {

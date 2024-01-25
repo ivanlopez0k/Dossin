@@ -9,22 +9,22 @@ export class ServiciosComponent {
   serviceData = [
     {
       cardTitle: 'Transporte de Cargas Paletizadas',
-      cardImg: 'https://rigar.com.ar/wp-content/uploads/2019/05/camion-semi-remolque-01-1024x725.png',
+      cardImg: '../../../../assets/logos/servicios-sec1/cargas-paletizadas.png',
       cardDesc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ex alias esse expedita! Labore dolore doloremque aut iuredolor    in     aliquam.',
     },
     {
       cardTitle: 'Cargas a Granel',
-      cardImg: 'https://rigar.com.ar/wp-content/uploads/2019/05/camion-semi-remolque-01-1024x725.png',
+      cardImg: '../../../../assets/logos/servicios-sec1/granel.png',
       cardDesc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ex alias esse expedita! Labore dolore doloremque aut iuredolor    in     aliquam.',
     },
     {
       cardTitle: 'Transporte de Contenedores',
-      cardImg: 'https://rigar.com.ar/wp-content/uploads/2019/05/camion-semi-remolque-01-1024x725.png',
+      cardImg: '../../../../assets/logos/servicios-sec1/container.png',
       cardDesc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ex alias esse expedita! Labore dolore doloremque aut iuredolor    in     aliquam.',
     },
     {
       cardTitle: 'Transporte Internacional',
-      cardImg: 'https://rigar.com.ar/wp-content/uploads/2019/04/internacional.png',
+      cardImg: '../../../../assets/logos/servicios-sec1/transporte-internacional.png',
       cardDesc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ex alias esse expedita! Labore dolore doloremque aut iuredolor    in     aliquam.',
     }
   ];

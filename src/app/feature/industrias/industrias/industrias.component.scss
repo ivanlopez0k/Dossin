@@ -53,10 +53,11 @@
 }
 
 .empresa {
-    width: calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
+    width: calc(30% - 20px);
+    max-width: calc(30% - 20px);
     margin-bottom: 20px;
     box-sizing: border-box;
+    padding: 10px;
 }
 
 .empresa-item {
@@ -65,20 +66,22 @@
     display: flex;
     flex-direction: column;
     overflow: hidden; 
+    border-radius: 8px;
 }
 
 .empresa-imagen {
     width: 100%;
-    height: 250px; 
+    height: 250px;
     overflow: hidden; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-img {
-    width: auto;
-    height: 100%;
+.empresa-imagen img {
+    width: 70%;
+    height: auto;
+    max-height: fit-content;
     object-fit: fill;
 }
 

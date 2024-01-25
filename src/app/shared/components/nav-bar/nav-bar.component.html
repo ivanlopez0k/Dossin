@@ -2,12 +2,12 @@
   <div class="top-line">
     <div class="language-container">
         <ul class="language-list">
-            <li class="language-item">
-                <a class=""><span (click)="switchLang('es')">ES</span></a>
-            </li>
-            <li class="language-item">
-                <a><span class="" (click)="switchLang('en')">EN</span></a>
-            </li>
+          <li class="language-item" [class.active]="selectedLang === 'es'">
+              <a class=""><span (click)="switchLang('es')">ES</span></a>
+          </li>
+          <li class="language-item" [class.active]="selectedLang === 'en'">
+              <a><span class="" (click)="switchLang('en')">EN</span></a>
+          </li>
         </ul>
     </div>		
   </div>

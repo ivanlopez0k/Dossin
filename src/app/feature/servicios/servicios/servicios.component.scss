@@ -43,7 +43,6 @@
 
 .elegirnos-section {
     margin-top: 50px;
-    //background-color: #f1f1f1;
     width: 100%;
     min-height: 360px;
     display: flex;
@@ -69,9 +68,13 @@
 .elegirnos-flex {
     width: 100%;
     display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;  
+    justify-content: center;
+    align-items: center;
 }
 .elegirnos-item {
-    width: 25%;
+    width: 33%;
     padding: 10px;
     display: flex;
     flex-direction: column;
