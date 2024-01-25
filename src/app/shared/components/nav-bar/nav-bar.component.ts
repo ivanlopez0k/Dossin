@@ -1,5 +1,4 @@
 import { Component, Renderer2 } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from 'src/app/services/language/language.service';
 
 @Component({
@@ -9,6 +8,7 @@ import { LanguageService } from 'src/app/services/language/language.service';
 })
 export class NavBarComponent {
   isSideMenuVisible = false;
+  selectedLang: string | undefined; // Track the selected language
 
   constructor(private renderer: Renderer2, public translate: LanguageService) { }
 
@@ -25,7 +25,9 @@ export class NavBarComponent {
       }
     }
   }
+
   switchLang(lang: string) {
     this.translate.setLanguage(lang);
+    this.selectedLang = lang; // Update the selected language
   }
 }
