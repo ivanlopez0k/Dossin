@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.scss']
 })
-export class ContactoComponent implements OnInit{
+export class ContactoComponent{
   portadaData = {
     videoSrc: '../../../../assets/videos/placeholder-video.mp4',
     titulo: 'Contactanos',
@@ -58,11 +58,7 @@ export class ContactoComponent implements OnInit{
       archivo: new FormControl('', Validators.required),
     });
   }
-  
 
-  ngOnInit(): void {
-    
-  }
   
   onFileSelected(event: any): void {
     const archivoInput = event.target as HTMLInputElement;

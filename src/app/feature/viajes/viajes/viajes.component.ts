@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators, FormsModule, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormsModule, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-viajes',
@@ -8,17 +8,30 @@ import { FormBuilder, Validators, FormsModule, FormGroup } from '@angular/forms'
 })
 export class ViajesComponent {
 
-  constructor(private _formBuilder: FormBuilder){}
+  datosViaje: FormGroup;
 
-datosViaje = this._formBuilder.group({
-  nombre: ['', Validators.required],
-  apellido: ['', Validators.required],
-  telefono: ['', Validators.required],
-  transporte: ['', Validators.required],
-  mensaje: ['', Validators.required]
-})
+constructor(private fb: FormBuilder){
+  this.datosViaje = this.fb.group({
+    nombre: new FormControl ('', Validators.required),
+    apellido: new FormControl ('', Validators.required),
+    telefono: new FormControl ('', Validators.required),
+    transporte: new FormControl ('', Validators.required),
+    mensaje: new FormControl ('', Validators.required)
+  })
+}
+  
 
-submitForm(){
-  console.log('Formulario enviado:', this.datosViaje.value)
+getControl(formControlName: string) {
+  return this.datosViaje.controls[formControlName];
+}
+submitForm(form: FormGroup): void {
+  if(form.valid){
+    console.log(form.value);
+    form.reset();
+  }
+  else {
+    form.markAllAsTouched();
+    console.log("No es valido el formulario, cabeza");
+  }
 }
 }

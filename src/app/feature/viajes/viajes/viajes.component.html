@@ -8,38 +8,46 @@
                 <img class="qr-image" src="../../../../assets/images/qr-image-example.jpg">
             </div>
         </div>
+
         <div class="form-container">
             <div class="form-title">
                 <h2>Cargá tus datos y nos ponemos en contacto</h2>
             </div>
-            <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
-            <div class="form">
-                <div class="first-part">
-                <div class="input-form">
-                <span class="span-text">Nombre</span>
-                <input type="text" formControlName="nombre" placeholder="Nombre"></div>
-                <div class="input-form">
-                <span class="span-text">Apellido</span>
-                <input type="text" formControlName="apellido" placeholder="Apellido">
+
+            <form [formGroup]="datosViaje" (ngSubmit)="submitForm(datosViaje)">
+                <div class="form">
+                    <div class="first-part">
+                        <div class="input-form" [class.warning]="getControl('Nombre') && (getControl('Nombre').invalid && (getControl('Nombre').dirty || getControl('Nombre').touched))">
+                            <span class="span-text">Nombre *</span>
+                            <input type="text" formControlName="nombre" placeholder="Nombre">
+                            <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu empresa</span>
+                        </div>
+                        <div class="input-form" [class.warning]="getControl('Apellido').invalid && (getControl('Apellido').dirty || getControl('Apellido').touched)">
+                            <span class="span-text">Apellido *</span>
+                            <input type="text" formControlName="apellido" placeholder="Apellido">
+                        </div>
+                    </div>
+                    
+                    <div class="first-part">
+                        <div class="input-form" [class.warning]="getControl('Transporte').invalid && (getControl('Transporte').dirty || getControl('Transporte').touched)">
+                            <span class="span-text">Transporte *</span>
+                            <input type="text" formControlName="transporte" placeholder="Transporte">
+                        </div>
+                        <div class="input-form" [class.warning]="getControl('telefono').invalid && (getControl('telefono').dirty || getControl('telefono').touched)">
+                            <span class="span-text">Teléfono *</span>
+                            <input type="text" formControlName="telefono" placeholder="Telefono">
+                        </div>
+                    </div>
+
+                    <div class="input-form-message" [class.warning]="getControl('mensaje').invalid && (getControl('mensaje').dirty || getControl('mensaje').touched)">
+                        <span class="span-text">Mensaje *</span>
+                        <textarea name="mensaje" id="mensaje" cols="10" rows="6" formControlName="mensaje"></textarea>
+                    </div>
                 </div>
-            
-            </div>
-            <div class="first-part">
-                <div class="input-form">
-                <span class="span-text">Transporte</span>
-                <input type="text" formControlName="transporte" placeholder="Transporte"></div>
-                <div class="input-form">
-                <span class="span-text">Teléfono</span>
-                <input type="text" formControlName="telefono" placeholder="351123456"></div>
-            </div>
-    
-                <div class="input-form-message">
-                <span class="span-text">Mensaje</span>
-                <textarea name="mensaje" id="mensaje" cols="10" rows="6" formControlName="mensaje" ></textarea>
-                </div>
-            </div>
-            <button type="submit" class="btn">Enviar</button> 
-        </form>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
         </div>
     </div>
 </div>
+

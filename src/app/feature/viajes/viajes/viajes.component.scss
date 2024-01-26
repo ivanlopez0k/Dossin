@@ -172,6 +172,14 @@ span{
     cursor: pointer;
 }
 
+.text-warning {
+    display: none;
+}
+.input-form.warning {
+}
+.input-form.warning .span-text {
+    color: #ff0400;
+}
 
 @media screen and (max-width: 1024px) {
     .first-part{
