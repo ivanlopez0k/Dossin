@@ -9,6 +9,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { ServiceCardComponent } from './components/cards/service-card/service-card.component';
 import { PortadaComponent } from './components/portada/portada.component';
+import { BlogCardsContainerComponent } from './components/blog-cards-container/blog-cards-container.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PortadaComponent } from './components/portada/portada.component';
     FooterComponent,
     FloatingWhatsappComponent,
     ServiceCardComponent,
-    PortadaComponent
+    PortadaComponent,
+    BlogCardsContainerComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { PortadaComponent } from './components/portada/portada.component';
     FooterComponent,
     FloatingWhatsappComponent,
     ServiceCardComponent,
-    PortadaComponent
+    PortadaComponent,
+    BlogCardsContainerComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA  ]
 })
