@@ -41,7 +41,7 @@ export class IndustriasComponent {
     },
     {
       empTitle: 'ARAUCO',
-      empLogo: '../../../../assets/images/clientes/ARAUCO.jpg',
+      empLogo: '../../../../assets/images/clientes/arauco.png',
     },
     {
       empTitle: 'BUNGE',
@@ -57,7 +57,7 @@ export class IndustriasComponent {
     },
     {
       empTitle: 'CONCI',
-      empLogo: '../../../assets/images/clientes/Conci.jpg',
+      empLogo: '../../../assets/images/clientes/conci.png',
     },
     {
       empTitle: 'Glucovil',
@@ -69,11 +69,11 @@ export class IndustriasComponent {
     },
     {
       empTitle: 'Molinos Agro',
-      empLogo: '../../../assets/images/clientes/Molinos-Agro.jpg',
+      empLogo: '../../../assets/images/clientes/molinos agro.png',
     },
     {
       empTitle: 'SER BEEF',
-      empLogo: '../../../assets/images/clientes/SER-beef.jpg',
+      empLogo: '../../../assets/images/clientes/serbeef.png',
     },
     {
       empTitle: 'Sinerlogic',
@@ -81,15 +81,15 @@ export class IndustriasComponent {
     },
     {
       empTitle: 'Superblock',
-      empLogo: '../../../assets/images/clientes/superblock.jpg',
+      empLogo: '../../../assets/images/clientes/super.png',
     },
     {
       empTitle: 'Vicentin S.A.I.C',
-      empLogo: '../../../assets/images/clientes/vicentin-saic.jpg',
+      empLogo: '../../../assets/images/clientes/vicentin.png',
     },
     {
       empTitle: 'VIEL',
-      empLogo: '../../../assets/images/clientes/viel.jpg',
+      empLogo: '../../../assets/images/clientes/viel.png',
     },
   ];
 
