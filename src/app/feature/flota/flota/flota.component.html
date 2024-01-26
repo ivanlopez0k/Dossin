@@ -1,2 +1,22 @@
 
 <app-portada [portadaInfo]="portadaData"></app-portada>
+<div class="intro-container">
+    <div class="intro-content">
+        <h1>¿Cómo está compuesta nuestra flota?</h1>
+        <p>Contamos con semi remolques, siders y chasis acoplados que permiten transportar todo tipo de mercadería. La normativa establecida por el decreto 32/2018 nos ha permitido realizar una gran inversión y en la actualidad nuestros vehículos ofrecen hasta un 25% más de capacidad de carga que la media nacional.  En la actualidad contamos con las siguientes unidades:</p>
+    </div>
+</div>
+
+<div class="recorrido-container">
+    <div class="recorrido-content">
+        <div *ngFor="let item of recorridoItems" class="recorrido-item">
+            <div class="recorrido-imagen">
+                <img [src]="item.imagenSrc" alt="{{ item.titulo }}">
+            </div>
+            <div class="recorrido-info">
+                <h1>{{ item.titulo }}</h1>
+                <p>{{ item.descripcion }}</p>
+            </div>
+        </div>
+    </div>
+</div>
