@@ -132,6 +132,12 @@
         font-size: 25px;
     }
     .recorrido-info p{
-        line-height: 1.5em;
+        line-height: 1.8em;
+    }
+}
+
+@media (max-width: 430px) {
+    .recorrido-info p{
+        line-height: 1.5;
     }
 }
