@@ -33,19 +33,6 @@ export class HomeComponent implements OnInit {
         description: 'blog3-p',
         link: '/blog'
     },
-    { 
-        imageSrc: '../../../../assets/images/camion-3.jpeg',
-        title: 'blog title3',
-        description: 'blog3-p',
-        link: '/blog'
-    },
-    { 
-        imageSrc: '../../../../assets/images/camion-3.jpeg',
-        title: 'blog title3',
-        description: 'blog3-p',
-        link: '/blog'
-    }
-    // Agrega más elementos de blog según sea necesario
   ];
   constructor(private translate: TranslateService) {}
 

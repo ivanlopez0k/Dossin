@@ -13,29 +13,36 @@
                 <h2>Cargá tus datos y nos ponemos en contacto</h2>
             </div>
             <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
-            <div class="form">
-                <div class="first-part">
-                <div class="input-form">
-                <span class="span-text">Nombre</span>
-                <input type="text" formControlName="nombre" placeholder="Nombre"></div>
-                <div class="input-form">
-                <span class="span-text">Apellido</span>
-                <input type="text" formControlName="apellido" placeholder="Apellido">
+                <div class="form">
+                    <div class="first-part">
+                        <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
+                            <span class="span-text">Nombre</span>
+                            <input type="text" formControlName="nombre"     placeholder="Nombre">
+                            <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu nombre</span>
+                        </div>
+                        <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
+                            <span class="span-text">Apellido</span>
+                            <input type="text" formControlName="apellido" placeholder="Apellido">
+                            <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu apellido</span>
+                        </div>
                 </div>
-            
-            </div>
-            <div class="first-part">
-                <div class="input-form">
-                <span class="span-text">Transporte</span>
-                <input type="text" formControlName="transporte" placeholder="Transporte"></div>
-                <div class="input-form">
-                <span class="span-text">Teléfono</span>
-                <input type="text" formControlName="telefono" placeholder="351123456"></div>
-            </div>
+                <div class="first-part">
+                    <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
+                        <span class="span-text">Transporte</span>
+                        <input type="text" formControlName="transporte"        placeholder="Transporte">
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu transporte</span>
+                    </div>
+                    <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
+                        <span class="span-text">Teléfono</span>
+                        <input type="number" formControlName="telefono"      placeholder="Teléfono">
+                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu telefono</span>
+                    </div>
+                </div>
     
-                <div class="input-form-message">
-                <span class="span-text">Mensaje</span>
-                <textarea name="mensaje" id="mensaje" cols="10" rows="6" formControlName="mensaje" ></textarea>
+                <div class="input-form-message" [class.warning]="isFormControlInvalid('mensaje')">
+                    <span class="span-text">Mensaje</span>
+                    <textarea name="mensaje" id="mensaje" cols="10" rows="6" formControlName="mensaje" ></textarea>
+                    <span class="text-warning">Este campo es obligatorio.Por favor ingresa un mensaje</span>
                 </div>
             </div>
             <button type="submit" class="btn">Enviar</button> 

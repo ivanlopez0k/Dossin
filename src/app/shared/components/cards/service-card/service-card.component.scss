@@ -9,8 +9,8 @@
 
 .image-card {
     width: 50%;
-    flex-grow: 1; /* Permite que la imagen ocupe todo el espacio disponible */
-    position: relative; /* Añadido para posicionar correctamente el contenido */
+    flex-grow: 1; 
+    position: relative; 
 }
 
 .image-card img {
@@ -22,25 +22,22 @@
 
 .title-card {
     padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .info-card {
-    position: relative;
-    height: 0;
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
     text-align: center;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+    padding: 0 20px;
+}
+.info-card > div{
     overflow: hidden;
-    transition: 1s;
     padding: 0 20px;
 }
 
 .card-container:hover .info-card {
+    grid-template-rows: 1fr;
     height: auto;
     padding: 20px;
 }
