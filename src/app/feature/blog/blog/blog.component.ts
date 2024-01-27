@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
+  portadaData = {
+    videoSrc: '../../../../assets/videos/placeholder-video.mp4',
+    titulo: '',
+    texto: '',
+  };
   blogsData = [
     { 
         imageSrc: '../../../../assets/images/camion-1.jpeg',
@@ -25,18 +30,5 @@ export class BlogComponent {
         description: 'blog3-p',
         link: '/blog'
     },
-    { 
-        imageSrc: '../../../../assets/images/camion-3.jpeg',
-        title: 'blog title3',
-        description: 'blog3-p',
-        link: '/blog'
-    },
-    { 
-        imageSrc: '../../../../assets/images/camion-3.jpeg',
-        title: 'blog title3',
-        description: 'blog3-p',
-        link: '/blog'
-    }
-    // Agrega más elementos de blog según sea necesario
   ];
 }
