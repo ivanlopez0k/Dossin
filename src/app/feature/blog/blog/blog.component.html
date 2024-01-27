@@ -1,1 +1,27 @@
-<app-blog-cards-container [blogs]="blogsData"></app-blog-cards-container>
+<app-portada [portadaInfo]="portadaData"></app-portada>
+<div class="blog-item-container">
+    <div class="blog-item-content">
+        <div class="image-container">
+            <img src="https://rigar.com.ar/wp-content/uploads/2020/04/header-rigar-2204-768x371.png">
+        </div>
+        <div class="info-container">
+            <h2>La importancia de seleccionar el mejor medio de transporte de mercancías</h2>
+            <p>Elegir el transporte adecuado es un elemento clave cuando se requiere importar o exportar mercancía. Cada producto tiene características y condiciones de entrega específicas, por</p>
+            <a href="/servicios" class="info-button"><span>+</span>INFO</a>
+        </div>
+    </div>
+</div>
+<app-blog-cards-container [blogs]="blogsData" [notHome]="true"></app-blog-cards-container>
+
+<div class="blog-item-container reverse">
+    <div class="blog-item-content">
+        <div class="image-container">
+            <img src="https://rigar.com.ar/wp-content/uploads/2020/04/header-rigar-2204-768x371.png">
+        </div>
+        <div class="info-container">
+            <h2>La importancia de seleccionar el mejor medio de transporte de mercancías</h2>
+            <p>Elegir el transporte adecuado es un elemento clave cuando se requiere importar o exportar mercancía. Cada producto tiene características y condiciones de entrega específicas, por</p>
+            <a href="/servicios" class="info-button"><span>+</span>INFO</a>
+        </div>
+    </div>
+</div>
