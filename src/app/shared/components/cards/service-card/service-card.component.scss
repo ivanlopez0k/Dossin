@@ -42,3 +42,18 @@
     padding: 20px;
 }
 
+.arrow-container {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow-container img{
+    transform: scaleY(-1);
+    transition: 0.5s;
+}
+
+.card-container:hover .arrow-container img {
+    transform: scaleY(1);
+}
