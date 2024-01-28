@@ -1,6 +1,8 @@
 
 <app-portada [portadaInfo]="portadaData"></app-portada>
 
+
+
 <div class="industrias-section">
     <div class="industrias-content">
         <div class="industrias-item" *ngFor="let card of industriaData; let i = index">
@@ -11,7 +13,9 @@
 
 <div class="empresas-section">
     <h1 class="empresas-main-title">Algunos de Nuestros Clientes</h1>
-    <div class="empresas-content">
+    <app-carrousel-clientes [empresasInfo]="empresasData"></app-carrousel-clientes>
+    <!--
+        <div class="empresas-content">
         <div class="empresa" *ngFor="let empresa of empresasData; let i = index">
             <div class="empresa-item">
                 <div class="empresa-imagen">
@@ -20,4 +24,6 @@
             </div>
         </div>
     </div>
+    -->
+    
 </div>
