@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-viajes',
@@ -30,10 +30,20 @@ export class ViajesComponent {
     return control.invalid && (control.dirty || control.touched);
   }
 
-  submitForm(){
+async submitForm(){
     if(this.datosViaje.valid){
-      console.log('Formulario enviado:', this.datosViaje.value);
+      emailjs.init('0iqF7t81iqHpG9ou3')
+      let res = await emailjs.send("service_snxjftg","template_hdclsf7",{
+        tipoForm: this.datosViaje.value.tipoForm,
+        nombre: this.datosViaje.value.nombre,
+        apellido: this.datosViaje.value.apellido,
+        telefono: this.datosViaje.value.telefono,
+        transporte: this.datosViaje.value.transporte,
+        mensaje: this.datosViaje.value.mensaje
+      });
+      alert('Mensaje enviado');
       this.datosViaje.reset();
+    
     }
     else {
       this.datosViaje.markAllAsTouched();
