@@ -62,7 +62,7 @@
 .float-text {
   position: fixed;
   bottom: 5%;
-  right: 8rem;
+  right: 9rem;
   background-color: #10df7e;
   color: #FFF;
   border-radius: 5px;
@@ -75,6 +75,8 @@
 .float:hover + .float-text {
   display: block;
 }
+
+
 
 @keyframes fadeIn {
   from {
