@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IndustriasRoutingModule } from './industrias-routing.module';
 import { IndustriasComponent } from './industrias/industrias.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -11,7 +12,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     IndustriasRoutingModule,
-    SharedModule
+    SharedModule,
+    TranslateModule.forChild()
   ]
 })
 export class IndustriasModule { }

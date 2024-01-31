@@ -43,6 +43,106 @@
     "footer-sumate-dossin": "Sumate a Dossin",
     "footer-oficina": "Oficina Comercial",
     "footer-base": "Base operativas",
-    "footer-copyright": "Todos los derechos reservados."
+    "footer-copyright": "Todos los derechos reservados.",
 
+
+    "viajes-qr-title": "¿Queres enterarte de nuestros beneficios que ofrecemos a los transportistas tercerizados?",
+    "viajes-form-title":"Cargá tus datos y nos ponemos en contacto",
+    "viajes-form-name":"Nombre",
+    "viajes-form-lastname":"Apellido",
+    "viajes-form-transport":"Transporte",
+    "viajes-form-telephone":"Teléfono",
+    "viajes-form-message":"Mensaje",
+    "viajes-form-send":"Enviar",
+    "viajes-form-name-warning":"Este campo es obligatorio.Por favor ingresa tu nombre",
+    "viajes-form-lastname-warning":"Este campo es obligatorio.Por favor ingresa tu apellido",
+    "viajes-form-transport-warning":"Este campo es obligatorio.Por favor ingresa tu transporte",
+    "viajes-form-telephone-warning":"Este campo es obligatorio.Por favor ingresa tu telefono",
+    "viajes-form-message-warning":"Este campo es obligatorio.Por favor ingresa un mensaje"
+
+    ,
+
+    "servicios-card-paletizadas-title":"Transporte de Cargas Paletizadas",
+    "servicios-card-paletizadas-desc":"Nuestra experiencia en el transporte de cargas paletizadas nos permite ofrecer un servicio integral para una amplia gama de sectores. Desde productos alimenticios que requieren condiciones especiales hasta materiales de construcción e insumos que demandan un manejo robusto, nos aseguramos de que tu carga llegue en óptimas condiciones",
+    "servicios-card-granel-title":"Cargas a Granel",
+    "servicios-card-granel-desc":"Nos destacamos por ofrecer servicios especializados en transporte de cargas a granel, abarcando commodities, especialidades del agro, derivados de la minería y áridos. Nuestra flota moderna y capacitada está diseñada para garantizar el traslado eficiente y seguro de estos productos, cumpliendo con los más altos estándares de calidad y cuidado. Ya sea que necesites movilizar cereales, productos agrícolas de alto valor, derivados mineros o áridos, estamos comprometidos a ofrecer soluciones logísticas confiables que se adapten a las necesidades específicas de tu industria.",
+    "servicios-card-contenedores-title":"Transporte de Contenedores",
+    "servicios-card-contenedeores-desc":"Somos capaces de realizar el movimiento eficiente de contenedores, ofreciendo opciones de round trips o viajes directos según tus necesidades logísticas. Nuestra capacidad para transportar contenedores de 20 o 40 pies garantiza flexibilidad en las operaciones de importación y exportación de tu empresa. Ya sea que busques optimizar rutas, reducir costos o mejorar la eficiencia en el transporte marítimo, nuestro equipo está preparado para proporcionar soluciones a medida que impulsen el éxito de tu cadena de suministro.",
+    "servicios-card-internacional-title":"Transporte Internacional",
+    "servicios-card-internacional-desc":"Ofrecemos soluciones integrales para el transporte internacional hacia destinos claves como Brasil, Chile, Uruguay y Bolivia. Nuestra red logística eficiente garantiza un traslado seguro y puntual de tu carga a través de fronteras, proporcionando servicios aduaneros y coordinación logística para facilitar un proceso sin contratiempos.",
+    "servicios-card-maquinaria-title": "Movimientos sobredimensionados y de maquinaria",
+    "servicios-card-maquinaria-desc": "Manejamos con precisión y eficiencia el traslado de cargas de gran envergadura, implementando soluciones logísticas innovadoras para superar desafíos únicos. Además, ofrecemos servicios especializados en el movimiento de maquinaria agrícola y vial. Nuestra flota y experiencia garantizan un transporte seguro y eficiente para tus activos más grandes, proporcionando soluciones adaptadas a las necesidades específicas de tu industria.",
+
+
+    "servicios-portada-titulo": "Servicios",
+    "servicios-portada-text": "Profesionales dedicados a atender todas las necesidades",
+
+    "servicios-elegirnos-titulo":"¿Por que trabajar con nosotros?",
+    "servicios-trayectoria": "Trayectoria",
+    "servicios-compromiso": "Compromiso con el cliente",
+    "servicios-seguimiento": "Seguimiento satelital",
+    "servicios-personalizado": "Servicio personalizado",
+    "servicios-ambiente": "Compromiso con el medio ambiente"
+
+
+    ,
+
+
+    "industrias-portada-titulo": "Industrias",
+    "industrias-portada-texto": "Tenemos experiencia en diversos rubros industriales",
+
+    "industrias-agricola-titulo": "Agricola",
+    "industrias-agricola-text": "La industria del campo es el mayor complejo exportador en la Argentina. Nosotros transportamos los granos que se producen en la región pampeana para que puedan ser despachados a mercados internacionales en los puertos de Rosario o Buenos Aires.",
+    "industrias-mineria-titulo": "Mineria",
+    "industrias-mineria-text": "Una operación minera eficiente requiere de una gran capacidad carga y una flota moderna que sea capaz de cumplir con las exigencias de seguridad, sostenibilidad y cuidado del medio ambiente que son cada vez más frecuentes en la industria minera. Pero así también de soluciones logísticas de avanzada que le permitan a las empresas reducir sus costos para adaptarse a los nuevos parámetros del mercado.",
+    "industrias-mercaderias-titulo": "Mercaderias",
+    "industrias-mercaderias-text": "La industria manufacturera produce una amplia variedad de bienes intermedios y finales. La entrega segura y puntual de estos bienes es fundamental para la continuidad y la rentabilidad de cada empresa. En Rigar manejamos eficientemente los envíos regulares, pequeños o grandes.",
+    "industrias-construccion-titulo": "Construccion",
+    "industrias-construccion-text": "Las limitaciones de capacidad de los camiones, la complejidad del sistema logístico, y las normas seguridad son sólo algunos de los desafíos que se presentan para las empresas de la industria de la construcción. En Rigar le ayudamos a superar estas complejidades con una red optimizada de transporte y logística que incluye equipo y manejo especializados, conductores capacitados, ingeniería de rutas, soporte administrativo y tecnología innovadora.",
+    "industrias-alimentos-titulo": "Alimenos y bebidas",
+    "industrias-alimentos-text": "Manejamos y almacenamos todo tipo de productos de alimentos y bebidas no perecederos y no refrigerados. Nuestras instalaciones y equipos se mantienen limpios y todos los alimentos se tratan de forma higiénica y de acuerdo con las normas y regulaciones de la industria durante la carga y el transporte.",
+
+    "industrias-empresas": "Algunos de Nuestros Clientes"
+
+
+    
+    ,
+
+
+
+    "contacto-cliente":"Cliente",
+    "contacto-proveedor": "Proveedor",
+    "contacto-cv": "Mandar CV",
+
+    "contacto-apellido": "Apellido",
+    "contacto-nombre": "Nombre",
+    "contacto-email": "Email",
+    "contacto-telefono": "Telefono",
+    "contacto-cuit": "CUIT",
+    "contacto-servicio": "Servicio",
+    "contacto-mensaje":"Mensaje",
+    "contacto-enviar": "Enviar",
+    "contacto-empresa": "Empresa",
+    "contacto-profesion": "Profesion",
+    "contacto-chofer": "Chofer",
+    "contacto-contador": "Contador",
+    "contacto-dador": "Dador",
+    "contacto-edad": "Edad",
+    "contacto-dni": "DNI",
+    "contacto-apellido-warning":"Este campo es obligatorio.Por favor ingresa tu apellido",
+    "contacto-seleccionador": "Selecciona un puesto",
+    "contacto-adj-CV": "Adjunta tu CV",
+    "contactoLabelText": "Selecciona un archivo",
+    "contacto-nombre-warning": "Este campo es obligatorio.Por favor ingresa tu nombre",
+    "contacto-empresa-warning": "Este campo es obligatorio.Por favor ingresa tu empresa",
+    "contacto-email-warning": "Este campo es obligatorio.Por favor ingresa un email valido",
+    "contacto-telefono-warning": "Este campo es obligatorio.Por favor ingresa tu telefono",
+    "contacto-cuit-warning": "Este campo es obligatorio.Por favor ingresa tu CUIT",
+    "contacto-servicio-warning": "Este campo es obligatorio.Por favor ingresa tus servicios",
+    "contacto-profesion-warning": "Este campo es obligatorio.Por favor ingrese el puesto a postularse",
+    "contacto-edad-warning": "Este campo es obligatorio.Por favor ingrese su edad",
+    "contacto-dni-warning": "Este campo es obligatorio.Por favor ingrese su DNI"
+
+
+    
 }
