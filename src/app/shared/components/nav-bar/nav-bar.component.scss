@@ -39,6 +39,15 @@
   font-size: 0.9rem;
 }
 
+.colored{
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.white{
+  color: white;
+}
+
 .language-item:hover,
 .language-item.active{
   background-color: var(--primary-lightgray);

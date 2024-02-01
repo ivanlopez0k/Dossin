@@ -2,11 +2,11 @@
   <div class="top-line">
     <div class="language-container">
         <ul class="language-list">
-          <li class="language-item" [class.active]="selectedLang === 'es'">
-              <a class=""><span (click)="switchLang('es')">ES</span></a>
+          <li class="language-item" [class.active]="selectedLang === 'es'" >
+              <a [ngClass]="{'colored': selectedLang === 'es'}" class=""><span  (click)="switchLang('es')" [ngClass]="{'white': selectedLang === 'es'}">ES</span></a>
           </li>
           <li class="language-item" [class.active]="selectedLang === 'en'">
-              <a><span class="" (click)="switchLang('en')">EN</span></a>
+              <a [ngClass]="{'colored': selectedLang === 'en'}"><span class="" [ngClass]="{'white': selectedLang === 'en'}" (click)="switchLang('en')">EN</span></a>
           </li>
         </ul>
     </div>		

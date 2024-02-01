@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-viajes',
   templateUrl: './viajes.component.html',
   styleUrls: ['./viajes.component.scss']
 })
-export class ViajesComponent {
+export class ViajesComponent implements OnInit{
   datosViaje:FormGroup;
-  constructor(private _formBuilder: FormBuilder){
+  constructor(private _formBuilder: FormBuilder, private translate: TranslateService){
     this.datosViaje = this._formBuilder.group({
       
       tipoForm: 'Viajes',
@@ -19,6 +20,10 @@ export class ViajesComponent {
       transporte: new FormControl('', Validators.required),
       mensaje: new FormControl('', Validators.required)
     })
+  }
+
+  ngOnInit(): void {
+      
   }
 
   getControl(formControlName: string) {
