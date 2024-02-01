@@ -14,21 +14,21 @@ export class BlogComponent {
   blogsData = [
     { 
         imageSrc: '../../../../assets/images/camion-1.jpeg',
-        title: 'blog title1',
+        title: 'Dador de carga',
         description: 'blog1-p',
-        link: '/blog'
+        link: '/blog/dador-de-carga'
     },
     { 
         imageSrc: '../../../../assets/images/camion-2.jpeg',
-        title: 'blog title2',
+        title: 'Seguimiento',
         description: 'blog2-p',
-        link: '/blog'
+        link: '/blog/seguimiento'
     },
     { 
         imageSrc: '../../../../assets/images/camion-3.jpeg',
-        title: 'blog title3',
+        title: 'Tercerizar Cargas',
         description: 'blog3-p',
-        link: '/blog'
+        link: '/blog/tercerizar-cargas'
     },
   ];
 }
