@@ -116,5 +116,9 @@ export class ContactoComponent implements OnInit{
     this.translate.get('contactoLabelText').subscribe((title: string) => {
       this.archivoLabelText = title;
     });
+    this.translate.get('contacto-portada-titulo').subscribe((description: string) => {
+      this.portadaData.titulo = description;
+    });
+    
   }
 }

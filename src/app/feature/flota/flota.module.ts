@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FlotaRoutingModule } from './flota-routing.module';
 import { FlotaComponent } from './flota/flota.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -11,7 +12,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     FlotaRoutingModule,
-    SharedModule
+    SharedModule,
+    TranslateModule.forChild()
   ]
 })
 export class FlotaModule { }
