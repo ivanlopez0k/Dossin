@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-
+import emailjs from '@emailjs/browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-viajes',
   templateUrl: './viajes.component.html',
   styleUrls: ['./viajes.component.scss']
 })
-export class ViajesComponent {
+export class ViajesComponent implements OnInit{
   datosViaje:FormGroup;
-  constructor(private _formBuilder: FormBuilder){
+  constructor(private _formBuilder: FormBuilder, private translate: TranslateService){
     this.datosViaje = this._formBuilder.group({
       
       tipoForm: 'Viajes',
@@ -21,6 +22,10 @@ export class ViajesComponent {
     })
   }
 
+  ngOnInit(): void {
+      
+  }
+
   getControl(formControlName: string) {
     return this.datosViaje.controls[formControlName];
   }
@@ -30,10 +35,20 @@ export class ViajesComponent {
     return control.invalid && (control.dirty || control.touched);
   }
 
-  submitForm(){
+async submitForm(){
     if(this.datosViaje.valid){
-      console.log('Formulario enviado:', this.datosViaje.value);
+      emailjs.init('0iqF7t81iqHpG9ou3')
+      let res = await emailjs.send("service_snxjftg","template_hdclsf7",{
+        tipoForm: this.datosViaje.value.tipoForm,
+        nombre: this.datosViaje.value.nombre,
+        apellido: this.datosViaje.value.apellido,
+        telefono: this.datosViaje.value.telefono,
+        transporte: this.datosViaje.value.transporte,
+        mensaje: this.datosViaje.value.mensaje
+      });
+      alert('Mensaje enviado');
       this.datosViaje.reset();
+    
     }
     else {
       this.datosViaje.markAllAsTouched();

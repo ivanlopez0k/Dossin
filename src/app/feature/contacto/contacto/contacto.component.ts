@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contacto',
@@ -20,7 +21,7 @@ export class ContactoComponent implements OnInit{
   archivoLabelText: string = 'Selecciona un archivo';
   selectedFile: File | null = null;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public translate: TranslateService) {
     this.clienteForm = this.fb.group({
       tipoForm: 'Cliente', 
       apellido: new FormControl('', Validators.required),
@@ -61,7 +62,11 @@ export class ContactoComponent implements OnInit{
   
 
   ngOnInit(): void {
-    
+    this.translate.onLangChange.subscribe(() => {
+      this.updateText();
+    });
+
+    this.updateText();
   }
   
   onFileSelected(event: any): void {
@@ -75,7 +80,7 @@ export class ContactoComponent implements OnInit{
     } else {
       // No se cargó ningún archivo
       this.selectedFile = null;
-      this.archivoLabelText = 'Selecciona un archivo';
+      this.archivoLabelText = '';
     }
   }
 
@@ -105,5 +110,15 @@ export class ContactoComponent implements OnInit{
   
   mostrarForm(formulario: string): void {
     this.formularioActual = formulario;
+  }
+
+  private updateText(): void {
+    this.translate.get('contactoLabelText').subscribe((title: string) => {
+      this.archivoLabelText = title;
+    });
+    this.translate.get('contacto-portada-titulo').subscribe((description: string) => {
+      this.portadaData.titulo = description;
+    });
+    
   }
 }

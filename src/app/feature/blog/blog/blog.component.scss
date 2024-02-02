@@ -57,13 +57,6 @@ a {
     margin-top: 1.6rem;
 }
 
-.reverse {
-    margin-top: 0;
-    margin-bottom: 100px;
-    .info-container {
-        order: -1;
-    }
-}
 
 @media screen and (max-width:1024px){
     .info-container h2{

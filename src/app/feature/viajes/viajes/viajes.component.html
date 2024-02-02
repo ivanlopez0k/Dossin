@@ -2,7 +2,7 @@
     <div class="content">
         <div class="qr-container">
             <div class="qr-title">
-                <h2>¿Queres enterarte de nuestros beneficios que ofrecemos a los transportistas tercerizados?</h2>
+                <h2>{{"viajes-qr-title" | translate }}</h2>
             </div>
             <div class="qr">
                 <img class="qr-image" src="../../../../assets/images/qr-image-example.jpg">
@@ -10,42 +10,42 @@
         </div>
         <div class="form-container">
             <div class="form-title">
-                <h2>Cargá tus datos y nos ponemos en contacto</h2>
+                <h2>{{"viajes-form-title" | translate }}</h2>
             </div>
             <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
                 <div class="form">
                     <div class="first-part">
                         <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
-                            <span class="span-text">Nombre</span>
-                            <input type="text" formControlName="nombre"     placeholder="Nombre">
-                            <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu nombre</span>
+                            <span class="span-text">{{"viajes-form-name" | translate }}</span>
+                            <input type="text" formControlName="nombre"     placeholder="{{'viajes-form-name'|translate}}">
+                            <span class="text-warning">{{"viajes-form-name-warning" | translate }}</span>
                         </div>
                         <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
-                            <span class="span-text">Apellido</span>
-                            <input type="text" formControlName="apellido" placeholder="Apellido">
-                            <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu apellido</span>
+                            <span class="span-text">{{"viajes-form-lastname" | translate }}</span>
+                            <input type="text" formControlName="apellido" placeholder="{{'viajes-form-lastname'|translate}}">
+                            <span class="text-warning">{{"viajes-form-lastname-warning" | translate }}</span>
                         </div>
                 </div>
                 <div class="first-part">
                     <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
-                        <span class="span-text">Transporte</span>
-                        <input type="text" formControlName="transporte"        placeholder="Transporte">
-                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu transporte</span>
+                        <span class="span-text">{{"viajes-form-transport" | translate }}</span>
+                        <input type="text" formControlName="transporte"        placeholder="{{'viajes-form-transport'|translate}}">
+                        <span class="text-warning">{{"viajes-form-transport-warning" | translate }}</span>
                     </div>
                     <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
-                        <span class="span-text">Teléfono</span>
-                        <input type="number" formControlName="telefono"      placeholder="Teléfono">
-                        <span class="text-warning">Este campo es obligatorio.Por favor ingresa tu telefono</span>
+                        <span class="span-text">{{"viajes-form-telephone" | translate }}</span>
+                        <input type="number" formControlName="telefono"      placeholder="{{'viajes-form-telephone'|translate}}">
+                        <span class="text-warning">{{"viajes-form-telephone-warning" | translate }}</span>
                     </div>
                 </div>
     
                 <div class="input-form-message" [class.warning]="isFormControlInvalid('mensaje')">
-                    <span class="span-text">Mensaje</span>
+                    <span class="span-text">{{"viajes-form-message" | translate }}</span>
                     <textarea name="mensaje" id="mensaje" cols="10" rows="6" formControlName="mensaje" ></textarea>
-                    <span class="text-warning">Este campo es obligatorio.Por favor ingresa un mensaje</span>
+                    <span class="text-warning">{{"viajes-form-message-warning" | translate }}</span>
                 </div>
             </div>
-            <button type="submit" class="btn">Enviar</button> 
+            <button type="submit" class="btn">{{"viajes-form-send" | translate }}</button> 
         </form>
         </div>
     </div>

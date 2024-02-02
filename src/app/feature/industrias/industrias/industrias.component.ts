@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-industrias',
   templateUrl: './industrias.component.html',
   styleUrls: ['./industrias.component.scss']
 })
-export class IndustriasComponent {
+export class IndustriasComponent implements OnInit {
   industriaData = [
     {
-      cardTitle: 'Agricola',
+      cardTitle: '',
       cardImg: '../../../../assets/logos/industrias/agronomia.png',
-      cardDesc: 'La industria del campo es el mayor complejo exportador en la Argentina. Nosotros transportamos los granos que se producen en la región pampeana para que puedan ser despachados a mercados internacionales en los puertos de Rosario o Buenos Aires. ',
+      cardDesc: '',
     },
     {
       cardTitle: 'Mineria',
@@ -95,7 +96,60 @@ export class IndustriasComponent {
 
   portadaData = {
     videoSrc: '../../../../assets/videos/placeholder-video.mp4',
-    titulo: 'Industrias',
-    texto: 'Tenemos experiencia en diversos rubros industriales'
+    titulo: '',
+    texto: ''
   };
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit(): void {
+    this.translate.onLangChange.subscribe(() => {
+      this.updateTitles();
+    });
+
+    this.updateTitles();
+  }
+
+  private updateTitles(): void {
+    this.translate.get('industrias-portada-titulo').subscribe((title: string) => {
+      this.portadaData.titulo = title;
+    });
+
+    this.translate.get('industrias-portada-texto').subscribe((description: string) => {
+      this.portadaData.texto = description;
+    });
+    this.translate.get('industrias-agricola-titulo').subscribe((title: string) => {
+      this.industriaData[0].cardTitle = title;
+    });
+    this.translate.get('industrias-agricola-text').subscribe((title: string) => {
+      this.industriaData[0].cardDesc = title;
+    });
+    this.translate.get('industrias-mineria-titulo').subscribe((title: string) => {
+      this.industriaData[1].cardTitle = title;
+    });
+    this.translate.get('industrias-mineria-text').subscribe((title: string) => {
+      this.industriaData[1].cardDesc = title;
+    });
+    this.translate.get('industrias-mercaderias-titulo').subscribe((title: string) => {
+      this.industriaData[2].cardTitle = title;
+    });
+    this.translate.get('industrias-mercaderias-text').subscribe((title: string) => {
+      this.industriaData[2].cardDesc = title;
+    });
+    this.translate.get('industrias-construccion-titulo').subscribe((title: string) => {
+      this.industriaData[3].cardTitle = title;
+    });
+    this.translate.get('industrias-construccion-text').subscribe((title: string) => {
+      this.industriaData[3].cardDesc = title;
+    });
+
+    this.translate.get('industrias-alimentos-titulo').subscribe((title: string) => {
+      this.industriaData[4].cardTitle = title;
+    });
+    this.translate.get('industrias-alimentos-text').subscribe((title: string) => {
+      this.industriaData[4].cardDesc = title;
+    });
+
+
+  }
 }

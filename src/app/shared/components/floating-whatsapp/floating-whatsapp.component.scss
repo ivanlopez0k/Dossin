@@ -25,29 +25,29 @@
 
 @keyframes shakeAndRotate {
   0%, 100% {
-    transform: rotate(0deg) translateX(0);
+      transform: rotate(0deg) translateX(0);
   }
   25% {
-    transform: rotate(-15deg) translateX(-5px);
+      transform: rotate(-15deg) translateX(-5px);
   }
   50% {
-    transform: rotate(15deg) translateX(5px);
+      transform: rotate(15deg) translateX(5px);
   }
   75% {
-    transform: rotate(-15deg) translateX(-5px);
+      transform: rotate(-15deg) translateX(-5px);
   }
   75% {
-  	transform: rotate(-15deg) translateX(-5px);
-  transform: scale(1.1);
+      transform: rotate(-15deg) translateX(-5px);
+      transform: scale(1.1);
   }
 }
 
 @keyframes pulseColor {
   0%, 100% {
-    color: #FFF;
+      color: #FFF;
   }
   50% {
-    color: #10df7e;
+      color: #10df7e;
   }
 }
 
@@ -57,4 +57,51 @@
 
 .my-float {
   transform: translateY(20%);
+}
+
+.float-text {
+  position: fixed;
+  bottom: 5%;
+  right: 9rem;
+  background-color: #10df7e;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+  z-index: 99;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.float:hover + .float-text {
+  display: block;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@media screen and (max-width:768px) {
+  .float-text {
+    right: 6rem;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .float-text {
+    right: 5rem;
+    bottom: 5.5%;
+  }
+}
+
+@media screen and (max-width:305px) {
+  .float-text {
+    right: 5rem;
+    bottom: 4%;
+  }
 }
