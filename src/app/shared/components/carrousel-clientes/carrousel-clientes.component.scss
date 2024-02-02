@@ -42,7 +42,7 @@
 
 .logos-slide {
   display: inline-block;
-  animation: slide 30s infinite linear;
+  animation: slide 40s infinite linear;
   padding: 0 1rem;
   justify-content: center;
 }
@@ -53,7 +53,7 @@
 }
 @media screen and (max-width: 1024px) {
   .logos {
-    max-width: 90%;
+    max-width: clamp(200px, 90vw, 1200px); 
   }
   }
 @media screen and (max-width: 430px) {
