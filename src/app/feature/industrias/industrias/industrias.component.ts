@@ -46,11 +46,11 @@ export class IndustriasComponent implements OnInit {
     },
     {
       empTitle: 'BUNGE',
-      empLogo: '../../../../assets/images/clientes/BUNGE.jpg',
+      empLogo: '../../../../assets/images/clientes/Bunge.webp',
     },
     {
       empTitle: 'Cadewor',
-      empLogo: '../../../../assets/images/clientes/cadewor.jpg',
+      empLogo: '../../../../assets/images/clientes/Cadewor.webp',
     },
     {
       empTitle: 'CEFAS',
@@ -58,11 +58,11 @@ export class IndustriasComponent implements OnInit {
     },
     {
       empTitle: 'CONCI',
-      empLogo: '../../../assets/images/clientes/conci.png',
+      empLogo: '../../../assets/images/clientes/CONCI.webp',
     },
     {
       empTitle: 'Glucovil',
-      empLogo: '../../../assets/images/clientes/Glucovil.jpg',
+      empLogo: '../../../assets/images/clientes/Glucovil.webp',
     },
     {
       empTitle: 'Minera Aguilar',
@@ -86,7 +86,7 @@ export class IndustriasComponent implements OnInit {
     },
     {
       empTitle: 'Vicentin S.A.I.C',
-      empLogo: '../../../assets/images/clientes/vicentin.png',
+      empLogo: '../../../assets/images/clientes/Vicentin.webp ',
     },
     {
       empTitle: 'VIEL',
