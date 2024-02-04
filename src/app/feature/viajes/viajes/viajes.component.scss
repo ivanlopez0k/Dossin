@@ -6,6 +6,7 @@ input, textarea{
     width: 100%;
     margin: 8vh auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 55vh;
@@ -13,6 +14,7 @@ input, textarea{
 }
 
 .content {
+    width: 100%;
     max-width: 1200px;
     display: flex;
     justify-content: center;
@@ -56,7 +58,14 @@ input, textarea{
     height: auto;
 }
 
-
+.forms-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .form-container{
     width: 50%;
     display: flex;
@@ -95,6 +104,13 @@ form {
     justify-content: center;
     align-items: center;
 }
+.secondary-form .first-part{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .first-part{
     width: 100%;
     display: flex;
@@ -107,6 +123,9 @@ form {
     align-items: baseline;
     width: 50%;
     margin: 10px;
+}
+.secondary-form .input-form{
+    width: 100%;
 }
 .input-form input{
     height: 30px;
@@ -127,27 +146,6 @@ span{
     font-size: 20px;
 }
 
-.input-form-message{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.input-form-message textarea{
-    width: 90%;
-    height: 70px;
-    margin-top:30px;
-    outline: 0;
-    border-width: 0 0 2px;
-    border-color: var(--primary-color);
-    resize: none;
-}
-.input-form-message span{
-    width: 90%;
-    text-align: left;
-}
 .boton-enviar{
     width: 100%;
     display: flex;
@@ -165,6 +163,7 @@ span{
     color: #fff;
     border-radius: 8px;
     transition: transform 0.5s ease-in-out;
+    margin-top: 1.25rem;
 }
 
 .btn:hover {
@@ -187,15 +186,6 @@ span{
 }
 .input-form.warning input{
     border-color: #ff0400;
-}
-.input-form-message.warning span{
-    color: #ff0400;
-}
-.input-form-message.warning textarea{
-    border-color: #ff0400;
-}
-.input-form-message.warning .text-warning{
-    display: block;
 }
 
 @media screen and (max-width: 1024px) {

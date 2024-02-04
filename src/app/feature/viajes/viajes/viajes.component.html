@@ -8,45 +8,158 @@
                 <img class="qr-image" src="../../../../assets/images/qr-image-example.jpg">
             </div>
         </div>
-        <div class="form-container">
-            <div class="form-title">
-                <h2>{{"viajes-form-title" | translate }}</h2>
+        <div class="qr-container">
+            <div class="qr-title">
+                <h2>{{"viajes-qr-title" | translate }}</h2>
             </div>
-            <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
-                <div class="form">
+            <div class="qr">
+                <img class="qr-image" src="../../../../assets/images/qr-image-example.jpg">
+            </div>
+        </div>
+        
+    </div>
+    <div class="forms-wrapper">
+        <div class="content">
+            <div class="form-container">
+                <div class="form-title">
+                    <h2>{{"viajes-form-title" | translate }}</h2>
+                </div>
+                <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
+                    <div class="form">
+                        <div class="first-part">
+                            <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
+                                <span class="span-text">{{"viajes-form-name" | translate }}</span>
+                                <input type="text" formControlName="nombre"     placeholder="{{'viajes-form-name'|translate}}">
+                                <span class="text-warning">{{"viajes-form-name-warning" | translate }}</span>
+                            </div>
+                            <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
+                                <span class="span-text">{{"viajes-form-lastname" | translate }}</span>
+                                <input type="text" formControlName="apellido" placeholder="{{'viajes-form-lastname'|translate}}">
+                                <span class="text-warning">{{"viajes-form-lastname-warning" | translate }}</span>
+                            </div>
+                    </div>
                     <div class="first-part">
-                        <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
-                            <span class="span-text">{{"viajes-form-name" | translate }}</span>
-                            <input type="text" formControlName="nombre"     placeholder="{{'viajes-form-name'|translate}}">
-                            <span class="text-warning">{{"viajes-form-name-warning" | translate }}</span>
+                        <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
+                            <span class="span-text">{{"viajes-form-transport" | translate }}</span>
+                            <input type="text" formControlName="transporte"        placeholder="{{'viajes-form-transport'|translate}}">
+                            <span class="text-warning">{{"viajes-form-transport-warning" | translate }}</span>
                         </div>
-                        <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
-                            <span class="span-text">{{"viajes-form-lastname" | translate }}</span>
-                            <input type="text" formControlName="apellido" placeholder="{{'viajes-form-lastname'|translate}}">
-                            <span class="text-warning">{{"viajes-form-lastname-warning" | translate }}</span>
+                        <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
+                            <span class="span-text">{{"viajes-form-telephone" | translate }}</span>
+                            <input type="number" formControlName="telefono"      placeholder="{{'viajes-form-telephone'|translate}}">
+                            <span class="text-warning">{{"viajes-form-telephone-warning" | translate }}</span>
                         </div>
-                </div>
-                <div class="first-part">
-                    <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
-                        <span class="span-text">{{"viajes-form-transport" | translate }}</span>
-                        <input type="text" formControlName="transporte"        placeholder="{{'viajes-form-transport'|translate}}">
-                        <span class="text-warning">{{"viajes-form-transport-warning" | translate }}</span>
-                    </div>
-                    <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
-                        <span class="span-text">{{"viajes-form-telephone" | translate }}</span>
-                        <input type="number" formControlName="telefono"      placeholder="{{'viajes-form-telephone'|translate}}">
-                        <span class="text-warning">{{"viajes-form-telephone-warning" | translate }}</span>
                     </div>
                 </div>
-    
-                <div class="input-form-message" [class.warning]="isFormControlInvalid('mensaje')">
-                    <span class="span-text">{{"viajes-form-message" | translate }}</span>
-                    <textarea name="mensaje" id="mensaje" cols="10" rows="6" formControlName="mensaje" ></textarea>
-                    <span class="text-warning">{{"viajes-form-message-warning" | translate }}</span>
-                </div>
+                <button type="submit" class="btn">{{"viajes-form-send" | translate }}</button> 
+            </form>
             </div>
-            <button type="submit" class="btn">{{"viajes-form-send" | translate }}</button> 
-        </form>
+            <div class="form-container secondary-form">
+                <div class="form-title">
+                    <h2>{{"viajes-form-title" | translate }}</h2>
+                </div>
+                <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
+                    <div class="form">
+                        <div class="first-part">
+                            <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
+                                <span class="span-text">{{"viajes-form-name" | translate }}</span>
+                                <input type="text" formControlName="nombre"     placeholder="{{'viajes-form-name'|translate}}">
+                                <span class="text-warning">{{"viajes-form-name-warning" | translate }}</span>
+                            </div>
+                            <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
+                                <span class="span-text">{{"viajes-form-lastname" | translate }}</span>
+                                <input type="text" formControlName="apellido" placeholder="{{'viajes-form-lastname'|translate}}">
+                                <span class="text-warning">{{"viajes-form-lastname-warning" | translate }}</span>
+                            </div>
+                    </div>
+                    <div class="first-part">
+                        <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
+                            <span class="span-text">{{"viajes-form-transport" | translate }}</span>
+                            <input type="text" formControlName="transporte"        placeholder="{{'viajes-form-transport'|translate}}">
+                            <span class="text-warning">{{"viajes-form-transport-warning" | translate }}</span>
+                        </div>
+                        <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
+                            <span class="span-text">{{"viajes-form-telephone" | translate }}</span>
+                            <input type="number" formControlName="telefono"      placeholder="{{'viajes-form-telephone'|translate}}">
+                            <span class="text-warning">{{"viajes-form-telephone-warning" | translate }}</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn">{{"viajes-form-send" | translate }}</button> 
+            </form>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="form-container secondary-form">
+                <div class="form-title">
+                    <h2>Documentos Empresa</h2>
+                </div>
+                <form [formGroup]="datosEmpresa" (ngSubmit)="submitForm()">
+                    <div class="form">
+                        <div class="first-part">
+                            <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
+                                <span class="span-text">¿Tiene alta de AFIP?</span>
+                                <input type="text" formControlName="nombre"     placeholder="{{'viajes-form-name'|translate}}">
+                                <span class="text-warning">{{"viajes-form-name-warning" | translate }}</span>
+                            </div>
+                            <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
+                                <span class="span-text">¿Tiene Libre Deuda Sindical?</span>
+                                <input type="text" formControlName="apellido" placeholder="{{'viajes-form-lastname'|translate}}">
+                                <span class="text-warning">{{"viajes-form-lastname-warning" | translate }}</span>
+                            </div>
+                    </div>
+                    <div class="first-part">
+                        <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
+                            <span class="span-text">¿Tiene Constancias de IIBB?</span>
+                            <input type="text" formControlName="transporte"        placeholder="{{'viajes-form-transport'|translate}}">
+                            <span class="text-warning">{{"viajes-form-transport-warning" | translate }}</span>
+                        </div>
+                        <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
+                            <span class="span-text">¿Tiene Constancias de CBU?</span>
+                            <input type="number" formControlName="telefono"      placeholder="{{'viajes-form-telephone'|translate}}">
+                            <span class="text-warning">{{"viajes-form-telephone-warning" | translate }}</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn">{{"viajes-form-send" | translate }}</button> 
+            </form>
+            </div>
+            <div class="form-container secondary-form">
+                <div class="form-title">
+                    <h2>Documentos Empresa</h2>
+                </div>
+                <form [formGroup]="datosEmpresa" (ngSubmit)="submitForm()">
+                    <div class="form">
+                        <div class="first-part">
+                            <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
+                                <span class="span-text">¿Tiene alta de AFIP?</span>
+                                <input type="text" formControlName="nombre"     placeholder="{{'viajes-form-name'|translate}}">
+                                <span class="text-warning">{{"viajes-form-name-warning" | translate }}</span>
+                            </div>
+                            <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
+                                <span class="span-text">¿Tiene Libre Deuda Sindical?</span>
+                                <input type="text" formControlName="apellido" placeholder="{{'viajes-form-lastname'|translate}}">
+                                <span class="text-warning">{{"viajes-form-lastname-warning" | translate }}</span>
+                            </div>
+                    </div>
+                    <div class="first-part">
+                        <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
+                            <span class="span-text">¿Tiene Constancias de IIBB?</span>
+                            <input type="text" formControlName="transporte"        placeholder="{{'viajes-form-transport'|translate}}">
+                            <span class="text-warning">{{"viajes-form-transport-warning" | translate }}</span>
+                        </div>
+                        <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
+                            <span class="span-text">¿Tiene Constancias de CBU?</span>
+                            <input type="number" formControlName="telefono"      placeholder="{{'viajes-form-telephone'|translate}}">
+                            <span class="text-warning">{{"viajes-form-telephone-warning" | translate }}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">{{"viajes-form-send" | translate }}</button> 
+            </form>
+            </div>
         </div>
     </div>
 </div>
