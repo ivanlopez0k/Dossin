@@ -95,28 +95,28 @@
                 <div class="form-title">
                     <h2>Documentos Empresa</h2>
                 </div>
-                <form [formGroup]="datosEmpresa" (ngSubmit)="submitForm()">
+                <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
                     <div class="form">
                         <div class="first-part">
                             <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
-                                <span class="span-text">¿Tiene alta de AFIP?</span>
+                                <span class="span-text">{{"viajes-form-name" | translate }}</span>
                                 <input type="text" formControlName="nombre"     placeholder="{{'viajes-form-name'|translate}}">
                                 <span class="text-warning">{{"viajes-form-name-warning" | translate }}</span>
                             </div>
                             <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
-                                <span class="span-text">¿Tiene Libre Deuda Sindical?</span>
+                                <span class="span-text">{{"viajes-form-lastname" | translate }}</span>
                                 <input type="text" formControlName="apellido" placeholder="{{'viajes-form-lastname'|translate}}">
                                 <span class="text-warning">{{"viajes-form-lastname-warning" | translate }}</span>
                             </div>
                     </div>
                     <div class="first-part">
                         <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
-                            <span class="span-text">¿Tiene Constancias de IIBB?</span>
+                            <span class="span-text">{{"viajes-form-transport" | translate }}</span>
                             <input type="text" formControlName="transporte"        placeholder="{{'viajes-form-transport'|translate}}">
                             <span class="text-warning">{{"viajes-form-transport-warning" | translate }}</span>
                         </div>
                         <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
-                            <span class="span-text">¿Tiene Constancias de CBU?</span>
+                            <span class="span-text">{{"viajes-form-telephone" | translate }}</span>
                             <input type="number" formControlName="telefono"      placeholder="{{'viajes-form-telephone'|translate}}">
                             <span class="text-warning">{{"viajes-form-telephone-warning" | translate }}</span>
                         </div>
