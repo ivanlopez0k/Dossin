@@ -103,7 +103,6 @@ export class ContactoComponent implements OnInit{
     }
     else {
       form.markAllAsTouched();
-      console.log("No es valido el formulario, cabeza");
     }
   }
 

@@ -8,45 +8,516 @@
                 <img class="qr-image" src="../../../../assets/images/qr-image-example.jpg">
             </div>
         </div>
-        <div class="form-container">
-            <div class="form-title">
-                <h2>{{"viajes-form-title" | translate }}</h2>
+        <div class="qr-container">
+            <div class="qr-title">
+                <h2>{{"viajes-qr-title" | translate }}</h2>
             </div>
-            <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
-                <div class="form">
-                    <div class="first-part">
-                        <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
-                            <span class="span-text">{{"viajes-form-name" | translate }}</span>
-                            <input type="text" formControlName="nombre"     placeholder="{{'viajes-form-name'|translate}}">
-                            <span class="text-warning">{{"viajes-form-name-warning" | translate }}</span>
-                        </div>
-                        <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
-                            <span class="span-text">{{"viajes-form-lastname" | translate }}</span>
-                            <input type="text" formControlName="apellido" placeholder="{{'viajes-form-lastname'|translate}}">
-                            <span class="text-warning">{{"viajes-form-lastname-warning" | translate }}</span>
-                        </div>
-                </div>
-                <div class="first-part">
-                    <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
-                        <span class="span-text">{{"viajes-form-transport" | translate }}</span>
-                        <input type="text" formControlName="transporte"        placeholder="{{'viajes-form-transport'|translate}}">
-                        <span class="text-warning">{{"viajes-form-transport-warning" | translate }}</span>
-                    </div>
-                    <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
-                        <span class="span-text">{{"viajes-form-telephone" | translate }}</span>
-                        <input type="number" formControlName="telefono"      placeholder="{{'viajes-form-telephone'|translate}}">
-                        <span class="text-warning">{{"viajes-form-telephone-warning" | translate }}</span>
-                    </div>
-                </div>
+            <div class="qr">
+                <img class="qr-image" src="../../../../assets/images/qr-image-example.jpg">
+            </div>
+        </div>
+        
+    </div>
+
     
-                <div class="input-form-message" [class.warning]="isFormControlInvalid('mensaje')">
-                    <span class="span-text">{{"viajes-form-message" | translate }}</span>
-                    <textarea name="mensaje" id="mensaje" cols="10" rows="6" formControlName="mensaje" ></textarea>
-                    <span class="text-warning">{{"viajes-form-message-warning" | translate }}</span>
+    <div class="forms-wrapper">
+        <form [formGroup]="datosViaje" (ngSubmit)="submitForm()">
+            <div class="content">
+                <div class="form-container">
+                    <div class="form-title">
+                        <h2>{{"viajes-form-title" | translate }}</h2>
+                    </div>
+                        <div class="form">
+                            <div class="first-part">
+                                <div class="input-form" [class.warning]="isFormControlInvalid('nombre')">
+                                    <span class="span-text">{{"viajes-form-name" | translate }}</span>
+                                    <input type="text" formControlName="nombre" placeholder="{{'viajes-form-name'|translate}}">
+                                    <span class="text-warning">{{"viajes-form-name-warning" | translate }}</span>
+                                </div>
+                                <div class="input-form" [class.warning]="isFormControlInvalid('apellido')">
+                                    <span class="span-text">{{"viajes-form-lastname" | translate }}</span>
+                                    <input type="text" formControlName="apellido" placeholder="{{'viajes-form-lastname'|translate}}">
+                                    <span class="text-warning">{{"viajes-form-lastname-warning" | translate }}</span>
+                                </div>
+                        </div>
+                        <div class="first-part">
+                            <div class="input-form" [class.warning]="isFormControlInvalid('transporte')">
+                                <span class="span-text">{{"viajes-form-transport" | translate }}</span>
+                                <input type="text" formControlName="transporte" placeholder="{{'viajes-form-transport'|translate}}">
+                                <span class="text-warning">{{"viajes-form-transport-warning" | translate }}</span>
+                            </div>
+                            <div class="input-form" [class.warning]="isFormControlInvalid('telefono')">
+                                <span class="span-text">{{"viajes-form-telephone" | translate }}</span>
+                                <input type="number" formControlName="telefono" placeholder="{{'viajes-form-telephone'|translate}}">
+                                <span class="text-warning">{{"viajes-form-telephone-warning" | translate }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--FORM EMPRESA-->
+                <div class="form-container secondary-form">
+                    <div class="form-title">
+                        <h2>Documentos Empresa</h2>
+                    </div>
+                        <div class="form">
+                            <div class="first-part">
+                                <!---->
+                                <div class="archivo-wraper">
+                                    <div class="input-form" [class.warning]="isFormControlInvalid('ahaAfipEmpresa')">
+                                        <span class="span-text">¿Tiene la Constancia de Inscripcion AFIP?</span>
+                                        <div class="form-selectors">
+                                            <span>
+                                                <label>Si</label>
+                                                <input type="radio" formControlName="ahaAfipEmpresa" [value]="'Si'" />
+                                            </span>
+                                            
+                                            <span>
+                                                <label>No</label>
+                                                <input type="radio" formControlName="ahaAfipEmpresa" [value]="'No'" />
+                                            </span>
+                                        </div>
+                                        <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                    </div>
+    
+                                    <div *ngIf="datosViaje.get('ahaAfipEmpresa')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('ahaAfipArchivo')">
+                                        <label for="ahaAfipArchivo" class="archivo-label">
+                                            <span class="archivo-label-button" >Subir Documento</span>
+                                            <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                            <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                        </label>
+                                        
+                                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="ahaAfipArchivo" id="ahaAfipArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                    </div>
+                                </div>
+                                
+                                <div class="archivo-wraper">
+                                    <div class="input-form" [class.warning]="isFormControlInvalid('libreDeudaEmpresa')">
+                                        <span class="span-text">¿Tiene el Libre de Deuda Sindical?</span>
+                                        <div class="form-selectors">
+                                            <span>
+                                                <label>Si</label>
+                                                <input type="radio" formControlName="libreDeudaEmpresa" [value]="'Si'" />
+                                            </span>
+                                            
+                                            <span>
+                                                <label>No</label>
+                                                <input type="radio" formControlName="libreDeudaEmpresa" [value]="'No'" />
+                                            </span>
+                                        </div>
+                                        <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                    </div>
+    
+                                    <div *ngIf="datosViaje.get('libreDeudaEmpresa')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('libreDeudaArchivo')">
+                                        <label for="libreDeudaArchivo" class="archivo-label">
+                                            <span class="archivo-label-button" >Subir Documento</span>
+                                            <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                            <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                        </label>
+                                        
+                                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="libreDeudaArchivo" id="libreDeudaArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="first-part">
+                            <div class="archivo-wraper">
+                                <div class="input-form" [class.warning]="isFormControlInvalid('constanciaIIBBEmpresa')">
+                                    <span class="span-text">¿Tiene la Constancia IIBB?</span>
+                                    <div class="form-selectors">
+                                        <span>
+                                            <label>Si</label>
+                                            <input type="radio" formControlName="constanciaIIBBEmpresa" [value]="'Si'" />
+                                        </span>
+                                        
+                                        <span>
+                                            <label>No</label>
+                                            <input type="radio" formControlName="constanciaIIBBEmpresa" [value]="'No'" />
+                                        </span>
+                                    </div>
+                                    <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                </div>
+
+                                <div *ngIf="datosViaje.get('constanciaIIBBEmpresa')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('constanciaIIBBArchivo')">
+                                    <label for="constanciaIIBBArchivo" class="archivo-label">
+                                        <span class="archivo-label-button" >Subir Documento</span>
+                                        <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                        <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                    </label>
+                                    
+                                    <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="constanciaIIBBArchivo" id="constanciaIIBBArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                </div>
+                            </div>
+
+                            <div class="archivo-wraper">
+                                <div class="input-form" [class.warning]="isFormControlInvalid('constanciaCBUEmpresa')">
+                                    <span class="span-text">¿Tiene la Constancia de CBU?</span>
+                                    <div class="form-selectors">
+                                        <span>
+                                            <label>Si</label>
+                                            <input type="radio" formControlName="constanciaCBUEmpresa" [value]="'Si'" />
+                                        </span>
+                                        
+                                        <span>
+                                            <label>No</label>
+                                            <input type="radio" formControlName="constanciaCBUEmpresa" [value]="'No'" />
+                                        </span>
+                                    </div>
+                                    <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                </div>
+
+                                <div *ngIf="datosViaje.get('constanciaCBUEmpresa')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('constanciaCBUArchivo')">
+                                    <label for="constanciaCBUArchivo" class="archivo-label">
+                                        <span class="archivo-label-button" >Subir Documento</span>
+                                        <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                        <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                    </label>
+                                    
+                                    <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="constanciaCBUArchivo" id="constanciaCBUArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <!--FORM CHOFER-->
+                <div class="form-container secondary-form">
+                    <div class="form-title">
+                        <h2>Documentos Chofer</h2>
+                    </div>
+                        <div class="form">
+                            <div class="first-part">
+                                <div class="archivo-wraper">
+                                    <div class="input-form" [class.warning]="isFormControlInvalid('dniChofer')">
+                                        <span class="span-text">¿Tiene el DNI del Chofer?</span>
+                                        <div class="form-selectors">
+                                            <span>
+                                                <label>Si</label>
+                                                <input type="radio" formControlName="dniChofer" [value]="'Si'" />
+                                            </span>
+                                            
+                                            <span>
+                                                <label>No</label>
+                                                <input type="radio" formControlName="dniChofer" [value]="'No'" />
+                                            </span>
+                                        </div>
+                                        <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                    </div>
+    
+                                    <div *ngIf="datosViaje.get('dniChofer')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('dniChoferArchivo')">
+                                        <label for="dniChoferArchivo" class="archivo-label">
+                                            <span class="archivo-label-button" >Subir Documento</span>
+                                            <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                            <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                        </label>
+                                        
+                                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="dniChoferArchivo" id="dniChoferArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                    </div>
+                                </div>
+
+                                <div class="archivo-wraper">
+                                    <div class="input-form" [class.warning]="isFormControlInvalid('licenciaChofer')">
+                                        <span class="span-text">¿Tiene la Licencia del Chofer?</span>
+                                        <div class="form-selectors">
+                                            <span>
+                                                <label>Si</label>
+                                                <input type="radio" formControlName="licenciaChofer" [value]="'Si'" />
+                                            </span>
+                                            
+                                            <span>
+                                                <label>No</label>
+                                                <input type="radio" formControlName="licenciaChofer" [value]="'No'" />
+                                            </span>
+                                        </div>
+                                        <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                    </div>
+    
+                                    <div *ngIf="datosViaje.get('licenciaChofer')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('licenciaChoferArchivo')">
+                                        <label for="licenciaChoferArchivo" class="archivo-label">
+                                            <span class="archivo-label-button" >Subir Documento</span>
+                                            <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                            <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                        </label>
+                                        
+                                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="licenciaChoferArchivo" id="licenciaChoferArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="first-part">
+                            <div class="archivo-wraper">
+                                <div class="input-form" [class.warning]="isFormControlInvalid('altaTempranaChofer')">
+                                    <span class="span-text">¿Tiene la Alta Temprana del Chofer?</span>
+                                    <div class="form-selectors">
+                                        <span>
+                                            <label>Si</label>
+                                            <input type="radio" formControlName="altaTempranaChofer" [value]="'Si'" />
+                                        </span>
+                                        
+                                        <span>
+                                            <label>No</label>
+                                            <input type="radio" formControlName="altaTempranaChofer" [value]="'No'" />
+                                        </span>
+                                    </div>
+                                    <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                </div>
+
+                                <div *ngIf="datosViaje.get('altaTempranaChofer')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('altaTempranaChoferArchivo')">
+                                    <label for="altaTempranaChoferArchivo" class="archivo-label">
+                                        <span class="archivo-label-button" >Subir Documento</span>
+                                        <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                        <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                    </label>
+                                    
+                                    <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="altaTempranaChoferArchivo" id="altaTempranaChoferArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                </div>
+                            </div>
+
+                            <div class="archivo-wraper">
+                                <div class="input-form" [class.warning]="isFormControlInvalid('artChofer')">
+                                    <span class="span-text">¿Tiene el ART del Chofer?</span>
+                                    <div class="form-selectors">
+                                        <span>
+                                            <label>Si</label>
+                                            <input type="radio" formControlName="artChofer" [value]="'Si'" />
+                                        </span>
+                                        
+                                        <span>
+                                            <label>No</label>
+                                            <input type="radio" formControlName="artChofer" [value]="'No'" />
+                                        </span>
+                                    </div>
+                                    <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                </div>
+
+                                <div *ngIf="datosViaje.get('artChofer')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('artChoferArchivo')">
+                                    <label for="artChoferArchivo" class="archivo-label">
+                                        <span class="archivo-label-button" >Subir Documento</span>
+                                        <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                        <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                    </label>
+                                    
+                                    <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="artChoferArchivo" id="artChoferArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="first-part">
+                            <div class="archivo-wraper">
+                                <div class="input-form" [class.warning]="isFormControlInvalid('lintiChofer')">
+                                    <span class="span-text">¿Tiene la Linti del Chofer?</span>
+                                    <div class="form-selectors">
+                                        <span>
+                                            <label>Si</label>
+                                            <input type="radio" formControlName="lintiChofer" [value]="'Si'" />
+                                        </span>
+                                        
+                                        <span>
+                                            <label>No</label>
+                                            <input type="radio" formControlName="lintiChofer" [value]="'No'" />
+                                        </span>
+                                    </div>
+                                    <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                </div>
+
+                                <div *ngIf="datosViaje.get('lintiChofer')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('lintiChoferArchivo')">
+                                    <label for="lintiChoferArchivo" class="archivo-label">
+                                        <span class="archivo-label-button" >Subir Documento</span>
+                                        <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                        <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                    </label>
+                                    
+                                    <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="lintiChoferArchivo" id="lintiChoferArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                </div>
+                            </div>
+
+                            <div class="archivo-wraper">
+                                <div class="input-form" [class.warning]="isFormControlInvalid('seguroVidaChofer')">
+                                    <span class="span-text">¿Tiene el Seguro de Vida del Chofer?</span>
+                                    <div class="form-selectors">
+                                        <span>
+                                            <label>Si</label>
+                                            <input type="radio" formControlName="seguroVidaChofer" [value]="'Si'" />
+                                        </span>
+                                        
+                                        <span>
+                                            <label>No</label>
+                                            <input type="radio" formControlName="seguroVidaChofer" [value]="'No'" />
+                                        </span>
+                                    </div>
+                                    <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                </div>
+
+                                <div *ngIf="datosViaje.get('seguroVidaChofer')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('seguroVidaChoferArchivo')">
+                                    <label for="seguroVidaChoferArchivo" class="archivo-label">
+                                        <span class="archivo-label-button" >Subir Documento</span>
+                                        <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                        <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                    </label>
+                                    
+                                    <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="seguroVidaChoferArchivo" id="seguroVidaChoferArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--FORM CAMION-->
+                <div class="form-container secondary-form">
+                    <div class="form-title">
+                        <h2>Documentos Camión</h2>
+                    </div>
+                        <div class="form">
+                            <div class="first-part">
+                                <div class="archivo-wraper">
+                                    <div class="input-form" [class.warning]="isFormControlInvalid('rtoCamion')">
+                                        <span class="span-text">¿Tiene la RTO del Camion?</span>
+                                        <div class="form-selectors">
+                                            <span>
+                                                <label>Si</label>
+                                                <input type="radio" formControlName="rtoCamion" [value]="'Si'" />
+                                            </span>
+                                            
+                                            <span>
+                                                <label>No</label>
+                                                <input type="radio" formControlName="rtoCamion" [value]="'No'" />
+                                            </span>
+                                        </div>
+                                        <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                    </div>
+    
+                                    <div *ngIf="datosViaje.get('rtoCamion')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('rtoArchivo')">
+                                        <label for="rtoArchivo" class="archivo-label">
+                                            <span class="archivo-label-button" >Subir Documento</span>
+                                            <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                            <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                        </label>
+                                        
+                                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="rtoArchivo" id="rtoArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                    </div>
+                                </div>
+                                
+                                <div class="archivo-wraper">
+                                    <div class="input-form" [class.warning]="isFormControlInvalid('polizaSeguroCamion')">
+                                        <span class="span-text">¿Tiene la Poliza de Seguro del Camion?</span>
+                                        <div class="form-selectors">
+                                            <span>
+                                                <label>Si</label>
+                                                <input type="radio" formControlName="polizaSeguroCamion" [value]="'Si'" />
+                                            </span>
+                                            
+                                            <span>
+                                                <label>No</label>
+                                                <input type="radio" formControlName="polizaSeguroCamion" [value]="'No'" />
+                                            </span>
+                                        </div>
+                                        <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                    </div>
+    
+                                    <div *ngIf="datosViaje.get('polizaSeguroCamion')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('polizaSeguroArchivo')">
+                                        <label for="polizaSeguroArchivo" class="archivo-label">
+                                            <span class="archivo-label-button" >Subir Documento</span>
+                                            <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                            <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                        </label>
+                                        
+                                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="polizaSeguroArchivo" id="polizaSeguroArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="first-part">
+                            <div class="archivo-wraper">
+                                <div class="input-form" [class.warning]="isFormControlInvalid('pasoSeguroCamion')">
+                                    <span class="span-text">¿Tiene el Paso Seguro del Camion?</span>
+                                    <div class="form-selectors">
+                                        <span>
+                                            <label>Si</label>
+                                            <input type="radio" formControlName="pasoSeguroCamion" [value]="'Si'" />
+                                        </span>
+                                        
+                                        <span>
+                                            <label>No</label>
+                                            <input type="radio" formControlName="pasoSeguroCamion" [value]="'No'" />
+                                        </span>
+                                    </div>
+                                    <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                </div>
+
+                                <div *ngIf="datosViaje.get('pasoSeguroCamion')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('pasoSeguroArchivo')">
+                                    <label for="pasoSeguroArchivo" class="archivo-label">
+                                        <span class="archivo-label-button" >Subir Documento</span>
+                                        <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                        <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                    </label>
+                                    
+                                    <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="pasoSeguroArchivo" id="pasoSeguroArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                </div>
+                            </div>
+                            
+                            <div class="archivo-wraper">
+                                <div class="input-form" [class.warning]="isFormControlInvalid('rutaCamion')">
+                                    <span class="span-text">¿Tiene la Ruta del Camion?</span>
+                                    <div class="form-selectors">
+                                        <span>
+                                            <label>Si</label>
+                                            <input type="radio" formControlName="rutaCamion" [value]="'Si'" />
+                                        </span>
+                                        
+                                        <span>
+                                            <label>No</label>
+                                            <input type="radio" formControlName="rutaCamion" [value]="'No'" />
+                                        </span>
+                                    </div>
+                                    <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                                </div>
+
+                                <div *ngIf="datosViaje.get('rutaCamion')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('rutaCamionArchivo')">
+                                    <label for="rutaCamionArchivo" class="archivo-label">
+                                        <span class="archivo-label-button" >Subir Documento</span>
+                                        <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                        <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                    </label>
+                                    
+                                    <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="rutaCamionArchivo" id="rutaCamionArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="archivo-wraper">
+                            <div class="input-form" [class.warning]="isFormControlInvalid('certificadoSatelitalCamion')">
+                                <span class="span-text">¿Tiene el Certificado Satelital?</span>
+                                <div class="form-selectors">
+                                    <span>
+                                        <label>Si</label>
+                                        <input type="radio" formControlName="certificadoSatelitalCamion" [value]="'Si'" />
+                                    </span>
+                                    
+                                    <span>
+                                        <label>No</label>
+                                        <input type="radio" formControlName="certificadoSatelitalCamion" [value]="'No'" />
+                                    </span>
+                                </div>
+                                <span class="text-warning ">Campo Obligatorio. Seleccione "No" si no tiene este documento</span>
+                            </div>
+
+                            <div *ngIf="datosViaje.get('certificadoSatelitalCamion')?.value === 'Si'" class="input-file input-form" [class.warning]="isFormControlInvalid('certificadoSatelitalArchivo')">
+                                <label for="certificadoSatelitalArchivo" class="archivo-label">
+                                    <span class="archivo-label-button" >Subir Documento</span>
+                                    <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                                    <span class="text-warning">Campo Obligatorio.Suba su archivo o seleccione "No" si no tiene este documento</span>
+                                </label>
+                                
+                                <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="certificadoSatelitalArchivo" id="certificadoSatelitalArchivo" class="archivo-input" (change)="onFileSelected($event)">
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
             <button type="submit" class="btn">{{"viajes-form-send" | translate }}</button> 
+        
         </form>
-        </div>
     </div>
 </div>

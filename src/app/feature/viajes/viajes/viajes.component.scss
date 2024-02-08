@@ -6,6 +6,7 @@ input, textarea{
     width: 100%;
     margin: 8vh auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 55vh;
@@ -13,10 +14,12 @@ input, textarea{
 }
 
 .content {
+    width: 100%;
     max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 
@@ -56,8 +59,16 @@ input, textarea{
     height: auto;
 }
 
-
+.forms-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .form-container{
+    margin-top: 50px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -94,10 +105,16 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .first-part{
     width: 100%;
     display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 .input-form{
@@ -107,6 +124,7 @@ form {
     align-items: baseline;
     width: 50%;
     margin: 10px;
+    width: 100%;
 }
 .input-form input{
     height: 30px;
@@ -127,27 +145,6 @@ span{
     font-size: 20px;
 }
 
-.input-form-message{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.input-form-message textarea{
-    width: 90%;
-    height: 70px;
-    margin-top:30px;
-    outline: 0;
-    border-width: 0 0 2px;
-    border-color: var(--primary-color);
-    resize: none;
-}
-.input-form-message span{
-    width: 90%;
-    text-align: left;
-}
 .boton-enviar{
     width: 100%;
     display: flex;
@@ -165,6 +162,7 @@ span{
     color: #fff;
     border-radius: 8px;
     transition: transform 0.5s ease-in-out;
+    margin-top: 1.25rem;
 }
 
 .btn:hover {
@@ -188,15 +186,102 @@ span{
 .input-form.warning input{
     border-color: #ff0400;
 }
-.input-form-message.warning span{
+
+//------------------------------------------------------------------
+.secondary-form {
+    .input-form {
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.form-selectors {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .span-text {
+        margin-right: 10px;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 10px 0;
+    }
+
+    label {
+        margin-right: 5px;
+    }
+    input {
+        margin-top: 0;
+    }
+    
+}
+
+.input-file {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input[type="file"]{
+    display: none;
+}
+.input-file .archivo-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.input-file label .archivo-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px auto;
+    height: auto; 
+}
+.input-file label .archivo-label-button{
+    width: 280px;
+    max-width: 80%;
+    text-align: center;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.input-file label .archivo-label-texto {
+    text-align: center;
+    overflow: hidden;
+    font-size: 1rem;
+    white-space: normal;
+    max-width: 100%; 
+    margin-top: 0.75rem;
+}
+.input-file.warning {
+    label .archivo-label-button{
+        background-color: #ff0400;
+    }
+    .archivo-label-texto {
     color: #ff0400;
+    }
+    .text-warning {
+        display: block;
+    }
 }
-.input-form-message.warning textarea{
-    border-color: #ff0400;
-}
-.input-form-message.warning .text-warning{
-    display: block;
-}
+
+//------------------------------------------------------------------
 
 @media screen and (max-width: 1024px) {
     .first-part{
@@ -227,7 +312,7 @@ span{
         width: 100%;
     }
     .form-container{
-        order: -1;
+        margin-top: 100px;
         padding: 0;
     }
 }
