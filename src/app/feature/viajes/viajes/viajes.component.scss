@@ -19,6 +19,7 @@ input, textarea{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 
@@ -67,6 +68,7 @@ input, textarea{
     align-items: center;
 }
 .form-container{
+    margin-top: 50px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -103,17 +105,16 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
-.secondary-form .first-part{
+.first-part{
+    width: 100%;
+    display: flex;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.first-part{
-    width: 100%;
-    display: flex;
 
 }
 .input-form{
@@ -123,8 +124,6 @@ form {
     align-items: baseline;
     width: 50%;
     margin: 10px;
-}
-.secondary-form .input-form{
     width: 100%;
 }
 .input-form input{
@@ -188,6 +187,102 @@ span{
     border-color: #ff0400;
 }
 
+//------------------------------------------------------------------
+.secondary-form {
+    .input-form {
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.form-selectors {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .span-text {
+        margin-right: 10px;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 10px 0;
+    }
+
+    label {
+        margin-right: 5px;
+    }
+    input {
+        margin-top: 0;
+    }
+    
+}
+
+.input-file {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input[type="file"]{
+    display: none;
+}
+.input-file .archivo-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.input-file label .archivo-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px auto;
+    height: auto; 
+}
+.input-file label .archivo-label-button{
+    width: 280px;
+    max-width: 80%;
+    text-align: center;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.input-file label .archivo-label-texto {
+    text-align: center;
+    overflow: hidden;
+    font-size: 1rem;
+    white-space: normal;
+    max-width: 100%; 
+    margin-top: 0.75rem;
+}
+.input-file.warning {
+    label .archivo-label-button{
+        background-color: #ff0400;
+    }
+    .archivo-label-texto {
+    color: #ff0400;
+    }
+    .text-warning {
+        display: block;
+    }
+}
+
+//------------------------------------------------------------------
+
 @media screen and (max-width: 1024px) {
     .first-part{
         width: 100%;
@@ -217,7 +312,7 @@ span{
         width: 100%;
     }
     .form-container{
-        order: -1;
+        margin-top: 100px;
         padding: 0;
     }
 }
