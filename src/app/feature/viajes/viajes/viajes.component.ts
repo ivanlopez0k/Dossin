@@ -122,16 +122,20 @@ export class ViajesComponent implements OnInit {
     }
   }
 
-  onFileSelected(event: any): void {
+  onFileSelected(event: any, controlName: string): void {
     const archivoInput = event.target as HTMLInputElement;
-
+  
     if (archivoInput?.files?.length && archivoInput.files[0]) {
       const primerArchivo = archivoInput.files[0];
       this.selectedFile = primerArchivo;
       this.archivoLabelText = `${primerArchivo?.name || 'Desconocido'}`;
+  
+      
+      this.datosViaje.get(controlName)?.setValue(primerArchivo);
     } else {
       this.selectedFile = null;
       this.archivoLabelText = '';
+      this.datosViaje.get(controlName)?.setValue(null);
     }
   }
 }
