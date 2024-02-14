@@ -9,29 +9,29 @@ import { TranslateService } from '@ngx-translate/core';
 export class IndustriasComponent implements OnInit {
   industriaData = [
     {
-      cardTitle: '',
+      cardTitle: 'Agrícola',
       cardImg: '../../../../assets/logos/industrias/agronomia.png',
-      cardDesc: '',
+      cardDesc: 'En el sector agrícola, Dossin se especializa en el transporte seguro y eficiente de commodities y especialidades, maquinaria del agro e insumos. Nuestra flota y experiencia garantizan el manejo cuidadoso de grandes volúmenes de carga, contribuyendo al éxito de los agricultores y empresas del sector.',
     },
     {
       cardTitle: 'Mineria',
       cardImg: '../../../../assets/logos/industrias/mineria.png',
-      cardDesc: 'Una operación minera eficiente requiere de una gran capacidad carga y una flota moderna que sea capaz de cumplir con las exigencias de seguridad, sostenibilidad y cuidado del medio ambiente que son cada vez más frecuentes en la industria minera. Pero así también de soluciones logísticas de avanzada que le permitan a las empresas reducir sus costos para adaptarse a los nuevos parámetros del mercado.',
+      cardDesc: 'Colaboramos estrechamente con la industria minera para proporcionar soluciones logísticas adaptadas a sus necesidades únicas. Manejamos el transporte de derivados mineros y movimientos sobredimensionados e especiales con la eficiencia necesaria para mantener las operaciones mineras en marcha.',
     },
     {
       cardTitle: 'Mercaderias',
       cardImg: '../../../../assets/logos/industrias/mercaderia.png',
-      cardDesc: 'La industria manufacturera produce una amplia variedad de bienes intermedios y finales. La entrega segura y puntual de estos bienes es fundamental para la continuidad y la rentabilidad de cada empresa. En Rigar manejamos eficientemente los envíos regulares, pequeños o grandes.',
+      cardDesc: 'Dossin ofrece servicios de transporte para una amplia variedad de mercancías, abarcando desde productos manufacturados hasta bienes de consumo. Adaptamos nuestras soluciones logísticas para garantizar entregas puntuales y eficientes, satisfaciendo las demandas dinámicas de cada industria.',
     },
     {
       cardTitle: 'Construccion',
       cardImg: '../../../../assets/logos/industrias/construccion.png',
-      cardDesc: 'Las limitaciones de capacidad de los camiones, la complejidad del sistema logístico, y las normas seguridad son sólo algunos de los desafíos que se presentan para las empresas de la industria de la construcción. En Rigar le ayudamos a superar estas complejidades con una red optimizada de transporte y logística que incluye equipo y manejo especializados, conductores capacitados, ingeniería de rutas, soporte administrativo y tecnología innovadora.',
+      cardDesc: 'En el sector de la construcción, proporcionamos servicios logísticos especializados para el transporte de materiales de construcción, equipos pesados y otros elementos necesarios para proyectos de construcción. Nuestra flota versátil y experiencia nos permiten enfrentar los desafíos específicos de esta industria.',
     },
     {
       cardTitle: 'Alimentos y Bebidas',
       cardImg: '../../../../assets/logos/industrias/alimentos.png',
-      cardDesc: 'Manejamos y almacenamos todo tipo de productos de alimentos y bebidas no perecederos y no refrigerados. Nuestras instalaciones y equipos se mantienen limpios y todos los alimentos se tratan de forma higiénica y de acuerdo con las normas y regulaciones de la industria durante la carga y el transporte.',
+      cardDesc: 'Dossin se destaca en el manejo de productos alimenticios y bebidas, garantizando un transporte seguro y cumpliendo con los requisitos normativos. Nos comprometemos a mantener la frescura e integridad de los productos, asegurando entregas eficientes a lo largo de la cadena de suministro.',
     }
   ];
 
