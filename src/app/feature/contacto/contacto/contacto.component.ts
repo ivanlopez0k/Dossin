@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contacto',
@@ -21,7 +22,7 @@ export class ContactoComponent implements OnInit{
   archivoLabelText: string = 'Selecciona un archivo';
   selectedFile: File | null = null;
 
-  constructor(private fb: FormBuilder, public translate: TranslateService) {
+  constructor(private fb: FormBuilder, private route: ActivatedRoute, public translate: TranslateService) {
     this.clienteForm = this.fb.group({
       tipoForm: 'Cliente', 
       apellido: new FormControl('', Validators.required),
@@ -62,10 +63,15 @@ export class ContactoComponent implements OnInit{
   
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      const formulario = params['formulario'];
+      this.mostrarForm(formulario);
+    });
+  
     this.translate.onLangChange.subscribe(() => {
       this.updateText();
     });
-
+  
     this.updateText();
   }
   
@@ -103,13 +109,12 @@ export class ContactoComponent implements OnInit{
     }
     else {
       form.markAllAsTouched();
-      console.log("No es valido el formulario, cabeza");
     }
   }
 
   
   mostrarForm(formulario: string): void {
-    this.formularioActual = formulario;
+    this.formularioActual = formulario || 'cliente'; // Valor por defecto o cuando el parámetro es nulo
   }
 
   private updateText(): void {
