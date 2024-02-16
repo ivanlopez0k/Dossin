@@ -1,0 +1,262 @@
+
+<app-portada [portadaInfo]="portadaData"></app-portada>
+
+<div class="contacto-section">
+    <div class="contacto-content">
+        <div class="contacto-selector">
+            <div class="selector-item" (click)="mostrarForm('cliente')" [class.selected]="formularioActual === 'cliente'">
+              <span>{{"contacto-cliente"|translate}}</span>
+            </div>
+            <div class="selector-item" (click)="mostrarForm('proveedor')" [class.selected]="formularioActual === 'proveedor'">
+              <span>{{'contacto-proveedor'|translate}}</span>
+            </div>
+            <div class="selector-item" (click)="mostrarForm('cv')" [class.selected]="formularioActual === 'cv'">
+              <span>{{"contacto-cv"|translate}}</span>
+            </div>
+          </div>
+        <div class="form-container">
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+
+            <form *ngIf="formularioActual === 'cliente'" [formGroup]="clienteForm" (ngSubmit)="printForm(clienteForm)">
+                <div class="top-form form-row">
+                    <div class="form-item" [class.warning]="getControlCliente('apellido').invalid && (getControlCliente('apellido').dirty || getControlCliente('apellido').touched)">
+                        <label>
+                            {{'contacto-apellido'|translate}} *
+                        </label>
+                        <div class="input-container">
+                            <input type="text" class="form-control" placeholder="{{'contacto-apellido'|translate}}" value="" formControlName="apellido">
+                        </div>
+                        <span *ngIf="getControlCliente('apellido').invalid && (getControlCliente('apellido').dirty || getControlCliente('apellido').touched)" class="text-warning">{{'contacto-apellido-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlCliente('nombre').invalid && (getControlCliente('nombre').dirty || getControlCliente('nombre').touched)">
+                        <label>
+                            {{'contacto-nombre'|translate}} *
+                        </label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="{{'contacto-nombre'|translate}}" aria-required="true" formControlName="nombre" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-nombre-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlCliente('empresa').invalid && (getControlCliente('empresa').dirty || getControlCliente('empresa').touched)">
+                        <label>{{'contacto-empresa'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="{{'contacto-empresa'|translate}}" aria-required="true" formControlName="empresa" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-empresa-warning'|translate}}</span>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item" [class.warning]="getControlCliente('email').invalid && (getControlCliente('email').dirty || getControlCliente('email').touched)">
+                        <label>{{'contacto-email'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="email" value="" placeholder="{{'contacto-email'|translate}}" data-required="true" aria-required="true" formControlName="email" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-email-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlCliente('telefono').invalid && (getControlCliente('telefono').dirty || getControlCliente('telefono').touched)">
+                        <label>{{'contacto-telefono'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="number" inputmode="numeric" value="" placeholder="{{'contacto-telefono'|translate}}" aria-required="true" autocomplete="off" formControlName="telefono" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-telefono-warning'|translate}}</span>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item" [class.warning]="getControlCliente('cuit').invalid && (getControlCliente('cuit').dirty || getControlCliente('cuit').touched)">
+                        <label>{{'contacto-cuit'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="number" inputmode="numeric" value="" placeholder="{{'contacto-cuit'|translate}}" data-required="true" aria-required="true" formControlName="cuit" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-cuit-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlCliente('servicios').invalid && (getControlCliente('servicios').dirty || getControlCliente('servicios').touched)">
+                        <label>{{'contacto-servicio'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="{{'contacto-servicio'|translate}}" aria-required="true" autocomplete="off" formControlName="servicios" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-servicio-warning'|translate}}</span>
+                    </div>
+                </div>
+                <div class="bottom-form">
+                    <label>{{'contacto-mensaje'|translate}}</label>
+                    
+                    <textarea rows="6" maxlength="180" formControlName="texto"></textarea>
+                    
+                </div>
+                <button type="submit" class="btn">{{'contacto-enviar'|translate}}</button>
+
+            </form>
+    
+
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+
+            <form *ngIf="formularioActual === 'proveedor'" [formGroup]="proveedorForm" (ngSubmit)="printForm(proveedorForm)">
+                <div class="top-form form-row">
+                    <div class="form-item" [class.warning]="getControlProveedor('apellido').invalid && (getControlProveedor('apellido').dirty || getControlProveedor('apellido').touched)">
+                        <label>
+                            {{'contacto-apellido'|translate}} *
+                        </label>
+                        <div class="input-container">
+                            <input type="text" class="form-control" placeholder="{{'contacto-apellido'|translate}}" value="" formControlName="apellido">
+                        </div>
+                        <span *ngIf="getControlProveedor('apellido').invalid && (getControlProveedor('apellido').dirty || getControlProveedor('apellido').touched)" class="text-warning">{{'contacto-apellido-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlProveedor('nombre').invalid && (getControlProveedor('nombre').dirty || getControlProveedor('nombre').touched)">
+                        <label>
+                            {{'contacto-nombre'|translate}} *
+                        </label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="{{'contacto-nombre'|translate}}" aria-required="true" formControlName="nombre" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-nombre-warining'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlProveedor('empresa').invalid && (getControlProveedor('empresa').dirty || getControlProveedor('empresa').touched)">
+                        <label>{{'contacto-empresa'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="{{'contacto-empresa'|translate}}" aria-required="true" formControlName="empresa" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-empresa-warning'|translate}}</span>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item" [class.warning]="getControlProveedor('email').invalid && (getControlProveedor('email').dirty || getControlProveedor('email').touched)">
+                        <label>{{'contacto-email'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="email" value="" placeholder="{{'contacto-email'|translate}}" data-required="true" aria-required="true" formControlName="email" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-email-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlProveedor('telefono').invalid && (getControlProveedor('telefono').dirty || getControlProveedor('telefono').touched)">
+                        <label>{{'contacto-telefono'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="number" inputmode="numeric" value="" placeholder="{{'contacto-telefono'|translate}}" aria-required="true" autocomplete="off" formControlName="telefono" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-telefono-warning'|translate}}</span>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item" [class.warning]="getControlProveedor('cuit').invalid && (getControlProveedor('cuit').dirty || getControlProveedor('cuit').touched)">
+                        <label>{{'contacto-cuit'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="number" inputmode="numeric" value="" placeholder="{{'contacto-cuit'|translate}}" data-required="true" aria-required="true" formControlName="cuit" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-cuit-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlProveedor('servicios').invalid && (getControlProveedor('servicios').dirty || getControlProveedor('servicios').touched)">
+                        <label>{{'contacto-servicio'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="{{'contacto-servicio'|translate}}" aria-required="true" autocomplete="off" formControlName="servicios" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-servicio-warning'|translate}}</span>
+                    </div>
+                </div>
+                <div class="bottom-form">
+                    <label>{{'contacto-mensaje'|translate}}</label>
+                    
+                    <textarea rows="6" maxlength="180" formControlName="texto"></textarea>
+                    
+                </div>
+                <button type="submit" class="btn">{{'contacto-enviar'|translate}}</button>
+
+            </form>
+
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+
+            <form *ngIf="formularioActual === 'cv'" [formGroup]="cvForm" (ngSubmit)="printForm(cvForm)">
+
+                <div class="top-form form-row">
+                    <div class="form-item" [class.warning]="getControlPostulante('apellido').invalid && (getControlPostulante('apellido').dirty || getControlPostulante('apellido').touched)">
+                        <label>
+                            {{'contacto-apellido'|translate}} *
+                        </label>
+                        <div class="input-container">
+                            <input type="text" class="form-control" placeholder="{{'contacto-apellido'|translate}}" value="" formControlName="apellido">
+                        </div>
+                        <span *ngIf="getControlPostulante('apellido').invalid && (getControlPostulante('apellido').dirty || getControlPostulante('apellido').touched)" class="text-warning">{{'contacto-apellido-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlPostulante('nombre').invalid && (getControlPostulante('nombre').dirty || getControlPostulante('nombre').touched)">
+                        <label>
+                            {{'contacto-nombre'|translate}} *
+                        </label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="{{'contacto-nombre'|translate}}" aria-required="true" formControlName="nombre" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-nombre-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlPostulante('empresa').invalid && (getControlPostulante('empresa').dirty || getControlPostulante('empresa').touched)">
+                        <label>{{'contacto-empresa'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="text" value="" placeholder="{{'contacto-empresa'|translate}}" aria-required="true" formControlName="empresa" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-empresa-warning'|translate}}</span>
+                    </div>
+                </div>
+
+                <div class="top-form form-row">
+                    <div class="form-item" [class.warning]="getControlPostulante('profesion').invalid && (getControlPostulante('profesion').dirty || getControlPostulante('profesion').touched)">
+                        <label for="profesion">{{'contacto-profesion'|translate}} *</label>
+                        <div class="input-container selec-container">
+                            <select id="profesion" name="profesion" aria-required="true" formControlName="profesion" required>
+                                <option value="" disabled selected style="color: #888888;">{{'contacto-seleccionador'|translate}}</option>
+                                <option value="chofer">{{'contacto-chofer'|translate}}</option>
+                                <option value="contador">{{'contacto-contador'|translate}}</option>
+                                <option value="dador">{{'contacto-dador'|translate}}</option>
+                                </select>
+                            <span class="text-warning">{{'contacto-profesion-warning'|translate}}</span>
+                        </div>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlPostulante('edad').invalid && (getControlPostulante('edad').dirty || getControlPostulante('edad').touched)">
+                        <label>{{'contacto-edad'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="number" inputmode="numeric" value="" placeholder="{{'contacto-edad'|translate}}" aria-required="true" formControlName="edad" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-edad'|translate}}d</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlPostulante('dni').invalid && (getControlPostulante('dni').dirty || getControlPostulante('dni').touched)">
+                        <label>{{'contacto-dni'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="number" inputmode="numeric" value="" placeholder="{{'contacto-dni'|translate}}" aria-required="true" formControlName="dni" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-dni-warning'|translate}}</span>
+                    </div>
+                </div>
+                <div class="midle-form form-row">
+                    <div class="form-item" [class.warning]="getControlPostulante('email').invalid && (getControlPostulante('email').dirty || getControlPostulante('email').touched)">
+                        <label>{{'contacto-email'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="email" value="" placeholder="{{'contacto-email'|translate}}" data-required="true" aria-required="true" formControlName="email" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-email-warning'|translate}}</span>
+                    </div>
+                    <div class="form-item" [class.warning]="getControlPostulante('telefono').invalid && (getControlPostulante('telefono').dirty || getControlPostulante('telefono').touched)">
+                        <label>{{'contacto-telefono'|translate}} *</label>
+                        <div class="input-container">
+                            <input type="number" inputmode="numeric" value="" placeholder="{{'contacto-telefono'|translate}}" aria-required="true" autocomplete="off" formControlName="telefono" required>
+                        </div>
+                        <span class="text-warning">{{'contacto-telefono-warning'|translate}}</span>
+                    </div>
+                </div>
+                
+                <!-- Código HTML -->
+                <div class="bottom-form form-row">
+                    <div class="input-file" [class.warning]="getControlPostulante('archivo').invalid && (getControlPostulante('archivo').dirty || getControlPostulante('archivo').touched)">
+                        <label for="archivo-input" class="archivo-label">
+                            <span class="archivo-label-button" >{{'contacto-adj-CV'|translate}}</span>
+                            <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
+                        </label>
+                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.js,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="archivo" id="archivo-input" class="archivo-input" (change)="onFileSelected($event)" required>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn">{{'contacto-enviar'|translate}}</button>
+                </div>
+                
+            </form>
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+
+        </div>
+
+    </div>
+</div>
+

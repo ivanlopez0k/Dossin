@@ -1,0 +1,14 @@
+<div class="card-container" [class.hovered]="isHovered">
+    <div class="image-card">
+        <img [src]="cardInfo.cardImg">
+    </div>
+    <div class="title-card">
+        <h2>{{ cardInfo.cardTitle }}</h2>
+    </div>
+    <div class="info-card">
+        <div>{{ cardInfo.cardDesc }}</div>
+    </div>
+    <div class="arrow-container">
+        <img src="../../../../../assets/svg/arrow-up.svg">
+    </div>
+</div>

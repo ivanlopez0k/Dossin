@@ -1,0 +1,19 @@
+<!--
+<div id="container">
+  <div class="scroller">
+      <ul class="tag-list scroller-inner">
+        <li *ngFor="let empresa of empresasInfo">
+          <img [src]="empresa.empLogo" [alt]="empresa.empTitle">
+        </li>
+    </ul>
+  </div>
+</div>
+-->
+<div class="logos">
+  <div class="logos-slide">
+    <img *ngFor="let empresa of empresasInfo" [src]="empresa.empLogo" [alt]="empresa.empTitle">
+  </div>
+  <div class="logos-slide">
+    <img *ngFor="let empresa of empresasInfo" [src]="empresa.empLogo" [alt]="empresa.empTitle">
+  </div>
+</div>

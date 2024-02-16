@@ -1,0 +1,18 @@
+
+<app-portada [portadaInfo]="portadaData"></app-portada>
+
+
+
+<div class="industrias-section">
+    <div class="industrias-content">
+        <div class="industrias-item" *ngFor="let card of industriaData; let i = index">
+            <app-service-card [cardInfo]="card"></app-service-card>
+        </div>
+    </div>
+</div>
+
+<div class="empresas-section">
+    <h1 class="empresas-main-title">{{'industrias-empresas'|translate}}</h1>
+    <app-carrousel-clientes [empresasInfo]="empresasData"></app-carrousel-clientes>
+    
+</div>

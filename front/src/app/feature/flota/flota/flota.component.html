@@ -1,0 +1,21 @@
+
+<app-portada [portadaInfo]="portadaData"></app-portada>
+<div class="intro-container">
+    <div class="intro-content">
+        <h1>{{"flota-intro-h1"|translate}}</h1>
+        <p>{{"flota-intro-p"|translate}}</p>
+    </div>
+</div>
+
+<div class="recorrido-container">
+    <div class="recorrido-content">
+        <div *ngFor="let item of recorridoItems" class="recorrido-item">
+            <div class="recorrido-imagen">
+                <img [src]="item.imagenSrc" alt="{{ item.titulo }}">
+            </div>
+            <div class="recorrido-info">
+                <h1>{{ item.titulo }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
