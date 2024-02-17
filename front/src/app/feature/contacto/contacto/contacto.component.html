@@ -83,7 +83,7 @@
                     <textarea rows="6" maxlength="180" formControlName="texto"></textarea>
                     
                 </div>
-                <button type="submit" class="btn">{{'contacto-enviar'|translate}}</button>
+                <button (click)="enviarCliente()" type="submit" class="btn">{{'contacto-enviar'|translate}}</button>
 
             </form>
     
@@ -156,7 +156,7 @@
                     <textarea rows="6" maxlength="180" formControlName="texto"></textarea>
                     
                 </div>
-                <button type="submit" class="btn">{{'contacto-enviar'|translate}}</button>
+                <button (click)="enviarProveedor()" type="submit" class="btn">{{'contacto-enviar'|translate}}</button>
 
             </form>
 
@@ -244,12 +244,12 @@
                             <span class="archivo-label-button" >{{'contacto-adj-CV'|translate}}</span>
                             <span class="archivo-label-texto" >{{ archivoLabelText }}</span>
                         </label>
-                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.js,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="archivo" id="archivo-input" class="archivo-input" (change)="onFileSelected($event)" required>
+                        <input type="file" accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.ico,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.htm,.html,.vtt,.dfxp,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.js,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svg,.json,.xml" formControlName="archivo" id="archivo-input" class="archivo-input" (change)="handleFileInput($event)" required>
                     </div>
                 </div>
 
                 <div>
-                    <button type="submit" class="btn">{{'contacto-enviar'|translate}}</button>
+                    <button (click)="enviarCV()" type="submit" class="btn">{{'contacto-enviar'|translate}}</button>
                 </div>
                 
             </form>

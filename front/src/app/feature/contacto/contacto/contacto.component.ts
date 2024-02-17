@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
+import { ArchivoServiceService } from 'src/app/services/archivo-service.service';
 
 @Component({
   selector: 'app-contacto',
@@ -20,9 +21,9 @@ export class ContactoComponent implements OnInit{
   cvForm: FormGroup;
   formularioActual: string = "cliente";
   archivoLabelText: string = 'Selecciona un archivo';
-  selectedFile: File | null = null;
+  selectedFile: File[] | any | null = [];
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute, public translate: TranslateService) {
+  constructor(private fb: FormBuilder, private route: ActivatedRoute, public translate: TranslateService, private archivoService: ArchivoServiceService) {
     this.clienteForm = this.fb.group({
       tipoForm: 'Cliente', 
       apellido: new FormControl('', Validators.required),
@@ -126,4 +127,78 @@ export class ContactoComponent implements OnInit{
     });
     
   }
+
+async enviarCliente(){
+  if(this.clienteForm.valid){
+    const formCliente = this.clienteForm.value;
+    console.log(formCliente);
+    this.archivoService.enviarDatosCliente(formCliente).subscribe(
+    (respuesta) => {
+      console.log('Exito: ', respuesta);
+      alert('Datos enviados!');
+      this.clienteForm.reset();
+    },        (error) => {
+      console.error('Error:', error);
+      alert('Error al enviar el mensaje');
+    }
+  );
+
+  }  else{
+    this.clienteForm.markAllAsTouched();
+  }
+}
+
+async enviarProveedor(){
+  if(this.proveedorForm.valid){
+    const formProveedor = this.proveedorForm.value;
+    console.log(formProveedor);
+    this.archivoService.enviarDatosProveedor(formProveedor).subscribe(
+    (respuesta) => {
+      console.log('Exito: ', respuesta);
+      alert('Datos enviados!');
+      this.clienteForm.reset();
+    },        (error) => {
+      console.error('Error:', error);
+      alert('Error al enviar el mensaje');
+    }
+  );
+
+  }  else{
+    this.proveedorForm.markAllAsTouched();
+  }
+}
+
+async enviarCV() {
+  if (this.cvForm.valid) {
+
+    if (this.selectedFile instanceof File) {
+      const datosFormulario = this.cvForm.value;
+      console.log('Datos del formulario:', datosFormulario);
+
+      this.archivoService.enviarCV(datosFormulario, this.selectedFile)
+        .subscribe(
+          (respuesta) => {
+            console.log('Éxito:', respuesta);
+            alert('Mensaje enviado');
+            this.cvForm.reset();
+          },
+          (error) => {
+            console.error('Error:', error);
+            alert('Error al enviar el mensaje');
+          }
+        );
+    } else {
+      alert('Selecciona un archivo PDF.');
+    }
+  } else {
+    this.cvForm.markAllAsTouched();
+  }
+}
+
+handleFileInput(event: any) {
+  const archivoSeleccionado: File | null = event.target.files[0] || null;
+  this.selectedFile = archivoSeleccionado;
+  this.archivoLabelText = `Archivo cargado: ${archivoSeleccionado?.name || 'Desconocido'}`;
+}
+
 }
