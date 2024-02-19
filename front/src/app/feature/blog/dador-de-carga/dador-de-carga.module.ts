@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DadorDeCargaRoutingModule } from './dador-de-carga-routing.module';
 import { DadorDeCargaComponent } from './dador-de-carga.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -9,7 +10,8 @@ import { DadorDeCargaComponent } from './dador-de-carga.component';
   declarations: [DadorDeCargaComponent],
   imports: [
     CommonModule,
-    DadorDeCargaRoutingModule
+    DadorDeCargaRoutingModule,
+    TranslateModule.forChild()
   ]
 })
 export class DadorDeCargaModule { }

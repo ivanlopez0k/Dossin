@@ -14,22 +14,23 @@ export class HomeComponent implements OnInit {
     texto: '',
   };
 
+
   blogsData = [
     { 
         imageSrc: '../../../../assets/images/blog/dador-carga.jpg',
-        title: 'Dador de carga',
+        title: 'blog1-title',
         description: 'blog1-p',
         link: '/blog/dador-de-carga'
     },
     { 
         imageSrc: '../../../../assets/images/blog/seguimiento.jpg',
-        title: 'Seguimiento',
+        title: 'blog2-title',
         description: 'blog2-p',
         link: '/blog/seguimiento'
     },
     { 
         imageSrc: '../../../../assets/images/blog/tercerizar-cargas.jpg',
-        title: 'Tercerizar Cargas',
+        title: 'blog3-title',
         description: 'blog3-p',
         link: '/blog/tercerizar-cargas'
     },

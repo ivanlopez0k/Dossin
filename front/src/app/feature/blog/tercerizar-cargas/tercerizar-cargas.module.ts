@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TercerizarCargasRoutingModule } from './tercerizar-cargas-routing.module';
 import { TercerizarCargasComponent } from './tercerizar-cargas.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -9,7 +10,8 @@ import { TercerizarCargasComponent } from './tercerizar-cargas.component';
   declarations: [TercerizarCargasComponent],
   imports: [
     CommonModule,
-    TercerizarCargasRoutingModule
+    TercerizarCargasRoutingModule,
+    TranslateModule.forChild()
   ]
 })
 export class TercerizarCargasModule { }

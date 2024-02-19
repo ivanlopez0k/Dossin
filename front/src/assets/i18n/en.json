@@ -23,14 +23,15 @@
   "visitamos-title": "We visited...",
   "visitamos-p": "And explored various regions of Argentina, transporting our cargo across the country. Our fleet has crossed the provinces of Jujuy, Salta, Tucumán, Santiago del Estero, Chaco, Santa Fe, Entre Ríos, Córdoba, San Luis, San Juan, Mendoza, La Pampa, Río Negro, Neuquén, and Buenos Aires. Every kilometer traveled in these lands is a testimony to our dedication to connect our customers throughout the country.",
   "blog-title": "Our Blog",
-  "blog1-title": "7 reasons why you should outsource your company's logistics",
+  "blog1-title": "Cargo Provider",
   "blog1-p": "The expansion of trade has made logistics a strategic factor for all those companies seeking growth. As",
   "blog-btn": "INFO",
-  "blog2-title": "Logistics and transportation adapting to the Coronavirus.",
+  "blog2-title": "Tracking",
   "blog2-p": "During the current situation with the Coronavirus, many activities may be halted for a few months. However, both health and logistics cannot be neglected",
-  "blog3-title": "The importance of selecting the best means of freight transportation.",
+  "blog3-title": "Outsourcing Freight",
   "blog3-p": "Choosing the right mode of transportation is a key element when importing or exporting goods. Each product has specific delivery characteristics and conditions, as",
   "footer-sobre": "About Dossin",
+  "boton-vermas": "Read more",
   "footer-mision": "Mission",
   "footer-valores": "Values",
   "footer-servicios": "Services",
@@ -45,6 +46,11 @@
   "footer-base": "Operational Bases",
   "footer-copyright": "All rights reserved.",
 
+
+  
+  "viajes-title": "Welcome to the Dossin Logistics Transportation Providers Page",
+  "viajes-subtitle": "To be part of the database of potential providers, you must attach the documents and data requested below (attach as many as possible, in case you don't have one, do not attach). In addition to signing and attaching the document according to norms and conditions.",
+  "viajes-qr-info": "All information provided will be treated confidentially by the Purchasing Department. Once the information on this form is completed, we ask you to press the attach button. We will be in touch once the received information is analyzed.",
   "viajes-qr-title": "Do you want to find out about the benefits we offer to outsourced transporters?",
   "viajes-form-title": "Enter your information, and we'll get in touch.",
   "viajes-form-name": "Name",
@@ -58,6 +64,33 @@
   "viajes-form-transport-warning": "This field is mandatory. Please enter your transport.",
   "viajes-form-telephone-warning": "This field is mandatory. Please enter your phone number.",
   "viajes-form-message-warning": "This field is mandatory. Please enter a message.",
+  "empresa-title": "Company Documents",
+  "constancia-afip": "Do you have the AFIP Registration Certificate?",
+  "libre-deuda-sindical": "Do you have the Union Debt-Free Certificate?",
+  "constancia-iibb": "Do you have the IIBB Certificate?",
+  "constancia-cbu": "Do you have the CBU Certificate?",
+  "opcion-si": "Yes",
+  "opcion-no": "No",
+  "campo-obligatorio": "Mandatory field. Select 'No' if you don't have this document",
+  "archivo-obligatorio": "Mandatory field. Upload your file or select 'No' if you don't have this document",
+  "subir-archivo": "Upload Document",
+  "chofer-title": "Driver Documents",
+  "dni-chofer": "Do you have the Driver's National ID (DNI)?",
+  "licencia-chofer": "Do you have the Driver's License?",
+  "temprana-chofer": "Do you have the Early Registration of the Driver?",
+  "art-chofer": "Do you have the Driver's ART (Workers' Compensation Insurance)?",
+  "linti-chofer": "Do you have the Linti of the Driver?",
+  "seguro-vida-chofer": "Do you have the Driver's Life Insurance?",
+  "camion-title": "Truck Documents",
+  "rto-camion": "Do you have the Truck's Technical Inspection (RTO)?",
+  "poliza-camion": "Do you have the Truck's Insurance Policy?",
+  "seguro-camion": "Do you have the Truck's Safe Passage?",
+  "ruta-camion": "Do you have the Truck's Route Certificate?",
+  "certificado-satelital": "Do you have the Satellite Certificate?",
+
+
+
+
 
   "servicios-card-paletizadas-title": "Palletized Cargo Transportation",
   "servicios-card-paletizadas-desc": "Our experience in palletized cargo transportation allows us to offer comprehensive services for a wide range of sectors. From food products requiring special conditions to construction materials and supplies demanding robust handling, we ensure your cargo arrives in optimal conditions.",
@@ -152,6 +185,149 @@
   "flota-carretones-texto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aut cupiditate veritatis tempore eum cumque illo possimus in consectetur soluta nisi, quisquam, consequuntur et minus illum architecto nobis. Deserunt, cupiditate.",
   
   "flota-intro-h1": "How is our fleet composed?",
-  "flota-intro-p": "We have semi-trailers, siders, and chassis trailers that allow us to transport all kinds of merchandise. The regulations established by decree 32/2018 have allowed us to make a significant investment, and currently, our vehicles offer up to 25% more load capacity than the national average. Currently, we have the following units:"
+  "flota-intro-p": "We have semi-trailers, siders, and chassis trailers that allow us to transport all kinds of merchandise. The regulations established by decree 32/2018 have allowed us to make a significant investment, and currently, our vehicles offer up to 25% more load capacity than the national average. Currently, we have the following units:",
     
+
+
+
+"nosotros-title": "ABOUT DOSSIN",
+"nosotros-descrip": "Transportation and Logistics",
+"nosotros-info-title": "We are Dossin",
+"nosotros-info-p1": "Dossin is a young and dynamic company born in Córdoba from the futuristic vision and entrepreneurial spirit of two founders passionate about challenges. From our beginnings, we set out to offer innovative solutions in the broad logistics sector. What started as an idea became a reality, defining our successful trajectory.",
+"nosotros-info-p2": "We stand out for our entrepreneurial approach, committed to transformation and continuous improvement in the logistics industry. At Dossin, we value long-term relationships and are ready to face future challenges with determination and creativity.",
+"nosotros-comp-p1": "We are committed to punctuality and safety in every shipment, providing reliable logistics services and customer satisfaction. Choose us as your key transportation providers, where excellence is our standard.",
+"nosotros-comp-p2": "At Dossin, our values and commitment are to:",
+"nostoros-tilde1": "Our Workers",
+"nostoros-tilde2": "Our Clients",
+"nostoros-tilde3": "Continuous Improvement",
+"nostoros-tilde4": "The Environment",
+"nostoros-tilde5": "Society",
+"nosotros-mision-t": "Mission",
+"nosotros-mision-p": "We focus our efforts on providing efficient logistics and road transportation solutions that meet the needs of our clients. We are committed to offering a comprehensive and personalized service characterized by its quality and respect for the environment. Additionally, we seek to provide our employees with opportunities for both professional and personal development, strengthening our commitment to mutual growth.",
+"nosotros-vision-t": "Vision",
+"nosotros-vision-p": "We aspire to be a leading and constantly growing company in logistics and road transportation services. We differentiate ourselves by offering quality services that make a difference through continuous improvement and constant evolution. We contribute to social development and progress, relying on a highly trained and motivated human team while maintaining our commitment to environmental sustainability.",
+"nosotros-valores-header": "We commit to...",
+"nosotros-trabajadores-t": "Our Workers:",
+"nosotros-trabajadores-p": "We believe that our workers are Dossin's most valuable asset. We strive to ensure equal opportunities in a healthy and motivating work environment.",
+"nosotros-clientes-t": "Our Clients:",
+"nosotros-clientes-p": "We establish transparent, honest, and lasting relationships with our clients. We prioritize safety in all processes and customer satisfaction as our top priority.",
+"nosotros-mejora-t": "Continuous Improvement:",
+"nosotros-mejora-p": "We prioritize innovation, research, and the development of actions that favor our competitiveness, always seeking continuous improvement in all aspects of our service.",
+"nosotros-ambiente-t": "The Environment:",
+"nosotros-ambiente-p": "We propose and implement effective actions and plans that go beyond meeting legal requirements, actively contributing to environmental preservation.",
+"nosotros-sociedad-t": "Society:",
+"nosotros-sociedad-p": "We take actions with the purpose of improving social cohesion and strengthening the culture in the communities where Dossin has its facilities."
+
+
+,
+
+
+"blog-container-title": "The Current Situation of Transportation in Argentina",
+"blog-container-p": "Choosing the right transportation is a key element when importing or exporting goods. Each product has specific delivery characteristics and conditions, as"
+
+
+,
+
+
+
+"dador-title": "The Role of the 'Shipper' as an Intermediary in Logistic Management",
+"dador-intro-p1": "In the contemporary logistics field, the concept of a 'shipper' has evolved to encompass a crucial role as a connector in the transportation industry.",
+"dador-intro-p2": "The term 'shipper' takes on a new dimension when considered as a logistics intermediary. In this context, the shipper acts as a third party connecting companies in need of transportation services for their goods with available transport companies. It's important to note that the shipper is neither the owner of the cargo nor the owner of the transport but a facilitator managing and coordinating logistics between both parties.",
+"dador-roles-title": "Roles and Responsibilities of the Shipper as an Intermediary",
+"dador-conex-title": "Connection Between Supply and Demand:",
+"dador-conex-p1": "The shipper identifies the transportation needs of companies or individuals and connects these demands with available carriers or logistics services.",
+"dador-conex-p2": "The 'Connection Between Supply and Demand' process played by the shipper as a logistics intermediary involves a series of strategic and tactical activities aimed at facilitating the efficient satisfaction of transportation needs.",
+"dador-conex-p3": "Before initiating the connection, the shipper conducts a thorough analysis of the customer's transportation requirements. This involves understanding the nature of the cargo, delivery deadlines, specific conditions, and any special requirements associated with the shipment.",
+"dador-conex-p4": "Once the customer's requirements are fully understood, the shipper initiates the search for transportation offers. This may involve evaluating an extensive network of carriers and logistics services to identify those that best fit the particular needs of the shipment.",
+"dador-negoc-title": "Negotiation and Coordination:",
+"dador-negoc-p1": "A shipper acts as an intermediary in negotiations between the customer and the carrier, agreeing on terms, rates, and logistical conditions.",
+"dador-negoc-p2": "The shipper plays an active role in ensuring mutually beneficial agreements, considering factors such as distance, urgency, the nature of the cargo, and specific transport conditions.",
+"dador-negoc-p3": "After receiving and negotiating offers, the shipper conducts a thorough assessment to select the most suitable transportation option. This may involve considering variables such as the carrier's reputation, service quality, route availability, and adaptability to changing circumstances.",
+"dador-gestion-title": "Document Management and Tracking:",
+"dador-gestion-p1": "The shipper actively engages in the logistics management associated with transportation. This includes preparing necessary documentation, ensuring that all requirements and regulations are properly met.",
+"dador-gestion-p2": "Throughout the process, the shipper provides constant tracking and regular updates to both parties involved: the customer and the carrier. They are responsible for coordinating loading and unloading schedules and resolving any operational issues that may arise during the journey. Smooth communication and real-time information about the progress of the shipment ensure transparency, clarity, and the ability to proactively address any issues.",
+"dador-resol-title": "Problem Resolution:",
+"dador-resol-p1": "The 'Problem Resolution' phase is essential to ensure efficient and seamless execution of goods transportation. During this stage, the shipper monitors the progress of transportation constantly using technological tools that provide real-time data on the location of the cargo and any incidents during the journey. Rapid identification of issues, such as unexpected delays or changes in the route, is achieved through effective tracking and communication systems.",
+"dador-resol-p2": "Proactive communication with all involved parties, both the customer and the carrier, is key to informing about the situation and discussing possible solutions.",
+"dador-resol-p3": "Preparing and implementing contingency strategies, anticipating potential obstacles, is integral to this phase. In addition to identifying problems, the shipper coordinates the implementation of solutions, such as adjustments to the delivery schedule or finding alternative routes. After applying solutions, constant monitoring is conducted to assess their effectiveness, adjusting strategies as needed.",
+"dador-importancia-title": "Importance of the Shipper Intermediary in the Supply Chain",
+"dador-importancia-p1": "Optimization of routes and resources, flexibility and adaptability, along with reducing administrative burdens, highlight the fundamental role of the shipper in modern logistics.",
+"dador-importancia-p2": "By having a comprehensive view of supply and demand, the shipper deploys strategies to optimize routes and efficiently utilize available resources, improving goods transportation. Its ability to adapt to fluctuations and changes in real-time makes it a crucial link in the logistics chain, ensuring that operations remain efficient even in unforeseen situations. In addition, by assuming administrative burdens, it frees up companies and carriers to focus on their core competencies while handling the logistical aspects. This strategic collaboration not only streamlines the logistical process but allows for a more dedicated and specialized focus on the fundamental activities of each entity involved.",
+"dador-importancia-p3": "The shipper as an intermediary emerges as an essential component in the modern supply chain. Its role goes beyond simply connecting providers and demanders of transportation services; it stands as a strategic facilitator contributing to efficiency, optimization, and effective execution of logistics. Understanding this function is crucial for those seeking efficient and seamless logistics management."
+
+
+
+,
+
+
+
+"seg-title": "Cargo Tracking Technologies for Efficient Logistics",
+"seg-intro-p1": "In a world where logistics and transportation are fundamental pillars for a country's economy, the integration of advanced technologies emerges as a key differentiating element. This article delves into the latest innovations in cargo tracking technologies, highlighting the significant transformation driven by IoT sensors and blockchain-based solutions.",
+"seg-sensores-title": "IoT Sensors: Real-time Visibility",
+"seg-sensores-p": "IoT (Internet of Things) sensors are revolutionizing how companies manage their shipments. These devices act as digital eyes and ears and can be integrated into containers, pallets, or trucks, offering visibility throughout the entire logistics process.",
+"seg-sensores-l1": "Real-time Location: Sensors provide accurate data on the exact location of the cargo at any given time, enabling real-time tracking.",
+"seg-sensores-l2": "Cargo Conditions: This component allows real-time monitoring of critical variables such as temperature, humidity, and other specific cargo conditions, ensuring the integrity of sensitive products.",
+"seg-soluciones-title": "Blockchain-based Solutions: Transparency and Efficiency",
+"seg-soluciones-p": "Blockchain technology has emerged as a reliable tool to enhance transparency, security, and efficiency in the supply chain. In the context of cargo tracking, it offers significant benefits.",
+"seg-soluciones-l1": "Immutable Event Record: Every event related to the cargo is recorded in linked blocks, ensuring an unalterable and shared record of all transactions and movements.",
+"seg-soluciones-l2": "Reduction of Documentary Procedures: Blockchain eliminates the need for paper documents, reducing processing times at customs and transfer points.",
+"seg-implic-title": "Implications for the Supply Chain",
+"seg-implic-p1": "The combination of IoT sensors and blockchain technology goes beyond improving visibility; it has profound implications for efficiency and trust throughout the supply chain.",
+"seg-implic-l1": "Improved Operational Efficiency: The ability for real-time monitoring and the secure and accurate recording of events reduces response times and enhances operational efficiency.",
+"seg-implic-l2": "Increased Trust: The transparency provided by blockchain and the reliability of IoT sensor data significantly increase trust for both businesses and customers.",
+"seg-implic-p2": "In a constantly evolving logistics landscape, the adoption of cargo tracking technologies emerges as an essential element to maintain efficiency and competitiveness. The combination of IoT sensors and blockchain not only enhances visibility and trust but also paves the way for a more efficient and resilient supply chain in the future. Investing in these innovations is not just a cutting-edge strategy but a requirement for those looking to lead in the new era of logistics."
+
+
+,
+
+
+
+"ter-title": "The Benefits of Outsourcing Freight in Transportation",
+"ter-intro-p": "In the ever-dynamic world of transportation and logistics, companies face constant pressure to optimize operations, reduce costs, and deliver quality services. In this context, outsourcing freight emerges as a key solution for companies looking to thrive in a competitive environment.",
+"ter-implic-t": "What does outsourcing freight entail, and why are so many companies opting for this practice?",
+"ter-implic-p1": "Outsourcing freight, also known as logistics outsourcing, can offer benefits for companies needing to meet their transportation needs.",
+"ter-implic-p2": "Here are some key benefits:",
+"ter-enfoq-t": "Focus on Core Competencies",
+"ter-enfoq-p": "Outsourcing logistics functions allows companies to focus on their core competencies. This translates to a deeper dedication of time and resources to fundamental activities such as production, sales, or services. By entrusting logistics management to specialized experts, optimal operational efficiency is ensured, allowing the company to concentrate on enhancing and developing its core areas.",
+"ter-red-t": "Reduction of Operating Costs",
+"ter-red-p": "Outsourcing not only implies more efficient management of the supply chain but can also result in significant savings for the hiring company. By leveraging economies of scale and the expertise of logistics companies, operational expenses are reduced compared to in-house management. It presents itself as a more cost-effective option to optimize resources and maximize benefits.",
+"ter-flex-t": "Flexibility and Scalability",
+"ter-flex-p1": "Outsourcing not only provides greater flexibility but also facilitates agile adaptation to fluctuations in demand compared to in-house management, avoiding challenges that arise when trying to adjust resources independently.",
+"ter-flex-p2": "The ability of logistics companies to quickly adapt resources to changing needs represents a significant advantage. In contrast, when companies manage their transports internally, they face greater difficulties and costs; adapting resources may be slower and more expensive, resulting in a less agile response to market demand variations.",
+"ter-riesgo-t": "Risk and Responsibility Reduction",
+"ter-riesgo-p": "By outsourcing freight transport, the company delegates a portion of the inherent risks and responsibilities of logistics to the transport company. This includes fleet management, maintenance, compliance with regulations, and other aspects. By opting for outsourcing, the company not only lightens its operational burden but also shares the responsibility for maintaining excellence standards in transport, ensuring optimal performance and regulatory compliance without compromising service quality.",
+"ter-mejora-t": "Improvement in Service Quality",
+"ter-mejora-p1": "Logistics companies are distinguished by their specialization in transportation and efficient supply chain management, resulting in a significant improvement in the quality of the service offered. This commitment to excellence is reflected in efficient deliveries, real-time tracking ensuring visibility, and more precise inventory management. The expertise of these companies translates into high-quality service that responds to market demands effectively and efficiently.",
+"ter-mejora-p2": "In conclusion, outsourcing freight emerges as a strategy to optimize efficiency, reduce costs, and elevate service quality in the transportation and logistics sector. Flexibility, risk reduction, and improvement in service quality become strategic allies driving operational success.",
+"ter-mejora-p3": "However, it is crucial to emphasize that, despite the numerous benefits, outsourcing requires careful management to ensure effective collaboration and meet the specific needs of the company. An attentive and strategic approach is essential to maximize positive outcomes and proactively address any potential challenges."
+
+
+
+
+,
+
+
+
+
+"trp-title": "The Current Situation of Transportation in Argentina",
+"trp-intro-p1": "The complexity and dynamics defining the current situation of transportation in Argentina result from an interconnection of factors that go beyond the simple mobility of goods.",
+"trp-intro-p2": "Infrastructure, considered the backbone of transportation, faces challenges that directly impact the efficiency and competitiveness of the logistics system. Simultaneously, economic challenges, marked by fluctuations and changing macroeconomic conditions, create a continuous need for adaptation by sector companies. Additionally, regulations and norms impose a framework that influences daily operations, adding complexity to national logistics.",
+"trp-intro-p3": "Below, factors merging to shape the present and future of transportation in Argentina are explored, identifying areas of opportunity and challenges that require attention to strengthen and modernize the country's logistics system.",
+"trp-infra-t": "Road Infrastructure",
+"trp-infra-p1": "The road infrastructure network in Argentina faces considerable challenges. Despite the existence of an extensive road network in the country, lack of investment and proper maintenance has led to precarious conditions in many sections.",
+"trp-infra-p2": "This situation directly affects the efficiency of freight transport, generating repercussions on costs and delivery times.",
+"trp-infra-p3": "Neglect of road infrastructure compromises the flow and reliability of the logistics system, highlighting the need for interventions that improve and optimize the road network to effectively support the transport of goods.",
+"trp-desafio-t": "Economic Challenges",
+"trp-desafio-p1": "Argentina's economy has experienced significant variations in recent years, directly impacting the transportation sector. Inflation, currency devaluation, and constantly changing economic policies are factors contributing to generating uncertainty and, as a consequence, forcing transport companies to make continuous adaptations.",
+"trp-desafio-p2": "The volatile economic environment, marked by fluctuations in key indicators, imposes the constant need for transport companies to adjust and redefine strategies to maintain their competitiveness and sustainability amid a dynamic and challenging economic scenario.",
+"trp-reg-t": "Regulation and Norms",
+"trp-reg-p": "Regulations governing the transportation sector in Argentina play a crucial role. Evolving regulations and associated bureaucracy can become barriers affecting the operational efficiency of transport companies. The need to comply with regulatory demands not only poses a challenge in terms of logistical complexities but can also lead to additional costs. Adapting to constantly changing regulations becomes a crucial component for the successful operation of transport companies, as they must navigate regulatory obstacles to ensure legal compliance and maintain the smooth flow of their logistics operations.",
+"trp-inn-t": "Technological Innovation",
+"trp-inn-p1": "Despite challenges, there is a push toward technological innovation in the transportation sector in Argentina. The adoption of cargo tracking technologies, digital platforms, and logistics management systems is on the rise, aiming to elevate efficiency and transparency in the supply chain.",
+"trp-inn-p2": "This shift toward the incorporation of technological tools aims to overcome existing challenges and optimize logistics processes, demonstrating a positive trend toward modernization and continuous improvement in the country's transportation sector.",
+"trp-per-t": "Future Perspectives and Challenges",
+"trp-per-p1": "The future of transportation in Argentina is linked to how current challenges are faced and overcome. Investments in infrastructure, maintaining economic stability, and prompt adaptation to emerging technologies stand out as crucial factors that will influence the competitiveness and efficiency of the transportation system in the country.",
+"trp-per-p2": "The ability to address these critical aspects effectively and strategically will be fundamental in outlining a favorable and sustainable horizon for transportation in Argentina."
+
+
 }

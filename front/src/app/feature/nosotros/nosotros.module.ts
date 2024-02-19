@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NosotrosRoutingModule } from './nosotros-routing.module';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -11,7 +12,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     NosotrosRoutingModule,
-    SharedModule
+    SharedModule,
+    TranslateModule.forChild()
   ]
 })
 export class NosotrosModule { }
