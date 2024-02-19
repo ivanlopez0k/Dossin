@@ -4,7 +4,7 @@ input, textarea{
 
 .container{
     width: 100%;
-    margin: 8vh auto;
+    margin: 0 auto 8vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,6 +19,7 @@ input, textarea{
     margin: 1rem auto;
     margin-top: 25px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -26,8 +27,14 @@ input, textarea{
     border-radius: 12px;
     padding: 1rem;
 }
+.intro-text h1{
+    color: var(--primary-color);
+    width: 90%;
+    margin: 2rem auto;
+    text-wrap: balance;
+}
 .intro-text h2{
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     color: var(--primary-color);
     width: 80%;
     margin: 2rem auto;
@@ -212,7 +219,51 @@ span{
 .input-form.warning input{
     border-color: #ff0400;
 }
-
+.btn {
+    position: relative;
+}
+  
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+  }
+  
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+  
+.btn.cargando {
+    cursor: not-allowed;
+    opacity: 0.7;
+    color: var(--primary-color);
+  }
+.btn.cargando:hover {
+    background-color: var(--primary-color);
+}
+form.cargando {
+    cursor: not-allowed;
+    opacity: 0.5;
+    /* Agrega otros estilos según tus preferencias */
+  }
+  
+  /* Agrega estilos adicionales para los elementos del formulario durante el estado de carga */
+  form.cargando input,
+  form.cargando textarea,
+  form.cargando select, 
+  form.cargando .input-file{
+    /* Agrega estilos específicos para inputs, textareas, selects, etc. */
+    pointer-events: none; /* Evita la interacción con los elementos durante el estado de carga */
+  }
 //------------------------------------------------------------------
 .secondary-form {
     .input-form {
@@ -341,5 +392,19 @@ input[type="file"]{
     .form-container{
         margin-top: 100px;
         padding: 0;
+    }
+    .qr-title h2{
+        font-size: 1rem;
+    }
+
+    .intro-text {
+        padding: 0;
+    }
+    .intro-text h1,
+    .intro-text h2 {
+        margin: 2rem 0;
+    }
+    .intro-text h2 {
+        margin-top: 0;
     }
 }
