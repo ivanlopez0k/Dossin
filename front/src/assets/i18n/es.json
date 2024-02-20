@@ -1,0 +1,350 @@
+{
+    "navbar-servicios": "Servicios",
+    "navbar-industrias": "Industrias",
+    "navbar-viajes": "Viajes",
+    "navbar-nosotros": "Nosotros",
+    "navbar-contacto": "Contacto",
+    "Portada-Title": "Logística y Transporte",
+    "Portada-p": "Más que un transporte, una solucion logistica",
+    "Lideres": "\"Un medio para un fin\"",
+    "Lideres-p": "En Dossin somos una empresa joven e innovadora,  ofrecemos soluciones eficientes de transporte y logística a nivel nacional e internacional. Nos comprometemos con la puntualidad y la seguridad en cada envío, proporcionando servicios logísticos confiables y satisfacción del cliente. Eleginos como tus proveedores claves de transporte, donde la excelencia es nuestro estándar.",
+    "Lideres-boton": "Saber más",
+    "Nuestros-servicios": "Nuestros servicios",
+    "Transporte de Cargas Paletizada": "Transporte de Cargas Paletizada",
+    "Cargas a Granel": "Cargas a Granel",
+    "Transporte de contenedores": "Transporte de contenedores",
+    "Transporte Internacional": "Transporte Internacional",
+    "boton-servicio": "Ver más servicios",
+    "recorrido-2023": "En 2023...",
+    "recorrimos-title": "Recorrimos...",
+    "recorrimos-p": "Con nuestros camiones más de 350,000 kilómetros, demostrando la firmeza y responsabilidad de nuestra flota. Este logro no solo destaca la confianza depositada en nosotros, sino también el compromiso con nuestros clientes. Cada kilómetro es un testimonio de nuestra dedicación para garantizar entregas que cumplan con las expectativas en tiempo y forma.",
+    "cargamos-title": "Cargamos...",
+    "cargamos-p": "Con DOSSIN, hemos llevado con éxito más de 45,000 toneladas de diversas cargas, y estamos orgullosos de haber entregado cada una de ellas de manera segura y eficiente. Esta cifra no solo refleja la capacidad de nuestros camiones, sino también la versatilidad para satisfacer las diversas necesidades de nuestros clientes.",
+    "visitamos-title": "Visitamos...",
+    "visitamos-p": "Y exploramos diversas regiones de Argentina, llevando nuestras cargas a lo largo y ancho del país. Nuestra flota ha atravesado las provincias de Jujuy, Salta, Tucumán, Santiago del Estero, Chaco, Santa Fe, Entre Ríos, Córdoba, San Luis, San Juan, Mendoza, La Pampa, Río Negro, Neuquén y Buenos Aires. Cada kilómetro recorrido en estas tierras es un testimonio de nuestra dedicación para conectar a nuestros clientes con todo el país.",
+    "blog-title": "Nuestro Blog",
+    "blog1-title": "Dador de carga",
+    "blog1-p": "La expansión del comercio ha hecho que la logística se convierta en un factor estratégico para todas aquellas empresas que buscan crecer. A medida que",
+    "blog-btn": "INFO",
+    "blog2-title": "Seguimiento",
+    "blog2-p": "Durante la situación que estamos atravesando del Coronavirus, muchas actividades pueden ser frenadas algunos meses. Pero tanto la salud como la logística, no pueden abandonar",
+    "blog3-title": "Tercerizar Cargas",
+    "blog3-p": "Elegir el transporte adecuado es un elemento clave cuando se requiere importar o exportar mercancía. Cada producto tiene características y condiciones de entrega específicas, por",
+    "footer-sobre": "Sobre Dossin",
+    "boton-vermas":"Ver más",
+    "footer-mision": "Mision",
+    "footer-valores": "Valores",
+    "footer-servicios": "Servicios",
+    "footer-flota": "Flota",
+    "footer-industrias": "Industrias",
+    "footer-ayudar": "Como te podemos ayudar",
+    "footer-sumate": "Sumate al equipo tercerizados",
+    "footer-cliente": "Quiero ser cliente",
+    "footer-proveedor": "Quiero ser proveedor",
+    "footer-sumate-dossin": "Sumate a Dossin",
+    "footer-oficina": "Oficina Comercial",
+    "footer-base": "Base operativas",
+    "footer-copyright": "Todos los derechos reservados.",
+
+
+    "viajes-title":"Bienvenido a la página de proveedores de transporte de Dossin Logistica",
+    "viajes-subtitle":"Para formar parte de la base de datos de posibles proveedores, deberá adjuntar los documentos y datos que se solicitan a continuacion (adjuntar la gran mayoria posible, en el caso de no tener alguno no adjuntar). Ademas de firmar y adjuntar el documento de acuerdo con normas y condiciones.",
+    "viajes-qr-info":"Toda la información vertida será tratada de manera confidencial por el Departamento de Compras. Una vez completada la información de dicha planilla, le solicitamos que presione el boton adjuntar. Estaremos en contacto una vez analizada la información recibida.",
+    "viajes-qr-title": "¿Queres enterarte de nuestros beneficios que ofrecemos a los transportistas tercerizados?",
+    "viajes-form-title":"Cargá tus datos y nos ponemos en contacto",
+    "viajes-form-name":"Nombre",
+    "viajes-form-lastname":"Apellido",
+    "viajes-form-transport":"Transporte",
+    "viajes-form-telephone":"Teléfono",
+    "viajes-form-message":"Mensaje",
+    "viajes-form-send":"Enviar",
+    "viajes-form-name-warning":"Este campo es obligatorio.Por favor ingresa tu nombre",
+    "viajes-form-lastname-warning":"Este campo es obligatorio.Por favor ingresa tu apellido",
+    "viajes-form-transport-warning":"Este campo es obligatorio.Por favor ingresa tu transporte",
+    "viajes-form-telephone-warning":"Este campo es obligatorio.Por favor ingresa tu telefono",
+    "viajes-form-message-warning":"Este campo es obligatorio.Por favor ingresa un mensaje",
+    "empresa-title":"Documentos Empresa",
+    "constancia-afip":"¿Tiene la Constancia de Inscripcion AFIP?",
+    "libre-deuda-sindical":"¿Tiene el Libre de Deuda Sindical?",
+    "constancia-iibb":"¿Tiene la Constancia IIBB?",
+    "constancia-cbu":"¿Tiene la Constancia de CBU?",
+    "opcion-si":"Si",
+    "opcion-no":"No",
+    "campo-obligatorio":"Campo Obligatorio. Seleccione 'No' si no tiene este documento",
+    "archivo-obligatorio":"Campo Obligatorio.Suba su archivo o seleccione 'No' si no tiene este documento",
+    "subir-archivo":"Subir Documento",
+    "chofer-title":"Documento Chofer",
+    "dni-chofer":"¿Tiene el DNI del Chofer?",
+    "licencia-chofer":"¿Tiene la Licencia del Chofer?",
+    "temprana-chofer":"¿Tiene la Alta Temprana del Chofer?",
+    "art-chofer":"¿Tiene el ART del Chofer?",
+    "linti-chofer":"¿Tiene la Linti del Chofer?",
+    "seguro-vida-chofer":"¿Tiene el Seguro de Vida del Chofer?",
+    "camion-title":"Documentos Camión",
+    "rto-camion":"¿Tiene la RTO del Camion?",
+    "poliza-camion":"¿Tiene la Poliza de Seguro del Camion?",
+    "seguro-camion":"¿Tiene el Paso Seguro del Camion?",
+    "ruta-camion":"¿Tiene la Ruta del Camion?",
+    "certificado-satelital":"¿Tiene el Certificado Satelital?"
+    
+
+
+
+    ,
+
+    "servicios-card-paletizadas-title":"Transporte de Cargas Paletizadas",
+    "servicios-card-paletizadas-desc":"Nuestra experiencia en el transporte de cargas paletizadas nos permite ofrecer un servicio integral para una amplia gama de sectores. Desde productos alimenticios que requieren condiciones especiales hasta materiales de construcción e insumos que demandan un manejo robusto, nos aseguramos de que tu carga llegue en óptimas condiciones",
+    "servicios-card-granel-title":"Cargas a Granel",
+    "servicios-card-granel-desc":"Nos destacamos por ofrecer servicios especializados en transporte de cargas a granel, abarcando commodities, especialidades del agro, derivados de la minería y áridos. Nuestra flota moderna y capacitada está diseñada para garantizar el traslado eficiente y seguro de estos productos, cumpliendo con los más altos estándares de calidad y cuidado. Ya sea que necesites movilizar cereales, productos agrícolas de alto valor, derivados mineros o áridos, estamos comprometidos a ofrecer soluciones logísticas confiables que se adapten a las necesidades específicas de tu industria.",
+    "servicios-card-contenedores-title":"Transporte de Contenedores",
+    "servicios-card-contenedeores-desc":"Somos capaces de realizar el movimiento eficiente de contenedores, ofreciendo opciones de round trips o viajes directos según tus necesidades logísticas. Nuestra capacidad para transportar contenedores de 20 o 40 pies garantiza flexibilidad en las operaciones de importación y exportación de tu empresa. Ya sea que busques optimizar rutas, reducir costos o mejorar la eficiencia en el transporte marítimo, nuestro equipo está preparado para proporcionar soluciones a medida que impulsen el éxito de tu cadena de suministro.",
+    "servicios-card-internacional-title":"Transporte Internacional",
+    "servicios-card-internacional-desc":"Ofrecemos soluciones integrales para el transporte internacional hacia destinos claves como Brasil, Chile, Uruguay y Bolivia. Nuestra red logística eficiente garantiza un traslado seguro y puntual de tu carga a través de fronteras, proporcionando servicios aduaneros y coordinación logística para facilitar un proceso sin contratiempos.",
+    "servicios-card-maquinaria-title": "Movimientos sobredimensionados y de maquinaria",
+    "servicios-card-maquinaria-desc": "Manejamos con precisión y eficiencia el traslado de cargas de gran envergadura, implementando soluciones logísticas innovadoras para superar desafíos únicos. Además, ofrecemos servicios especializados en el movimiento de maquinaria agrícola y vial. Nuestra flota y experiencia garantizan un transporte seguro y eficiente para tus activos más grandes, proporcionando soluciones adaptadas a las necesidades específicas de tu industria.",
+
+
+    "servicios-portada-titulo": "Servicios",
+    "servicios-portada-text": "Profesionales dedicados a atender todas las necesidades",
+
+    "servicios-elegirnos-titulo":"¿Por que trabajar con nosotros?",
+    "servicios-trayectoria": "Trayectoria",
+    "servicios-compromiso": "Compromiso con el cliente",
+    "servicios-seguimiento": "Seguimiento satelital",
+    "servicios-personalizado": "Servicio personalizado",
+    "servicios-ambiente": "Compromiso con el medio ambiente"
+
+
+    ,
+
+
+    "industrias-portada-titulo": "Industrias",
+    "industrias-portada-texto": "Tenemos experiencia en diversos rubros industriales",
+
+    "industrias-agricola-titulo": "Agrícola",
+    "industrias-agricola-text": "En el sector agrícola, Dossin se especializa en el transporte seguro y eficiente de commodities y especialidades, maquinaria del agro e insumos. Nuestra flota y experiencia garantizan el manejo cuidadoso de grandes volúmenes de carga, contribuyendo al éxito de los agricultores y empresas del sector.",
+    "industrias-mineria-titulo": "Mineria",
+    "industrias-mineria-text": "Colaboramos estrechamente con la industria minera para proporcionar soluciones logísticas adaptadas a sus necesidades únicas. Manejamos el transporte de derivados mineros y movimientos sobredimensionados e especiales con la eficiencia necesaria para mantener las operaciones mineras en marcha.",
+    "industrias-mercaderias-titulo": "Mercaderias",
+    "industrias-mercaderias-text": "Dossin ofrece servicios de transporte para una amplia variedad de mercancías, abarcando desde productos manufacturados hasta bienes de consumo. Adaptamos nuestras soluciones logísticas para garantizar entregas puntuales y eficientes, satisfaciendo las demandas dinámicas de cada industria.",
+    "industrias-construccion-titulo": "Construccion",
+    "industrias-construccion-text": "En el sector de la construcción, proporcionamos servicios logísticos especializados para el transporte de materiales de construcción, equipos pesados y otros elementos necesarios para proyectos de construcción. Nuestra flota versátil y experiencia nos permiten enfrentar los desafíos específicos de esta industria.",
+    "industrias-alimentos-titulo": "Alimenos y bebidas",
+    "industrias-alimentos-text": "Dossin se destaca en el manejo de productos alimenticios y bebidas, garantizando un transporte seguro y cumpliendo con los requisitos normativos. Nos comprometemos a mantener la frescura e integridad de los productos, asegurando entregas eficientes a lo largo de la cadena de suministro.",
+
+    "industrias-empresas": "Algunos de Nuestros Clientes"
+
+
+    
+    ,
+
+    "contacto-portada-titulo": "Contactanos",
+
+    "contacto-cliente":"Cliente",
+    "contacto-proveedor": "Proveedor",
+    "contacto-cv": "Mandar CV",
+
+    "contacto-apellido": "Apellido",
+    "contacto-nombre": "Nombre",
+    "contacto-email": "Email",
+    "contacto-telefono": "Telefono",
+    "contacto-cuit": "CUIT",
+    "contacto-servicio": "Servicio",
+    "contacto-mensaje":"Mensaje",
+    "contacto-enviar": "Enviar",
+    "contacto-empresa": "Empresa",
+    "contacto-profesion": "Profesion",
+    "contacto-chofer": "Chofer",
+    "contacto-contador": "Contador",
+    "contacto-dador": "Dador",
+    "contacto-edad": "Edad",
+    "contacto-dni": "DNI",
+    "contacto-apellido-warning":"Este campo es obligatorio.Por favor ingresa tu apellido",
+    "contacto-seleccionador": "Profesión",
+    "contacto-adj-CV": "Adjunta tu CV",
+    "contactoLabelText": "Selecciona un archivo",
+    "contacto-nombre-warning": "Este campo es obligatorio.Por favor ingresa tu nombre",
+    "contacto-empresa-warning": "Este campo es obligatorio.Por favor ingresa tu empresa",
+    "contacto-email-warning": "Este campo es obligatorio.Por favor ingresa un email valido",
+    "contacto-telefono-warning": "Este campo es obligatorio.Por favor ingresa tu telefono",
+    "contacto-cuit-warning": "Este campo es obligatorio.Por favor ingresa tu CUIT",
+    "contacto-servicio-warning": "Este campo es obligatorio.Por favor ingresa tus servicios",
+    "contacto-profesion-warning": "Este campo es obligatorio.Por favor ingrese el puesto a postularse",
+    "contacto-edad-warning": "Este campo es obligatorio.Por favor ingrese su edad",
+    "contacto-dni-warning": "Este campo es obligatorio.Por favor ingrese su DNI"
+
+
+    ,
+
+    "flota-portada-titulo":"Nuestra Flota",
+    "flota-portada-texto": "Preparados para prestar servicios a diferentes industrias",
+    
+    "flota-sider-titulo": "Sider",
+    "flota-sider-texto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aut cupiditate veritatis tempore eum cumque illo possimus in consectetur soluta nisi, quisquam, consequuntur et minus illum architecto nobis. Deserunt, cupiditate. ",
+    "flota-semi-titulo": "Semi Baranda Volcable 13,5 y 14,5",
+    "flota-semi-texto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aut cupiditate veritatis tempore eum cumque illo possimus in consectetur soluta nisi, quisquam, consequuntur et minus illum architecto nobis. Deserunt, cupiditate. ",
+    "flota-portacontenedor-titulo": "Portacontenedor",
+    "flota-portacontenedor-texto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aut cupiditate veritatis tempore eum cumque illo possimus in consectetur soluta nisi, quisquam, consequuntur et minus illum architecto nobis. Deserunt, cupiditate. ",
+    "flota-chasis-titulo": "Chasis y Acoplado",
+    "flota-chasis-texto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aut cupiditate veritatis tempore eum cumque illo possimus in consectetur soluta nisi, quisquam, consequuntur et minus illum architecto nobis. Deserunt, cupiditate. ",
+    "flota-bitrenes-titulo": "Bitrenes",
+    "flota-bitrenes-texto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aut cupiditate veritatis tempore eum cumque illo possimus in consectetur soluta nisi, quisquam, consequuntur et minus illum architecto nobis. Deserunt, cupiditate. ",
+    "flota-bate-titulo": "Bate y Tolva",
+    "flota-bate-texto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aut cupiditate veritatis tempore eum cumque illo possimus in consectetur soluta nisi, quisquam, consequuntur et minus illum architecto nobis. Deserunt, cupiditate. ",
+    "flota-carretones-titulo": "Carretones",
+    "flota-carretones-texto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aut cupiditate veritatis tempore eum cumque illo possimus in consectetur soluta nisi, quisquam, consequuntur et minus illum architecto nobis. Deserunt, cupiditate. ",
+  
+    "flota-intro-h1": "¿Cómo está compuesta nuestra flota?",
+    "flota-intro-p": "Contamos con semi remolques, siders y chasis acoplados que permiten transportar todo tipo de mercadería. La normativa establecida por el decreto 32/2018 nos ha permitido realizar una gran inversión y en la actualidad nuestros vehículos ofrecen hasta un 25% más de capacidad de carga que la media nacional.  En la actualidad contamos con las siguientes unidades:",
+
+
+
+
+
+    "nosotros-title":"ACERCA DE DOSSIN",
+    "nosotros-descrip": "Transporte y Logica",
+    "nosotros-info-title":"Somos Dossin",
+    "nosotros-info-p1":"Dossin, es una empresa joven y dinámica, nació en Córdoba de la visión futurista y el espíritu emprendedor de dos fundadores apasionados por los desafíos. Desde nuestros inicios, nos propusimos ofrecer soluciones innovadoras en el amplio sector de la logística. Lo que comenzó como una idea se convirtió en una realidad, definiendo nuestra exitosa trayectoria.",
+    "nosotros-info-p2":"Destacamos por nuestro enfoque emprendedor, comprometidos con la transformación y mejora continua en la industria logística. En Dossin, valoramos las relaciones a largo plazo y estamos listos para enfrentar los desafíos futuros con determinación y creatividad.",
+    "nosotros-comp-p1":"Nos comprometemos con la puntualidad y la seguridad en cada envío, proporcionando servicios logísticos confiables y satisfacción del cliente. Eleginos como tus proveedores claves de transporte, donde la excelencia es nuestro estándar.",
+    "nosotros-comp-p2":"En Dossin nuestros valores y compromison son con:",
+    "nostoros-tilde1":"Nuestros Trabajadores",
+    "nostoros-tilde2":"Nuestros Clientes",
+    "nostoros-tilde3":"La Mejora Continua",
+    "nostoros-tilde4":"El Medio Ambiente",
+    "nostoros-tilde5":"La Sociedad",
+    "nosotros-mision-t":"Misión",
+    "nosotros-mision-p":"Enfocamos nuestros esfuerzos en brindar soluciones logísticas y de transporte por carretera que sean eficientes y se ajusten a las necesidades de nuestros clientes. Nos comprometemos a ofrecer un servicio integral y personalizado, caracterizado por su calidad y respeto al medio ambiente. Además, buscamos proporcionar a nuestros empleados oportunidades para su desarrollo tanto profesional como personal, fortaleciendo así nuestro compromiso con el crecimiento conjunto.",
+    "nosotros-vision-t":"Visión",
+    "nosotros-vision-p":"Aspiramos a ser una empresa líder y en constante crecimiento en el servicio logístico y de transporte por carretera. Nos diferenciamos al ofrecer servicios de calidad que marcan la diferencia a través de la mejora continua y la evolución constante. Contribuimos al desarrollo y progreso social, contando con un equipo humano altamente capacitado y motivado, y manteniendo nuestro compromiso con la sostenibilidad ambiental.",
+    "nosotros-valores-header":"Nos comprometemos con...",
+    "nosotros-trabajadores-t":"Nuestros Trabajadores:",
+    "nosotros-trabajadores-p":"Creemos que nuestros trabajadores son el activo más valioso de Dossin. Nos esforzamos por garantizar igualdad de oportunidades en un ambiente laboral saludable y motivador.",
+    "nosotros-clientes-t":"Nuestros Clientes:",
+    "nosotros-clientes-p":"Establecemos relaciones transparentes, honestas y duraderas con nuestros clientes. Priorizamos la seguridad en todos los procesos y la satisfacción del cliente como nuestra máxima prioridad.",
+    "nosotros-mejora-t":"La Mejora Continua:",
+    "nosotros-mejora-p":"Damos prioridad a la innovación, investigación y desarrollo de acciones que favorezcan nuestra competitividad, siempre buscando la mejora continua en todos los aspectos de nuestro servicio.",
+    "nosotros-ambiente-t":"El Medio Ambiente:",
+    "nosotros-ambiente-p":"Planteamos y aplicamos acciones y planes eficaces que van más allá de cumplir con los requisitos legales, contribuyendo activamente a la preservación del medio ambiente",
+    "nosotros-sociedad-t":"La Sociedad:",
+    "nosotros-sociedad-p":"Realizamos acciones con el propósito de mejorar la cohesión social y fortalecer la cultura en las comunidades donde Dossin tiene sus instalaciones."
+
+  
+
+    ,
+
+
+    "blog-descrip":"",
+    "blog-container-title":"La Situación Actual del Transporte en Argentina",
+    "blog-container-p":"Elegir el transporte adecuado es un elemento clave cuando se requiere importar o exportar mercancía. Cada producto tiene características y condiciones de entrega específicas, por"
+
+
+
+    ,
+
+
+
+
+    "dador-title":"El Rol del 'Dador de Carga' como Intermediario en la Gestión Logística",
+    "dador-intro-p1":"En el ámbito logístico contemporáneo, el concepto de 'dador de carga' ha evolucionado para abarcar un papel crucial como conector en la industria del transporte.",
+    "dador-intro-p2":"El término 'dador de carga' adquiere una nueva dimensión cuando se considera como un intermediario logístico. En este contexto, el dador de carga actúa como un tercero que conecta a aquellas empresas que requieren servicios de transporte para sus mercaderías con empresas de transporte disponibles. Es importante destacar que el dador de carga no es ni el dueño de la carga ni el propietario del transporte, sino un facilitador que gestiona y coordina la logística entre ambas partes.",
+    "dador-roles-title":"Roles y Responsabilidades del Dador de Carga como Intermediario",
+    "dador-conex-title":"Conexión Entre Oferta y Demanda:",
+    "dador-conex-p1":"El dador de carga identifica las necesidades de transporte de empresas o individuos y conecta estas demandas con transportistas o servicios de logística disponibles. ",
+    "dador-conex-p2":"El proceso de 'Conexión Entre Oferta y Demanda' desempeñado por el dador de carga como intermediario logístico implica una serie de actividades estratégicas y tácticas destinadas a facilitar la satisfacción eficiente de las necesidades de transporte.",
+    "dador-conex-p3":"Antes de iniciar la conexión, el dador de carga realiza un análisis exhaustivo de los requerimientos de transporte del cliente. Esto implica comprender la naturaleza de la carga, los plazos de entrega, las condiciones específicas, y cualquier requisito especial asociado con el envío.",
+    "dador-conex-p4":"Una vez que se comprenden completamente los requisitos del cliente, el dador de carga inicia la búsqueda de ofertas de transporte. Esto puede involucrar la evaluación de una red extensa de transportistas y servicios logísticos para identificar aquellos que mejor se adapten a las necesidades particulares del envío.",
+    "dador-negoc-title":"Negociación y Coordinación:",
+    "dador-negoc-p1":"Un dador de carga actúa como intermediario en las negociaciones entre el cliente y el transportista, acordando términos, tarifas y condiciones logísticas.",
+    "dador-negoc-p2":"El dador de carga juega un papel activo en asegurar acuerdos mutuamente beneficiosos, considerando factores como la distancia, la urgencia, la naturaleza de la carga y condiciones específicas del transporte. ",
+    "dador-negoc-p3":"Después de recibir y negociar ofertas, el dador de carga realiza una evaluación minuciosa para seleccionar la opción de transporte más adecuada. Esto puede implicar la consideración de variables como la reputación del transportista, la calidad del servicio, la disponibilidad de rutas y la capacidad de adaptación a circunstancias cambiantes.",
+    "dador-gestion-title":"Gestión Documental y Seguimiento:",
+    "dador-gestion-p1":"El dador de carga se involucra activamente en la gestión logística asociada con el transporte. Esto incluye la preparación de documentación necesaria, asegurando que todos los requisitos y regulaciones se cumplan de manera adecuada. ",
+    "dador-gestion-p2":"A lo largo de todo el proceso, el dador de carga proporciona seguimiento constante y actualizaciones de forma regular a ambas partes involucradas: el cliente y el transportista. El mismo debe encargarse de la coordinación de horarios de carga y descarga, y la resolución de cualquier problema operativo que pueda surgir durante el viaje. Una comunicación fluida e información en tiempo real sobre el progreso del envío asegura transparencia, claridad y la capacidad de abordar cualquier problema de manera proactiva.",
+    "dador-resol-title":"Resolución de Problemas:",
+    "dador-resol-p1":"La fase de 'Resolución de Problemas' es esencial para asegurar una ejecución eficiente y sin inconvenientes en el transporte de mercancías. Durante esta etapa, el dador de carga realiza un monitoreo constante del progreso del transporte mediante el uso de herramientas tecnológicas que proporcionan datos en tiempo real sobre la ubicación de la carga y cualquier incidencia durante el viaje. La rápida identificación de problemas, como retrasos inesperados o cambios en la ruta, se logra mediante sistemas de seguimiento y comunicación efectivos. ",
+    "dador-resol-p2":"La comunicación proactiva con todas las partes involucradas tanto con el cliente como con el transportista es clave para informar sobre la situación y discutir posibles soluciones. ",
+    "dador-resol-p3":"La preparación y aplicación de estrategias de contingencia, anticipando obstáculos potenciales, es parte integral de esta fase. Además de identificar problemas, el dador de carga coordina la implementación de soluciones, como ajustes en la programación de entrega o la búsqueda de rutas alternativas. Después de aplicar soluciones, se realiza un seguimiento constante para evaluar su efectividad, ajustando estrategias según sea necesario.",
+    "dador-importancia-title":"Importancia del Dador de Carga Intermediario en la Cadena de Suministro",
+    "dador-importancia-p1":"La optimización de rutas y recursos, la flexibilidad y adaptabilidad, junto con la reducción de la carga administrativa, destacan el papel fundamental del dador de carga en la logística moderna. ",
+    "dador-importancia-p2":"Al poseer una visión completa de la oferta y la demanda, el dador de carga despliega estrategias para optimizar las rutas y aprovechar eficientemente los recursos disponibles, mejorando los traslados de mercancías. Su capacidad para adaptarse a las fluctuaciones y cambios en tiempo real lo convierte en un eslabón crucial en la cadena logística, asegurando que la operación se mantenga eficiente incluso ante situaciones imprevistas. Además, al asumir la carga administrativa, libera a las empresas y transportistas para concentrarse en sus competencias centrales, mientras él se encarga de gestionar los aspectos logísticos. Esta colaboración estratégica no solo agiliza el proceso logístico, sino que permite un enfoque más dedicado y especializado en las actividades fundamentales de cada entidad involucrada. ",
+    "dador-importancia-p3":"El dador de carga como intermediario emerge como un componente esencial en la cadena de suministro moderna. Su papel va más allá de simplemente conectar a ofertantes y demandantes de servicios de transporte; se erige como un facilitador estratégico que contribuye a la eficiencia, la optimización y la ejecución efectiva de la logística. La comprensión de esta función es crucial para aquellos que buscan una gestión logística eficiente y sin contratiempos."
+
+
+
+
+    ,
+
+
+
+    "seg-title":"Tecnologías de Seguimiento de Carga para una Logística Eficiente",
+    "seg-intro-p1":"En un mundo donde la logística y el transporte son pilares fundamentales para el funcionamiento de la economía de un país, la integración de tecnologías avanzadas se muestra como un elemento diferenciador clave. Este artículo se adentra en las últimas innovaciones en tecnologías de seguimiento de carga, destacando la transformación significativa impulsada por sensores IoT y soluciones basadas en blockchain.",
+    "seg-sensores-title":"Sensores IoT: visibilidad en tiempo real",
+    "seg-sensores-p":"Los sensores IoT (Internet de las Cosas) están revolucionando la forma en que las empresas gestionan sus envíos. Estos dispositivos actúan como ojos y oídos digitales y se pueden encontrar integrados en contenedores, pallets, o en los mismos camiones. Los mismos ofrecen una visibilidad durante todo el proceso logístico.",
+    "seg-sensores-l1":"Ubicación en Tiempo Real: Los sensores proporcionan datos precisos sobre la ubicación exacta de la carga en cualquier momento, permitiendo un seguimiento en tiempo real.",
+    "seg-sensores-l2":"Condiciones de Carga: Este componente permite la monitorización en tiempo real de variables críticas como temperatura, humedad y otras condiciones específicas de carga, garantizando así la integridad de productos sensibles.",
+    "seg-soluciones-title":"Soluciones Basadas en Blockchain: Transparencia y Eficiencia:",
+    "seg-soluciones-p":"La tecnología blockchain se ha consolidado como una herramienta confiable para mejorar la transparencia, seguridad y eficiencia en la cadena de suministro. En el contexto del seguimiento de carga, ofrece beneficios significativos.",
+    "seg-soluciones-l1":"Registro Inmutable de Eventos: Cada evento relacionado con la carga se registra en bloques vinculados, asegurando un registro inalterable y compartido de todas las transacciones y movimientos.",
+    "seg-soluciones-l2":"Reducción de Trámites Documentales: La blockchain elimina la necesidad de documentos en papel, reduciendo los tiempos de procesamiento en aduanas y puntos de transferencia.",
+    "seg-implic-title":"Implicaciones para la Cadena de Suministro",
+    "seg-implic-p1":"La combinación de sensores IoT y tecnología blockchain va más allá de la mejora de la visibilidad; tiene implicaciones profundas en la eficiencia y confianza en toda la cadena de suministro.",
+    "seg-implic-l1":"Mejora de la Eficiencia Operativa: La capacidad de monitoreo en tiempo real y el registro seguro y preciso de eventos reducen los tiempos de respuesta y mejoran la eficiencia operativa",
+    "seg-implic-l2":"Aumento de la Confianza: La transparencia proporcionada por la cadena de bloques y la fiabilidad de los datos de los sensores IoT aumentan significativamente la confianza tanto para las empresas como para los clientes.",
+    "seg-implic-p2":"En un panorama logístico en constante evolución, la adopción de tecnologías de seguimiento de carga emerge como un elemento esencial para mantener la eficiencia y la competitividad. La combinación de sensores IoT y blockchain no solo mejora la visibilidad y la confianza, sino que también allana el camino para una cadena de suministro más eficiente y resiliente en el futuro. La inversión en estas innovaciones no solo es una estrategia de vanguardia, sino un requisito para aquellos que buscan liderar en la nueva era de la logística."
+
+
+
+
+    ,
+
+
+
+
+
+    "ter-title":"Los Beneficios de Tercerizar Cargas en el Transporte",
+    "ter-intro-p":"En el siempre dinámico mundo del transporte y la logística, las empresas se enfrentan a la constante presión de optimizar operaciones, reducir costos y ofrecer servicios de calidad. En este contexto, la tercerización de cargas surge como una solución clave para aquellas empresas que buscan prosperar en un entorno competitivo.",
+    "ter-implic-t":"¿Qué implica tercerizar cargas y por qué tantas empresas están optando por esta práctica?",
+    "ter-implic-p1":"Tercerizar cargas, también conocido outsourcing logístico, puede ofrecer beneficios para aquellas empresas que necesitan cubrir sus necesidades de transporte.",
+    "ter-implic-p2":"Aquí algunos de los beneficios clave:",
+    "ter-enfoq-t":"Enfoque en Competencias Principales",
+    "ter-enfoq-p":"La externalización de funciones logísticas permite que las empresas centren su atención en sus competencias principales. Esto se traduce en una dedicación más profunda de tiempo y recursos a actividades fundamentales como producción, ventas o servicios. Al confiar la gestión logística a expertos especializados, se garantiza una eficiencia operativa óptima, permitiendo que la empresa se concentre en potenciar y desarrollar sus áreas centrales.",
+    "ter-red-t":"Reducción de Costos Operativos",
+    "ter-red-p":"La tercerización no solo implica una gestión más eficiente de la cadena de suministro, sino que también puede resultar en ahorros significativos para la empresa contratante. Al aprovechar las economías de escala y la experiencia de las empresas de logística, se reducen los gastos operativos en comparación con la gestión interna de la empresa contratante. Se presenta como una opción más rentable para optimizar recursos y maximizar los beneficios.",
+    "ter-flex-t":"Flexibilidad y Escalabilidad",
+    "ter-flex-p1":"El outsourcing no solo proporciona una mayor flexibilidad, sino que también facilita la adaptación ágil a las fluctuaciones en la demanda, en comparación con la gestión interna, evitando los desafíos que surgen al intentar ajustar los recursos por cuenta propia. ",
+    "ter-flex-p2":"La capacidad de las empresas de logística para adaptar rápidamente los recursos según las necesidades cambiantes representa una ventaja significativa. En contraste, cuando las empresas gestionan internamente sus transportes, enfrentan mayores dificultades y costos, la adaptación de los recursos puede ser más lenta y costosa, lo que se traduce en una respuesta menos ágil a las variaciones en la demanda del mercado.",
+    "ter-riesgo-t":"Reducción de Riesgos y Responsabilidades",
+    "ter-riesgo-p":"Al externalizar el transporte de cargas, la empresa delega una porción de los riesgos y responsabilidades inherentes a la logística a la empresa de transporte. Esto incluye la gestión de la flota, mantenimiento, cumplimiento de regulaciones y otros aspectos. Al optar por la tercerización, la empresa no solo aligera su carga operativa, sino que también comparte la responsabilidad de mantener estándares de excelencia en el transporte, asegurando así un desempeño óptimo y cumplimiento normativo sin comprometer la calidad del servicio.",
+    "ter-mejora-t":"Mejora en la Calidad del Servicio",
+    "ter-mejora-p1":"Las empresas de logística se distinguen por su especialización en el transporte y la eficiente gestión de la cadena de suministro, lo que resulta en una notable mejora en la calidad del servicio ofrecido. Este compromiso con la excelencia se refleja en entregas eficientes, seguimiento en tiempo real que garantiza la visibilidad y una gestión de inventarios más precisa. La experiencia de estas empresas se traduce en un servicio de alta calidad que responde a las demandas del mercado de manera eficaz y eficiente.",
+    "ter-mejora-p2":"Para concluir, la tercerización de cargas se presenta como una estrategia para optimizar la eficiencia, reducir costos y elevar la calidad del servicio en el sector del transporte y la logística. La flexibilidad, la reducción de riesgos y la mejora en la calidad del servicio se convierten en aliados estratégicos que impulsan el éxito operativo.",
+    "ter-mejora-p3":"No obstante, es crucial subrayar que, a pesar de los numerosos beneficios, la tercerización requiere una gestión cuidadosa para asegurar una colaboración efectiva y satisfacer las necesidades específicas de la empresa. Un enfoque atento y estratégico es esencial para maximizar los resultados positivos y abordar cualquier desafío potencial de manera proactiva."
+
+
+    ,
+
+
+
+    "trp-title":"La Situación Actual del Transporte en Argentina",
+    "trp-intro-p1":"La complejidad y la dinámica que definen la situación actual del transporte en Argentina derivan de una interconexión de factores que van más allá de la simple movilidad de mercancías.",
+    "trp-intro-p2":"La infraestructura, considerada la columna vertebral del transporte, se enfrenta a desafíos que impactan directamente en la eficiencia y competitividad del sistema logístico. Simultáneamente, los desafíos económicos, marcados por fluctuaciones y condiciones macroeconómicas cambiantes, generan una necesidad continua de adaptación por parte de las empresas del sector. Asimismo, la regulación y las normativas imponen un marco que influye en las operaciones diarias, añadiendo complejidad a la logística nacional.",
+    "trp-intro-p3":" A continuación, se exploran factores que se fusionan para moldear el presente y el futuro del transporte en Argentina, identificando áreas de oportunidad y desafíos que requieren atención para fortalecer y modernizar el sistema logístico del país.",
+    "trp-infra-t":"Infraestructura Vial",
+    "trp-infra-p1":"La red de infraestructura vial en Argentina enfrenta desafíos considerables. A pesar de la existencia de una extensa red de carreteras en el país, la falta de inversión y un mantenimiento adecuado ha llevado a condiciones precarias en muchos tramos.",
+    "trp-infra-p2":"Esta situación afecta directamente la eficiencia del transporte de mercancías, generando repercusiones en los costos y los tiempos de entrega.",
+    "trp-infra-p3":"La falta de atención a la infraestructura vial compromete la fluidez y confiabilidad del sistema logístico, evidenciando la necesidad de intervenciones que mejoren y optimicen la red de carreteras para respaldar eficazmente el transporte de mercaderías.",
+    "trp-desafio-t":"Desafíos Económicos",
+    "trp-desafio-p1":"La economía de Argentina ha experimentado variaciones significativas en los últimos años, ejerciendo un impacto directo sobre el sector del transporte. La inflación, la devaluación de la moneda y las políticas económicas en constante cambio son factores que contribuyen a generar incertidumbre y, como consecuencia, obligan a las empresas de transporte a realizar adaptaciones continuas.",
+    "trp-desafio-p2":"El entorno económico volátil, marcado por fluctuaciones en los indicadores clave, impone a las empresas de transporte la necesidad constante de ajustarse y redefinir estrategias para mantener su competitividad y sostenibilidad en medio de un escenario económico dinámico y desafiante.",
+    "trp-reg-t":"Regulación y Normativas",
+    "trp-reg-p":"La normativa que rige el sector del transporte en Argentina desempeña una función crucial. Las regulaciones en constante evolución y la burocracia asociada pueden convertirse en barreras que afectan la eficiencia operativa de las empresas de transporte. La necesidad de ajustarse a las demandas normativas no solo implica un desafío en términos de complejidades logísticas, sino que también puede dar lugar a costos adicionales. La adaptación a las regulaciones en transformación constante se convierte en un componente sencial para la operación exitosa de las empresas de transporte, ya que estas deben sortear los obstáculos normativos para garantizar la conformidad legal y mantener la fluidez en sus operaciones logísticas.",
+    "trp-inn-t":"Innovación Tecnológica",
+    "trp-inn-p1":"A pesar de los desafíos, se observa un impulso hacia la innovación tecnológica en el sector del transporte en Argentina. La adopción de tecnologías de seguimiento de carga, plataformas digitales y sistemas de gestión logística está en aumento, buscando elevar la eficiencia y la transparencia en la cadena de suministro.",
+    "trp-inn-p2":"Este cambio hacia la incorporación de herramientas tecnológicas se propone superar los desafíos existentes y optimizar los procesos logísticos, evidenciando una tendencia positiva hacia la modernización y la mejora continua en el ámbito del transporte en el país.",
+    "trp-per-t":"Perspectivas y Desafíos Futuros",
+    "trp-per-p1":"El futuro del transporte en Argentina está ligado a cómo se enfrenten y superen los desafíos actuales. Las inversiones en infraestructura, el mantenimiento de la estabilidad económica y la pronta adaptación a las tecnologías emergentes se erigen como factores cruciales que influirán en la competitividad y eficiencia del sistema de transporte en el país.",
+    "trp-per-p2":"La capacidad para abordar estos aspectos críticos de manera efectiva y estratégica será fundamental para esbozar un horizonte favorable y sostenible para el transporte en Argentina."
+
+
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+            table {
+                width: 100%;
+                height: 50vh; 
+                table-layout: fixed;
+                border-spacing: 0;
+            }
+
+            tbody {
+                vertical-align: middle;
+            }
+            td {
+                width: 100%;
+            }
+            h1 {
+                font-size: 36px;
+                line-height: 48px;
+                padding-left: 30px;
+                padding-right: 30px;
+                text-align: center;
+            }
+            h2 {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                padding-left: 30px;
+                padding-right: 30px;
+                text-align: center;
+            }
+            .body-gmail {
+                margin: 0 auto;
+                padding: 0;
+                max-width: 600px;
+                table-layout: fixed;
+            }
+            .container {
+                width: 100%;
+                border-spacing: 0;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            .mobilefullwidth {
+                width: 100%;
+                height: auto;
+            }
+            .logo {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+                background-color: #198FBF;
+            }
+            .post {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .box {
+                background-color: #f2f2f2; 
+                max-width: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                margin: 20px 0;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+            }
+
+            .content {
+                display: flex;
+                width: 100%;
+                align-items: center; 
+                justify-content: space-between; 
+            }
+            .informacion {
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+            .left, .right {
+                padding: auto;
+                margin: auto 5px;
+                flex: 50%;
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+                text-align: center;
+            }
+
+            .contenedor-imagen {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                padding: auto;
+            }
+            .imagen-mail {
+                max-width: 180px;
+                height: auto;
+                border-radius: 10px;
+                display: block;
+                margin: auto;
+                padding: auto;
+            }
+            .titulo-info {
+                text-align: center;
+            }
+            .estilo-titulo-info {
+                color: #FFF;
+                font-family: 'Montserrat', sans-serif;
+                text-transform: uppercase;
+                font-size: 15px;
+                display: inline-block;
+                font-weight: bold;
+                background: #198FBF;
+                padding: 5px 10px;
+                padding: 0 10 px;
+                margin: 0px 5px;
+            }
+            a{
+                text-decoration: none;
+            }
+            .titulo-info a {
+                text-decoration: none;
+                color: #FFF; 
+            }
+            @media screen and (max-width: 600px) {
+        table {
+            width: 100% !important;
+        }
+
+        .container {
+            max-width: 100% !important;
+        }
+
+        .box {
+            max-width: 100% !important;
+            margin: 20px 10px !important;
+        }
+
+        h1, h2, .titulo-info {
+            font-size: 20px !important;
+            padding: 10px !important;
+        }
+
+        p {
+            font-size: 16px !important; 
+            line-height: 20px !important;
+            padding: 10px !important;
+        }
+
+        .imagen-mail {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    }
+    </style>
+</head>
+
+<body class="body-gmail">
+    <h1>¡Hola, llegó un mail de posibles viajes para Dossin!</h1>
+
+    <h2>Información del contacto</h2>
+
+    <h3>Nombre y Apellido</h3>
+    <p>{{nombre}} {{apellido}}</p>
+    <h3>Telefono</h3>
+    <p>{{telefono}}</p>
+    <h3>Transporte</h3>
+    <p>{{transporte}}</p>
+
+    <h3>Datos de Empresa</h3>
+
+    <p>¿Tiene la Constancia de Inscripcion AFIP? {{ahaAfipEmpresa}}</p>
+    <p>¿Tiene el Libre de Deuda Sindical? {{libreDeudaEmpresa}}</p>
+    <p>¿Tiene la Constancia IIBB? {{constanciaIIBBEmpresa}}</p>
+    <p>¿Tiene la Constancia de CBU? {{constanciaCBUEmpresa}}</p>
+
+    <h3>Datos de Chofer</h3>
+
+    <p>¿Tiene el DNI del Chofer? {{dniChofer}}</p>
+    <p>¿Tiene la Licencia del Chofer? {{licenciaChofer}}</p>
+    <p>¿Tiene la Alta Temprana del Chofer? {{altaTempranaChofer}}</p>
+    <p>¿Tiene el ART del Chofer? {{artChofer}}</p>
+    <p>¿Tiene la Linti del Chofer? {{lintiChofer}}</p>
+    <p>¿Tiene el Seguro de Vida del Chofer? {{seguroVidaChofer}}</p>
+
+    <h3>Datos Camión</h3>
+
+    <p>¿Tiene la RTO del Camion? {{rtoCamion}}</p>
+    <p>¿Tiene la Poliza de Seguro del Camion? {{polizaSeguroCamion}}</p>
+    <p>¿Tiene el Paso Seguro del Camion? {{pasoSeguroCamion}}</p>
+    <p>¿Tiene la Ruta del Camion? {{rutaCamion}}</p>
+    <p>¿Tiene el Certificado Satelital? {{certificadoSatelitalCamion}}</p>
+
+</body>
+
+</html>

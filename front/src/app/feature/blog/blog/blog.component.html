@@ -1,0 +1,14 @@
+<app-portada [portadaInfo]="portadaData"></app-portada>
+<div class="blog-item-container">
+    <div class="blog-item-content">
+        <div class="image-container">
+            <img src="../../../../assets/images/blog/transporte-arg.jpg">
+        </div>
+        <div class="info-container">
+            <h2>{{'blog-container-title'|translate}}</h2>
+            <p>{{'blog-container-p'|translate}}</p>
+            <a href="/blog/transporte-arg" class="info-button"><span>+</span>INFO</a>
+        </div>
+    </div>
+</div>
+<app-blog-cards-container [blogs]="blogsData" [notHome]="true"></app-blog-cards-container>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+            table {
+                width: 100%;
+                height: 50vh; 
+                table-layout: fixed;
+                border-spacing: 0;
+            }
+
+            tbody {
+                vertical-align: middle;
+            }
+            td {
+                width: 100%;
+            }
+            h1 {
+                font-size: 36px;
+                line-height: 48px;
+                padding-left: 30px;
+                padding-right: 30px;
+                text-align: center;
+            }
+            h2 {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                padding-left: 30px;
+                padding-right: 30px;
+                text-align: center;
+            }
+            .body-gmail {
+                margin: 0 auto;
+                padding: 0;
+                max-width: 600px;
+                table-layout: fixed;
+            }
+            .container {
+                width: 100%;
+                border-spacing: 0;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            .mobilefullwidth {
+                width: 100%;
+                height: auto;
+            }
+            .logo {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+                background-color: #198FBF;
+            }
+            .post {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .box {
+                background-color: #f2f2f2; 
+                max-width: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                margin: 20px 0;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+            }
+
+            .content {
+                display: flex;
+                width: 100%;
+                align-items: center; 
+                justify-content: space-between; 
+            }
+            .informacion {
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+            .left, .right {
+                padding: auto;
+                margin: auto 5px;
+                flex: 50%;
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+                text-align: center;
+            }
+
+            .contenedor-imagen {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                padding: auto;
+            }
+            .imagen-mail {
+                max-width: 180px;
+                height: auto;
+                border-radius: 10px;
+                display: block;
+                margin: auto;
+                padding: auto;
+            }
+            .titulo-info {
+                text-align: center;
+            }
+            .estilo-titulo-info {
+                color: #FFF;
+                font-family: 'Montserrat', sans-serif;
+                text-transform: uppercase;
+                font-size: 15px;
+                display: inline-block;
+                font-weight: bold;
+                background: #198FBF;
+                padding: 5px 10px;
+                padding: 0 10 px;
+                margin: 0px 5px;
+            }
+            a{
+                text-decoration: none;
+            }
+            .titulo-info a {
+                text-decoration: none;
+                color: #FFF; 
+            }
+            @media screen and (max-width: 600px) {
+        table {
+            width: 100% !important;
+        }
+
+        .container {
+            max-width: 100% !important;
+        }
+
+        .box {
+            max-width: 100% !important;
+            margin: 20px 10px !important;
+        }
+
+        h1, h2, .titulo-info {
+            font-size: 20px !important;
+            padding: 10px !important;
+        }
+
+        p {
+            font-size: 16px !important; 
+            line-height: 20px !important;
+            padding: 10px !important;
+        }
+
+        .imagen-mail {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    }
+    </style>
+</head>
+
+<body class="body-gmail">
+    <h1>¡Hola, llegó un mail de un proveedor para Dossin!</h1>
+
+    <h2>Información del contacto</h2>
+
+    <h3>Nombre y Apellido</h3>
+    <p>{{nombre}} {{apellido}}</p>
+    <h3>Telefono</h3>
+    <p>{{telefono}}</p>
+    <h3>Empresa</h3>
+    <p>{{empresa}}</p>
+    <h3>Email</h3>
+    <p>{{email}}</p>
+    <h3>CUIT</h3>
+    <p>{{cuit}}</p>
+    <h3>Servicio</h3>
+    <p>{{servicio}}</p>
+
+    <h3>Mensaje</h3>
+
+    <p>{{mensaje}}</p>
+
+
+</body>
+
+</html>
