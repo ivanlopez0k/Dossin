@@ -7,19 +7,11 @@
       }
     ],
     "routes": [
-      { "handle": "filesystem" },
-      {"src": "/viajes", "dest": "./index.js"},
-      {"src": "/contacto-cliente", "dest": "./index.js"},
-      {"src": "/contacto-proveedor", "dest": "./index.js"},
-      {"src": "/cv", "dest": "./index.js"},
-      {"src": "/(.*)", "dest": "./index.js"}
-    ],
-    "server": {
-      "headers": {
-        "Access-Control-Allow-Origin": "https://dossin-front.vercel.app",
-        "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-        "Access-Control-Allow-Credentials": "true"
-      }
-    }
+        { "handle": "filesystem" },
+        {"src": "/viajes", "dest": "./index.js"},
+        {"src": "/contacto-cliente", "dest": "./index.js"},
+        {"src": "/contacto-proveedor", "dest": "./index.js"},
+        {"src": "/cv", "dest": "./index.js"},
+        {"src": "/(.*)", "dest": "./index.js"}
+    ]
   }
-  
