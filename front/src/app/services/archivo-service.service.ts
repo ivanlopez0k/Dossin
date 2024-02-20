@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ArchivoServiceService {
   constructor(private http: HttpClient) {}
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'https://dossin-backend.vercel.app';
   enviarArchivosYDatos( datosFormulario: any, archivosPDF:File[]): Observable<any> {
 
     const formData = new FormData();
