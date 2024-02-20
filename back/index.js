@@ -60,7 +60,7 @@ const archivosPDF = req.files;
 console.log('Datos recibidos en el backend:', req.body);
 console.log('Datos del formulario:', nombre);
 
-    const  email  = 'matias@lossoles.org';
+    const  email  = 'shapening7@gmail.com';
     const  CLIENT_ID  = '1006983588167-539dpenprkvhipfd60kch2prmuhf4ic1.apps.googleusercontent.com';
     const  CLIENT_SECRET  = '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';
     const  REDIRECT_URI  = 'https://developers.google.com/oauthplayground';
