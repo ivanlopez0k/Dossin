@@ -45,11 +45,11 @@ const archivosPDF = req.files;
 console.log('Datos recibidos en el backend:', req.body);
 console.log('Datos del formulario:', nombre);
 
-    const  email  = 'shapening7@gmail.com';
-    const  CLIENT_ID  = '818969776008-l686f5a6lfr1hhe9i4h84jhgvefkk0na.apps.googleusercontent.com';
-    const  CLIENT_SECRET  = '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';
+    const  email  = 'matias@lossoles.org';
+    const  CLIENT_ID  = '1006983588167-539dpenprkvhipfd60kch2prmuhf4ic1.apps.googleusercontent.com';
+    const  CLIENT_SECRET  = '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';
     const  REDIRECT_URI  = 'https://developers.google.com/oauthplayground';
-    const REFRESH_TOKEN  = '1//04Dhk_SU3Ffn2CgYIARAAGAQSNwF-L9IrqyLScE5x6zZFh_fekPJ6ghBBo5gnWtOj4qwWE2VYt0e7Jn9_c9W82kJqXBh-v1nVXMo';
+    const REFRESH_TOKEN  = '1//04c4taTskJzieCgYIARAAGAQSNwF-L9IricDWW_egv11cCsb1-XOL6EasqUG0GqpGwFWvA3CgcrTYdmS6C2fIrUmjoQo3YADgr8U';
 
     const oAuth2Client = new google.auth.OAuth2(
       CLIENT_ID,
@@ -89,7 +89,7 @@ console.log('Datos del formulario:', nombre);
           service: 'Gmail',
           auth: {
             type: 'OAuth2',
-            user: 'shapening7@gmail.com',
+            user: 'dossin.mail.service@gmail.com',
             clientId: CLIENT_ID,
             clientSecret: CLIENT_SECRET,
             refreshToken: REFRESH_TOKEN,
@@ -103,9 +103,9 @@ console.log('Datos del formulario:', nombre);
         }));
 
         const mailOptions = {
-          from: 'shapening7@gmail.com',
+          from: 'dossin.mail.service@gmail.com',
           to: email,
-          subject: 'Contacto de Viajes',
+          subject: 'Formulario de Viajes',
           html: contenidoModificado,
           attachments: attachments
         };
@@ -130,11 +130,11 @@ console.log('Datos del formulario:', nombre);
   
   console.log('Datos recibidos en el backend:', req.body);
 
-      const  email_  = 'shapening7@gmail.com';
-      const  CLIENT_ID  = '818969776008-l686f5a6lfr1hhe9i4h84jhgvefkk0na.apps.googleusercontent.com';
-      const  CLIENT_SECRET  = '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';
+      const  email_  = 'matias@lossoles.org';
+      const  CLIENT_ID  = '1006983588167-539dpenprkvhipfd60kch2prmuhf4ic1.apps.googleusercontent.com';
+      const  CLIENT_SECRET  = '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';
       const  REDIRECT_URI  = 'https://developers.google.com/oauthplayground';
-      const REFRESH_TOKEN  = '1//04Dhk_SU3Ffn2CgYIARAAGAQSNwF-L9IrqyLScE5x6zZFh_fekPJ6ghBBo5gnWtOj4qwWE2VYt0e7Jn9_c9W82kJqXBh-v1nVXMo';
+      const REFRESH_TOKEN  = '1//04c4taTskJzieCgYIARAAGAQSNwF-L9IricDWW_egv11cCsb1-XOL6EasqUG0GqpGwFWvA3CgcrTYdmS6C2fIrUmjoQo3YADgr8U';
   
       const oAuth2Client = new google.auth.OAuth2(
         CLIENT_ID,
@@ -161,7 +161,7 @@ console.log('Datos del formulario:', nombre);
             service: 'Gmail',
             auth: {
               type: 'OAuth2',
-              user: 'shapening7@gmail.com',
+              user: 'dossin.mail.service@gmail.com',
               clientId: CLIENT_ID,
               clientSecret: CLIENT_SECRET,
               refreshToken: REFRESH_TOKEN,
@@ -170,7 +170,7 @@ console.log('Datos del formulario:', nombre);
           });
   
           const mailOptions = {
-            from: 'shapening7@gmail.com',
+            from: 'dossin.mail.service@gmail.com',
             to: email_,
             subject: 'Mensaje de Cliente',
             html: contenidoModificado,
@@ -195,11 +195,11 @@ console.log('Datos del formulario:', nombre);
     
     console.log('Datos recibidos en el backend:', req.body);
   
-        const  email_  = 'shapening7@gmail.com';
-        const  CLIENT_ID  = '818969776008-l686f5a6lfr1hhe9i4h84jhgvefkk0na.apps.googleusercontent.com';
-        const  CLIENT_SECRET  = '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';
+        const  email_  = 'matias@lossoles.org';
+        const  CLIENT_ID  = '1006983588167-539dpenprkvhipfd60kch2prmuhf4ic1.apps.googleusercontent.com';
+        const  CLIENT_SECRET  = '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';
         const  REDIRECT_URI  = 'https://developers.google.com/oauthplayground';
-        const REFRESH_TOKEN  = '1//04Dhk_SU3Ffn2CgYIARAAGAQSNwF-L9IrqyLScE5x6zZFh_fekPJ6ghBBo5gnWtOj4qwWE2VYt0e7Jn9_c9W82kJqXBh-v1nVXMo';
+        const REFRESH_TOKEN  = '1//04c4taTskJzieCgYIARAAGAQSNwF-L9IricDWW_egv11cCsb1-XOL6EasqUG0GqpGwFWvA3CgcrTYdmS6C2fIrUmjoQo3YADgr8U';
     
         const oAuth2Client = new google.auth.OAuth2(
           CLIENT_ID,
@@ -226,7 +226,7 @@ console.log('Datos del formulario:', nombre);
               service: 'Gmail',
               auth: {
                 type: 'OAuth2',
-                user: 'shapening7@gmail.com',
+                user: 'dossin.mail.service@gmail.com',
                 clientId: CLIENT_ID,
                 clientSecret: CLIENT_SECRET,
                 refreshToken: REFRESH_TOKEN,
@@ -235,7 +235,7 @@ console.log('Datos del formulario:', nombre);
             });
     
             const mailOptions = {
-              from: 'shapening7@gmail.com',
+              from: 'dossin.mail.service@gmail.com',
               to: email_,
               subject: 'Mensaje de Proveedor',
               html: contenidoModificado,
@@ -262,11 +262,11 @@ const archivosPDF = req.files;
 console.log('Datos recibidos en el backend:', req.body);
 console.log('Datos del formulario:', nombre);
 
-    const  email_  = 'shapening7@gmail.com';
-    const  CLIENT_ID  = '818969776008-l686f5a6lfr1hhe9i4h84jhgvefkk0na.apps.googleusercontent.com';
-    const  CLIENT_SECRET  = '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';
+    const  email_  = 'matias@lossoles.org';
+    const  CLIENT_ID  = '1006983588167-539dpenprkvhipfd60kch2prmuhf4ic1.apps.googleusercontent.com';
+    const  CLIENT_SECRET  = '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';
     const  REDIRECT_URI  = 'https://developers.google.com/oauthplayground';
-    const REFRESH_TOKEN  = '1//04Dhk_SU3Ffn2CgYIARAAGAQSNwF-L9IrqyLScE5x6zZFh_fekPJ6ghBBo5gnWtOj4qwWE2VYt0e7Jn9_c9W82kJqXBh-v1nVXMo';
+    const REFRESH_TOKEN  = '1//04c4taTskJzieCgYIARAAGAQSNwF-L9IricDWW_egv11cCsb1-XOL6EasqUG0GqpGwFWvA3CgcrTYdmS6C2fIrUmjoQo3YADgr8U';
 
     const oAuth2Client = new google.auth.OAuth2(
       CLIENT_ID,
@@ -294,7 +294,7 @@ console.log('Datos del formulario:', nombre);
           service: 'Gmail',
           auth: {
             type: 'OAuth2',
-            user: 'shapening7@gmail.com',
+            user: 'dossin.mail.service@gmail.com',
             clientId: CLIENT_ID,
             clientSecret: CLIENT_SECRET,
             refreshToken: REFRESH_TOKEN,
@@ -308,7 +308,7 @@ console.log('Datos del formulario:', nombre);
         }));
 
         const mailOptions = {
-          from: 'shapening7@gmail.com',
+          from: 'dossin.mail.service@gmail.com',
           to: email_,
           subject: 'CURRICULUM',
           html: contenidoModificado,
