@@ -21,12 +21,12 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage,limits: { fileSize: 1024 * 1024 * 10 } });
 
 const corsOptions = {
-  origin: 'http://localhost:4200',
+  origin: 'https://dossin-front.vercel.app',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 
 app.use(express.json());
