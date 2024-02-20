@@ -3,10 +3,16 @@ const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
 const cors = require('cors');
 const fs = require('fs');
-const viajesContent = fs.readFileSync('./viajesContent.html', 'utf-8');
-const contactoCliente = fs.readFileSync('./conctactoCliente.html', 'utf-8');
-const contactoProveedor = fs.readFileSync('./contactoProveedor.html', 'utf-8');
-const cv = fs.readFileSync('./cv.html', 'utf-8');
+const path = require('path');
+const viajesContentPath = path.join(__dirname, 'viajesContent.html');
+const contactoClientePath = path.join(__dirname, 'conctactoCliente.html');
+const contactoProveedorPath = path.join(__dirname, 'contactoProveedor.html');
+const cvPath = path.join(__dirname, 'cv.html');
+
+const viajesContent = fs.readFileSync(viajesContentPath, 'utf-8');
+const contactoCliente = fs.readFileSync(contactoClientePath, 'utf-8');
+const contactoProveedor = fs.readFileSync(contactoProveedorPath, 'utf-8');
+const cv = fs.readFileSync(cvPath, 'utf-8');
 const app = express();
 const bodyParser = require('body-parser');
 const port = 3000;
@@ -20,7 +26,7 @@ const corsOptions = {
   credentials: true,
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 app.use(express.json());
