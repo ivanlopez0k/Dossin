@@ -1,13 +1,16 @@
 {
     "version": 2,
-    "builds": [{"src": "back/index.js", "use": "@vercel/node"}],
+    "builds": [
+      {
+        "src": "./index.js",
+        "use": "@vercel/node"
+      }
+    ],
     "routes": [
-      {"src": "/viajes", "dest": "/back/index.js"},
-      {"src": "/contacto-cliente", "dest": "/back/index.js"},
-      {"src": "/contacto-proveedor", "dest": "/back/index.js"},
-      {"src": "/cv", "dest": "/back/index.js"},
-
-      {"src": "/(.*)", "dest": "/back/index.js"}
+      {"src": "/(.*)"},
+      {"src": "/viajes"},
+      {"src": "/contacto-cliente"},
+      {"src": "/contacto-proveedor"},
+      {"src": "/cv"}
     ]
-
   }
