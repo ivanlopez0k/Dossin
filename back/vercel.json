@@ -10,6 +10,6 @@
         {"src": "/(.*)", "dest": "./index.js","methods":["GET","POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "headers":{
             "Access-Control-Allow-Origin": "https://dossin-front.vercel.app"
-        }, "credentials": true}
+        }}
     ]
   }
