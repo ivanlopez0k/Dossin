@@ -7,10 +7,6 @@
       }
     ],
     "routes": [
-        {"src": "/viajes", "dest": "./index.js"},
-        {"src": "/contacto-cliente", "dest": "./index.js"},
-        {"src": "/contacto-proveedor", "dest": "./index.js"},
-        {"src": "/cv", "dest": "./index.js"},
         {"src": "/(.*)", "dest": "./index.js"}
     ],
     "headers": [
