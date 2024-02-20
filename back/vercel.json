@@ -8,8 +8,6 @@
       {"src": "/cv", "dest": "/back/index.js"},
 
       {"src": "/(.*)", "dest": "/back/index.js"}
-    ],
-    "config": {
-      "workPath": "back"
-    }
+    ]
+
   }
