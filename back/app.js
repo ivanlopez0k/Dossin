@@ -33,7 +33,16 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', async(req, res)=>{
+  const html = `<html>
+    <head><title>Funciona</title>
+    <body>
+      <h1>Proyecto funcional</h1>
+    </body>
+  </html>`
 
+  res.send(html);
+})
 
 //VIAJES
 app.post('/viajes', upload.array('archivosPDF'), async (req, res) => {
