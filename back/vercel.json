@@ -7,25 +7,9 @@
       }
     ],
     "routes": [
-        {"src": "/viajes", "dest": "./index.js","methods":["GET","POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-        "headers":{
-            "Access-Control-Allow-Origin": "*"
-        }},
-        {"src": "/contacto-cliente", "dest": "./index.js","methods":["GET","POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-        "headers":{
-            "Access-Control-Allow-Origin": "*"
-        }},
-        {"src": "/contacto-proveedor", "dest": "./index.js","methods":["GET","POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-        "headers":{
-            "Access-Control-Allow-Origin": "*"
-        }},
-        {"src": "/cv", "dest": "./index.js","methods":["GET","POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-        "headers":{
-            "Access-Control-Allow-Origin": "*"
-        }},
         {"src": "/(.*)", "dest": "./index.js","methods":["GET","POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "headers":{
-            "Access-Control-Allow-Origin": "*"
-        }}
+            "Access-Control-Allow-Origin": "https://dossin-front.vercel.app"
+        }, "credentials": true}
     ]
   }
