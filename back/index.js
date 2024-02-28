@@ -8,7 +8,7 @@ const viajesContentPath = path.join(__dirname, 'viajesContent.html');
 const contactoClientePath = path.join(__dirname, 'conctactoCliente.html');
 const contactoProveedorPath = path.join(__dirname, 'contactoProveedor.html');
 const cvPath = path.join(__dirname, 'cv.html');
-
+const axios = require('axios')
 const viajesContent = fs.readFileSync(viajesContentPath, 'utf-8');
 const contactoCliente = fs.readFileSync(contactoClientePath, 'utf-8');
 const contactoProveedor = fs.readFileSync(contactoProveedorPath, 'utf-8');
@@ -17,11 +17,13 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = 3000;
 const multer = require('multer');
+const { oauth2 } = require('googleapis/build/src/apis/oauth2');
+const { OAuth2Client } = require('google-auth-library');
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage,limits: { fileSize: 1024 * 1024 * 10 } });
 
 const corsOptions = {
-  origin: '*',
+  origin: 'http://localhost:4200',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
@@ -35,7 +37,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://dossin-front.vercel.app');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
   res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   next();
@@ -52,6 +54,34 @@ app.get('/', async(req, res)=>{
   res.send(html);
 })
 
+const getTokenWithRefresh = async (secret, refreshToken) => {
+  const oauth2Client = new OAuth2Client(
+    secret.clientID,
+    secret.clientSecret,
+    secret.redirectUrls
+  );
+
+  // Verifica que credentials esté definido antes de asignar el refresh_token
+  if (oauth2Client.credentials) {
+    oauth2Client.credentials.refresh_token = refreshToken;
+
+    return new Promise((resolve, reject) => {
+      oauth2Client.getRequestHeaders((error, tokens) => {
+        if (!error) {
+          // Persiste los nuevos tokens (tokens.access_token y tokens.refresh_token)
+          resolve(tokens);
+        } else {
+          // Manejo de errores durante la renovación del token
+          reject(error);
+        }
+      });
+    });
+  } else {
+    // Manejo de casos donde credentials no está definido
+    throw new Error("No se pudo obtener credentials");
+  }
+};
+
 //VIAJES
 app.post('/viajes', upload.array('archivosPDF'), async (req, res) => {
   console.log('Archivos recibidos:', req.files);
@@ -59,20 +89,44 @@ app.post('/viajes', upload.array('archivosPDF'), async (req, res) => {
 const { nombre, apellido, telefono, transporte, ahaAfipEmpresa, libreDeudaEmpresa, constanciaIIBBEmpresa, constanciaCBUEmpresa, dniChofer, licenciaChofer, altaTempranaChofer, artChofer, lintiChofer, seguroVidaChofer, rtoCamion, polizaSeguroCamion, pasoSeguroCamion, rutaCamion,certificadoSatelitalCamion } = req.body;
 const archivosPDF = req.files;
 
-console.log('Datos recibidos en el backend:', req.body);
-console.log('Datos del formulario:', nombre);
 
     const  email  = 'matias@lossoles.org';
     const  CLIENT_ID  = '1006983588167-539dpenprkvhipfd60kch2prmuhf4ic1.apps.googleusercontent.com';
     const  CLIENT_SECRET  = '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';
     const  REDIRECT_URI  = 'https://developers.google.com/oauthplayground';
-    const REFRESH_TOKEN  = '1//04c4taTskJzieCgYIARAAGAQSNwF-L9IricDWW_egv11cCsb1-XOL6EasqUG0GqpGwFWvA3CgcrTYdmS6C2fIrUmjoQo3YADgr8U';
+    const REFRESH_TOKEN  = '1//04UQSOnHltY41CgYIARAAGAQSNwF-L9Ir4TUnpxAsYNXXoaOV9uuQfFWYTpQ_iJC1KmxI_wYoCrXOjDyUG3Z1R3SZnU1DQuNpRuc';
 
     const oAuth2Client = new google.auth.OAuth2(
       CLIENT_ID,
       CLIENT_SECRET,
       REDIRECT_URI,
     );
+
+
+
+    function getArchivoByOriginalName(archivosPDF, originalName) {
+      return archivosPDF.find(archivo => archivo.originalname === originalName);
+    }
+
+    const ahaAfipArchivo = getArchivoByOriginalName(archivosPDF, 'ahaAfipArchivo');
+    const libreDeudaArchivo = getArchivoByOriginalName(archivosPDF, 'libreDeudaArchivo');
+    const constanciaIIBBArchivo = getArchivoByOriginalName(archivosPDF, 'constanciaIIBBArchivo');
+    const constanciaCBUArchivo = getArchivoByOriginalName(archivosPDF, 'constanciaCBUArchivo');
+    const dniChoferArchivo = getArchivoByOriginalName(archivosPDF, 'dniChoferArchivo');
+    const licenciaChoferArchivo = getArchivoByOriginalName(archivosPDF, 'licenciaChoferArchivo');
+    const altaTempranaChoferArchivo = getArchivoByOriginalName(archivosPDF, 'altaTempranaChoferArchivo');
+    const artChoferArchivo = getArchivoByOriginalName(archivosPDF, 'artChoferArchivo');
+    const lintiChoferArchivo = getArchivoByOriginalName(archivosPDF, 'lintiChoferArchivo');
+    const seguroVidaChoferArchivo = getArchivoByOriginalName(archivosPDF, 'seguroVidaChoferArchivo');
+    const rtoArchivo = getArchivoByOriginalName(archivosPDF, 'rtoArchivo');
+    const polizaSeguroArchivo = getArchivoByOriginalName(archivosPDF, 'polizaSeguroArchivo');
+    const pasoSeguroArchivo = getArchivoByOriginalName(archivosPDF, 'pasoSeguroArchivo');
+    const rutaCamionArchivo = getArchivoByOriginalName(archivosPDF, 'rutaCamionArchivo');
+    const certificadoSatelitalArchivo = getArchivoByOriginalName(archivosPDF, 'certificadoSatelitalArchivo');
+
+
+
+    
     const contenidoModificado = viajesContent.replace('{{nombre}}', nombre)
     .replace('{{apellido}}', apellido)
     .replace('{{telefono}}', telefono)
@@ -92,15 +146,37 @@ console.log('Datos del formulario:', nombre);
     .replace('{{rutaCamion}}', rutaCamion)
     .replace('{{certificadoSatelitalCamion}}', certificadoSatelitalCamion)
     .replace('{{seguroVidaChofer}}', seguroVidaChofer)
+    .replace('{{ArchivoAFIP}}', ahaAfipArchivo)
+    .replace('{{archivo_deuda}}', libreDeudaArchivo)
+    .replace('{{archivoIIBB}}', constanciaIIBBArchivo)
+    .replace('{{archivoCBU}}', constanciaCBUArchivo)
+    .replace('{{archivoDniChofer}}', dniChoferArchivo)
+    .replace('{{archivoLicencia}}', licenciaChoferArchivo)
+    .replace('{{archivoTemprana}}', altaTempranaChoferArchivo)
+    .replace('{{archivoArt}}', artChoferArchivo)
+    .replace('{{archivoLinti}}', lintiChoferArchivo)
+    .replace('{{archivoSeguroVida}}', seguroVidaChoferArchivo)
+    .replace('{{archivoRTO}}', rtoArchivo)
+    .replace('{{archivoPoliza}}', polizaSeguroArchivo)
+    .replace('{{archivoPaso}}', pasoSeguroArchivo)
+    .replace('{{archivoCamionRuta}}', rutaCamionArchivo)
+    .replace('{{archivoSatelital}}', certificadoSatelitalArchivo)
 
 
+
+    
     oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
   
   
     async function sendMail() {
-      archivosPDF.forEach((archivo, index) => {
-});
+      archivosPDF.forEach((archivo, index) => {});
+    
       try {
+        // const tokens = await getTokenWithRefresh(
+        //   { clientID: CLIENT_ID, clientSecret: CLIENT_SECRET, redirectUrls: REDIRECT_URI },
+        //   REFRESH_TOKEN
+        // );
+        
         const tokenAcceso = await oAuth2Client.getAccessToken();
         const transporter = nodemailer.createTransport({
           service: 'Gmail',
@@ -113,24 +189,25 @@ console.log('Datos del formulario:', nombre);
             accessToken: tokenAcceso,
           },
         });
-
+    
         const attachments = archivosPDF.map((archivo, index) => ({
           filename: archivo.originalname,
           content: archivo.buffer,
         }));
-
+    
         const mailOptions = {
           from: 'dossin.mail.service@gmail.com',
           to: email,
           subject: 'Formulario de Viajes',
           html: contenidoModificado,
-          attachments: attachments
+          attachments: attachments,
         };
+    
         const info = await transporter.sendMail(mailOptions);
         console.log('Correo electrónico enviado:', info.response);
         return res.status(200).json({ message: '¡Gracias!' });
       } catch (error) {
-        console.error('Error interno del servidor:', error);
+        console.error('Error interno del servidor:', error.message, error.response?.data);
         return res.status(500).json({ error: 'Error interno al enviar el correo' });
       }
     }
@@ -151,7 +228,7 @@ console.log('Datos del formulario:', nombre);
       const  CLIENT_ID  = '1006983588167-539dpenprkvhipfd60kch2prmuhf4ic1.apps.googleusercontent.com';
       const  CLIENT_SECRET  = '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';
       const  REDIRECT_URI  = 'https://developers.google.com/oauthplayground';
-      const REFRESH_TOKEN  = '1//04c4taTskJzieCgYIARAAGAQSNwF-L9IricDWW_egv11cCsb1-XOL6EasqUG0GqpGwFWvA3CgcrTYdmS6C2fIrUmjoQo3YADgr8U';
+      const REFRESH_TOKEN  = '1//04UQSOnHltY41CgYIARAAGAQSNwF-L9Ir4TUnpxAsYNXXoaOV9uuQfFWYTpQ_iJC1KmxI_wYoCrXOjDyUG3Z1R3SZnU1DQuNpRuc';
   
       const oAuth2Client = new google.auth.OAuth2(
         CLIENT_ID,
@@ -216,7 +293,7 @@ console.log('Datos del formulario:', nombre);
         const  CLIENT_ID  = '1006983588167-539dpenprkvhipfd60kch2prmuhf4ic1.apps.googleusercontent.com';
         const  CLIENT_SECRET  = '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';
         const  REDIRECT_URI  = 'https://developers.google.com/oauthplayground';
-        const REFRESH_TOKEN  = '1//04c4taTskJzieCgYIARAAGAQSNwF-L9IricDWW_egv11cCsb1-XOL6EasqUG0GqpGwFWvA3CgcrTYdmS6C2fIrUmjoQo3YADgr8U';
+        const REFRESH_TOKEN  = '1//04UQSOnHltY41CgYIARAAGAQSNwF-L9Ir4TUnpxAsYNXXoaOV9uuQfFWYTpQ_iJC1KmxI_wYoCrXOjDyUG3Z1R3SZnU1DQuNpRuc';
     
         const oAuth2Client = new google.auth.OAuth2(
           CLIENT_ID,
@@ -283,7 +360,7 @@ console.log('Datos del formulario:', nombre);
     const  CLIENT_ID  = '1006983588167-539dpenprkvhipfd60kch2prmuhf4ic1.apps.googleusercontent.com';
     const  CLIENT_SECRET  = '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';
     const  REDIRECT_URI  = 'https://developers.google.com/oauthplayground';
-    const REFRESH_TOKEN  = '1//04c4taTskJzieCgYIARAAGAQSNwF-L9IricDWW_egv11cCsb1-XOL6EasqUG0GqpGwFWvA3CgcrTYdmS6C2fIrUmjoQo3YADgr8U';
+    const REFRESH_TOKEN  = '1//04UQSOnHltY41CgYIARAAGAQSNwF-L9Ir4TUnpxAsYNXXoaOV9uuQfFWYTpQ_iJC1KmxI_wYoCrXOjDyUG3Z1R3SZnU1DQuNpRuc';
 
     const oAuth2Client = new google.auth.OAuth2(
       CLIENT_ID,

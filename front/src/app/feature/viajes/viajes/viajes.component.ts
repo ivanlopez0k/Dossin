@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ArchivoServiceService } from 'src/app/services/archivo-service.service';
 import { TranslateService } from '@ngx-translate/core';
+import { ArchivoConNombreCampo } from 'src/app/services/archivo-service.service';
 
 @Component({
   selector: 'app-viajes',
@@ -28,6 +29,7 @@ export class ViajesComponent implements OnInit {
     rutaCamion: [],
     certificadoSatelitalCamion: [],
   };  
+
   archivoLabelTextAfip: string = '';
   archivoLabelTextLibreDeuda: string = '';
   archivoLabelTextIIBB: string = '';
@@ -150,32 +152,34 @@ setupFileControl(triggerControlName: string, targetControlName: string, archivoL
     if (this.datosViaje.valid) {
       this.cargando = true; // Inicia la señal de carga
   
-      // Extraer todos los archivos en un solo array
-      const archivosPDF = Object.values(this.archivosPorCampo).flat();
-      
+      // Mapear archivosPorCampo a una lista de ArchivoConNombreCampo
+      const archivosPDF: ArchivoConNombreCampo[] = Object.entries(this.archivosPorCampo)
+        .map(([campo, archivos]) => archivos.map(archivo => ({ archivo, nombreCampo: campo })))
+        .flat();
+  
       const datosFormulario = this.datosViaje.value;
-      console.log(datosFormulario);
+      console.log(archivosPDF);
   
       this.archivoService.enviarArchivosYDatos(datosFormulario, archivosPDF)
-        .subscribe(
-          (respuesta) => {
-            console.log('Éxito:', respuesta);
-            alert('Mensaje enviado');
-  
-            // Resetear el formulario
-            this.datosViaje.reset();
-  
-            // Limpiar archivosPorCampo y archivoLabelText
-            this.limpiarArchivosYLabels();
-          },
-          (error) => {
-            console.error('Error:', error);
-            alert('Error al enviar el mensaje');
-          }
-        )
-        .add(() => {
-          this.cargando = false; // Finaliza la señal de carga, independientemente del éxito o error
-        });
+  .subscribe(
+    (respuesta) => {
+      console.log('Éxito:', respuesta);
+      alert('Mensaje enviado');
+
+      // Resetear el formulario
+      this.datosViaje.reset();
+
+      // Limpiar archivosPorCampo y archivoLabelText
+      this.limpiarArchivosYLabels();
+    },
+    (error) => {
+      console.error('Error:', error);
+      alert('Error al enviar el mensaje');
+    }
+  )
+  .add(() => {
+    this.cargando = false; // Finaliza la señal de carga, independientemente del éxito o error
+  });
     } else {
       this.datosViaje.markAllAsTouched();
     }
@@ -201,23 +205,46 @@ setupFileControl(triggerControlName: string, targetControlName: string, archivoL
   onFileSelected(event: any, archivoLabelTextVariable: string, campo: string): void {
     const archivoInput = event.target as HTMLInputElement;
   
+    // Asegúrate de que haya al menos un elemento en el array
+    this.archivosPorCampo[campo] = this.archivosPorCampo[campo] || [];
+  
     if (archivoInput?.files?.length) {
-      const selectedFiles = Array.from(archivoInput.files);
+      const selectedFiles = Array.from(archivoInput.files) as File[];
   
-      // Almacenar los archivos en el arreglo correspondiente al campo
-      this.archivosPorCampo[campo] = (this.archivosPorCampo[campo] || []).concat(selectedFiles);
+      // Asigna el nombre del campo a cada archivo antes de almacenarlo
+      const archivosConNombre = selectedFiles.map(file => {
+        let nuevoNombre: string;
+        
+        // Verifica el tipo de archivo
+        if (file.type === 'application/pdf') {
+          nuevoNombre = `${campo}.pdf`;
+        } else if (file.type === 'image/jpeg') {
+          nuevoNombre = `${campo}.jpg`;
+        } else if (file.type === 'image/png') {
+          nuevoNombre = `${campo}.png`;
+        } else {
+          // Manejar otros tipos de archivo si es necesario
+          nuevoNombre = `${campo}.unknown`;
+        }
   
-      // Actualizar la labelText con los nombres de los archivos
-      const existingFiles = this.archivosPorCampo[campo].map((file: { name: any; }) => file.name).join(', ');
-      (this as any)[archivoLabelTextVariable] = existingFiles ? existingFiles + ', ' : '';
+        return Object.assign(file, { nombreCampo: nuevoNombre });
+      });
   
-      // Actualizar el valor del control en el formulario
-      const archivoControl = this.datosViaje.get(`${campo.replace('Empresa', '')}Archivo`);
-      if (archivoControl) {
-        archivoControl.setValue(this.archivosPorCampo[campo]);
-      }
+      // Almacena los archivos en el arreglo correspondiente al campo
+      this.archivosPorCampo[campo] = [...this.archivosPorCampo[campo], ...archivosConNombre];
+    }
+  
+    // Actualiza la labelText con los nombres de los archivos
+    const archivosExistente = this.archivosPorCampo[campo].map(file => file.name).join(', ');
+    (this as any)[archivoLabelTextVariable] = archivosExistente ? archivosExistente + ', ' : '';
+  
+    // Actualiza el valor del control en el formulario
+    const controlArchivo = this.datosViaje.get(`${campo.replace('Empresa', '')}Archivo`);
+    if (controlArchivo) {
+      controlArchivo.setValue(this.archivosPorCampo[campo]);
     }
   }
+  
   
 eliminarArchivos(campo: string, archivoLabelTextVariable: string): void {
   // Limpiar el arreglo de archivos correspondiente al campo

@@ -2,34 +2,50 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export interface ArchivoConNombreCampo {
+  archivo: File;
+  nombreCampo: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ArchivoServiceService {
   constructor(private http: HttpClient) {}
-  private apiUrl = 'https://dossin-backend.vercel.app';
-  enviarArchivosYDatos( datosFormulario: any, archivosPDF:File[]): Observable<any> {
+  private apiUrl = 'http://localhost:3000';
 
+  enviarArchivosYDatos(datosFormulario: any, archivosPDF: ArchivoConNombreCampo[]): Observable<any> {
     const formData = new FormData();
     Object.keys(datosFormulario).forEach(key => {
       formData.append(key, datosFormulario[key]);
     });
-
-    archivosPDF.forEach((archivo, index) => {
-      formData.append('archivosPDF', archivo);
+  
+    archivosPDF.forEach((archivoConNombre, index) => {
+      const extension = this.obtenerExtensionDesdeTipo(archivoConNombre.archivo.type);
+      const nuevoNombreCampo = `${archivoConNombre.nombreCampo}.${extension}`;
+      formData.append('archivosPDF', archivoConNombre.archivo, nuevoNombreCampo);
     });
-
-    console.log(formData.getAll('nombre'));
-
+  
     const url = `${this.apiUrl}/viajes`;
-const httpOptions = {
-  headers: new HttpHeaders({
-
-  }),
-  withCredentials: true,  
-};
-    
+    const httpOptions = {
+      headers: new HttpHeaders({}),
+      withCredentials: true,
+    };
+  
     return this.http.post(url, formData, httpOptions);
+  }
+
+  obtenerExtensionDesdeTipo(tipoArchivo: string): string {
+    switch (tipoArchivo) {
+      case 'application/pdf':
+        return 'pdf';
+      case 'image/jpeg':
+        return 'jpg';
+      case 'image/png':
+        return 'png';
+      default:
+        return 'unknown';
+    }
   }
 
 enviarDatosCliente(formCliente: any): Observable<any>{
