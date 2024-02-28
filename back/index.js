@@ -23,7 +23,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage,limits: { fileSize: 1024 * 1024 * 10 } });
 
 const corsOptions = {
-  origin: 'http://localhost:4200',
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
@@ -37,7 +37,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.setHeader('Access-Control-Allow-Origin', 'https://dossin-front.vercel.app');
   res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   next();
