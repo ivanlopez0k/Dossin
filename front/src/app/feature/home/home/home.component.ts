@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
   portadaData = {
-    videoSrc: '../../../../assets/videos/placeholder-video.mp4',
+    videoSrc: '../../../../assets/videos/video1.mp4',
     titulo: '',
     texto: '',
   };

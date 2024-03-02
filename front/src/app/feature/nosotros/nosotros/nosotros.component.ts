@@ -10,7 +10,7 @@ export class NosotrosComponent implements OnInit {
 constructor(private translate: TranslateService){}
 
   portadaData = {
-    videoSrc: '../../../../assets/videos/placeholder-video.mp4',
+    videoSrc: '../../../../assets/videos/video4.mp4',
     titulo: 'nosotros-title',
     texto: 'nosotros-descrip',
   };

@@ -95,7 +95,7 @@ export class IndustriasComponent implements OnInit {
   ];
 
   portadaData = {
-    videoSrc: '../../../../assets/videos/placeholder-video.mp4',
+    videoSrc: '../../../../assets/videos/video2.mp4',
     titulo: '',
     texto: ''
   };

@@ -38,7 +38,7 @@ export class ServiciosComponent implements OnInit{
     }
   ];
   portadaData = {
-    videoSrc: '../../../../assets/videos/placeholder-video.mp4',
+    videoSrc: '../../../../assets/videos/video3.mp4',
     titulo: '',
     texto: ''
   };

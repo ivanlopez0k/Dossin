@@ -11,7 +11,7 @@ import { ArchivoServiceService } from 'src/app/services/archivo-service.service'
 })
 export class ContactoComponent implements OnInit{
   portadaData = {
-    videoSrc: '../../../../assets/videos/placeholder-video.mp4',
+    videoSrc: '../../../../assets/videos/video2.mp4',
     titulo: 'Contactanos',
     texto: ''
   };
